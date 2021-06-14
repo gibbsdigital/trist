@@ -4,7 +4,21 @@
   "description": "Personal website for Tristan Gibbs",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "run-s clean prod:*",
+    "clean": "rm -rf dist",
+    "prod:css": "run-s build:sass build:postcss",
+    "prod:eleventy": "cross-env ELEVENTY_ENV=production eleventy",
+    "build:sass": "sass src/assets/sass/main.scss dist/assets/css/main.css",
+    "watch:sass": "sass --watch --style=expanded src/assets/sass:dist/assets/css",
+    "build:postcss": "postcss dist/assets/css/main.css --no-map -r",
+    "autoprefixer": "postcss dist/assets/css/main.css -u autoprefixer -r",
+    "build:images": "imagemin src/assets/images/**/* --out-dir=dist/assets/images",
+    "build:icons": "imagemin src/assets/images/icons/* --out-dir=dist/assets/images/icons --plugin=svgo",
+    "build:svg": "imagemin foo.png --plugin=pngquant > foo-optimized.png",
+    "start": "npm run dev",
+    "dev": "npm-run-all clean --parallel dev:*",
+    "dev:sass": "sass --watch --style=expanded src/assets/sass:dist/assets/css",
+    "dev:eleventy": "cross-env ELEVENTY_ENV=development eleventy --serve"
   },
   "repository": {
     "type": "git",
@@ -16,5 +30,23 @@
   "bugs": {
     "url": "https://github.com/gibbsdigital/trist/issues"
   },
-  "homepage": "https://github.com/gibbsdigital/trist#readme"
+  "homepage": "https://github.com/gibbsdigital/trist#readme",
+  "devDependencies": {
+    "@11ty/eleventy": "^0.12.1",
+    "@11ty/eleventy-img": "^0.9.0",
+    "@11ty/eleventy-plugin-rss": "^1.1.1",
+    "@11ty/eleventy-plugin-syntaxhighlight": "^3.1.1",
+    "@babel/core": "^7.14.6",
+    "@babel/preset-env": "^7.14.5",
+    "autoprefixer": "^10.2.6",
+    "cross-env": "^7.0.3",
+    "cssnano": "^5.0.6",
+    "dotenv": "^10.0.0",
+    "markdown-it": "^12.0.6",
+    "markdown-it-attrs": "^4.0.0",
+    "npm-run-all": "^4.1.5",
+    "postcss": "^8.3.4",
+    "postcss-cli": "^8.3.1",
+    "sass": "^1.34.1"
+  }
 }
