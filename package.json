@@ -1,0 +1,20 @@
+{
+  "name": "trist",
+  "version": "1.0.0",
+  "description": "Personal website for Tristan Gibbs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gibbsdigital/trist.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gibbsdigital/trist/issues"
+  },
+  "homepage": "https://github.com/gibbsdigital/trist#readme"
+}
