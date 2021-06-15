@@ -13,11 +13,12 @@ pagination:
         - projects
         - featuredProjects
         - rss
+        - eleventy
+permalink: "blog/tag/{{ tag | slug }}/index.html"
 title: Blog
 summary: A collection of my writings on Web development and design.
 eleventyComputed:
     description: "Articles for <mark>{{ tag }}</mark>"
-permalink: "/blog/tag/{{ tag | slug }}/index.html"
 headerColor: bg-dark
 ---
 

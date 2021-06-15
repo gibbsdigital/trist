@@ -3,9 +3,9 @@ title: Color Theme Switcher
 date: 2020-11-17
 datetime: 2020-11-17
 tags: 
-    - javascript
-    - eleventy
-    - css
+- javascript
+- eleventy
+- css
 ---
 
 

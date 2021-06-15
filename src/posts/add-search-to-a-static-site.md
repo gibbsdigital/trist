@@ -3,8 +3,8 @@ title: Add Search to a Static Site Using Custom Data Attributes
 date: 2020-11-17
 datetime: 2020-11-17
 tags: 
-    - javascript
-    - eleventy
+- javascript
+- eleventy
 ---
 
 
