@@ -1,0 +1,173 @@
+{# Only renders this section if there are links to render #} 
+
+{% if pagination.href.next or pagination.href.previous %}
+
+<nav class="pagination" aria-label="Pagination">
+
+    <ol>
+        <li class="first">
+            {% if pagination.href.previous %}
+            <a
+                class="prev "
+                href="{{ pagination.href.previous }}{{ paginationAnchor }}"
+                rel="prev"
+            >
+                <span>
+                    <!-- <svg class="left-arrow" fill="currentColor" aria-hidden="true" focusable="false" width="35" height="10">
+                        <use xlink:href="#left-arrow"></use>
+                    </svg> -->
+                    Prev
+                </span>
+            </a>
+            {% else %}
+            <span class="isDisabled">
+                <a class="prev" aria-disabled="true" href="{{ pagination.href.previous }}{{ paginationAnchor }}">Prev</a>
+            </span>
+            {% endif %} 
+        </li>
+        
+            
+            {%- for pageEntry in pagination.pages %}
+            <li>
+                <a 
+                    href="{{ pagination.hrefs[ loop.index0 ] }}{{ paginationAnchor }}" 
+                    {% if page.url == pagination.hrefs[ loop.index0 ] %} aria-current="page"{% endif %}>
+                    {{ loop.index }}
+                </a>
+            </li>
+            <!-- To get the index in a for loop use loop.index (loop.index starts with a 1)
+            To get the standard behavior (start with a 0) use loop.index0 -->
+            {%- endfor %}
+
+        
+            <li class="last">
+            {% if pagination.href.next %}
+                <a
+                    class="next"
+                    href="{{ pagination.href.next }}{{ paginationAnchor }}"
+                    rel="next"
+                >
+                    <span>
+                        Next 
+                            <!-- <svg id="arrow-right-mini" class="right-arrow2" viewBox="-100.9 99.1 61.9 105.9" width="12" height="12" fill="currentColor" aria-hidden="true" focusable="false">
+                            <path d="M-41.7 145.3l-43.5-43.5c-1.7-1.7-4-2.7-6.5-2.7s-4.8 1-6.5 2.7c-1.7 1.7-2.7 4-2.7 6.5s1 4.8 2.7 6.5L-61 152l-37.2 37.2c-1.7 1.7-2.7 4-2.7 6.5s1 4.8 2.6 6.5c1.8 1.9 4.2 2.8 6.6 2.8 2.3 0 4.6-.9 6.5-2.6 11.5-11.4 41.2-41 43.3-43l.2-.2c3.6-3.6 3.6-10.4 0-13.9z"></path>
+                        </svg>  -->
+                        <!-- <svg class="right-arrow" fill="currentColor" aria-hidden="true" focusable="false" width="35" height="10">
+                            <use xlink:href="#right-arrow"></use>
+                        </svg> -->
+                    </span>
+                </a>
+            {% else %}  
+                <span class="isDisabled">
+                    <a class="next" aria-hidden="true" href="{{ pagination.href.next }}{{ paginationAnchor }}">Next</a>
+                </span>
+            {% endif %}
+        </li>
+
+    </ol>
+</nav>
+
+
+{% endif %}
+
+<!-- 
+    ELEVENTY PAGINATION OBJECT:
+
+    {
+        items: [], // Array of current page’s chunk of data
+        pageNumber: 0, // current page number, 0 indexed
+
+        // Cool URLs, new in v0.10.0
+        hrefs: [], // Array of all page hrefs (in order)
+        href: {
+            next: "…", // put inside <a href="">Next Page</a>
+            previous: "…", // put inside <a href="">Previous Page</a>
+            first: "…",
+            last: "…",
+        },
+
+        // New in v0.10.0
+        pages: [], // Array of all chunks of paginated data (in order)
+        page: {
+            next: "…", // Next page’s chunk of data
+            previous: "…", // Previous page’s chunk of data
+            first: "…",
+            last: "…",
+        }
+
+        data: …, // the original string key to the dataset
+        size: 1, // page chunk sizes
+
+        // Cool URLs, new in v0.6.0
+        // Use pagination.href.next, pagination.href.previous, et al instead.
+        nextPageHref: "…", // put inside <a href="">Next Page</a>
+        previousPageHref: "…", // put inside <a href="">Previous Page</a>
+        firstPageHref: "…",
+        lastPageHref: "…",
+
+        // Uncool URLs
+        // These include index.html file names, use `hrefs` instead
+        links: [], // Array of all page links (in order)
+
+        // Deprecated things:
+        // nextPageLink
+        // previousPageLink
+        // firstPageLink (new in v0.6.0)
+        // lastPageLink (new in v0.6.0)
+        // pageLinks (alias to `links`)
+}
+
+{% for pageLink in pagination.links %}
+            <a 
+                href="{{ pageLink }}{{ paginationAnchor }}" 
+                
+                {% if (pagination.pageNumber == pagination.links.indexOf(pageLink)) %}aria-current="page"{% endif %} >
+                {{ loop.index }}
+            </a>
+        {% endfor %}
+
+
+
+        To get the index in a for loop use loop.index (loop.index starts with a 1)
+        To get the standard behavior (start with a 0) use loop.index0
+
+
+
+    <nav aria-labelledby="my-pagination">
+        <h2 id="my-pagination">This is my Pagination</h2>
+        <ol>
+        <li>{% if page.url != pagination.href.first %}<a href="{{ pagination.href.first }}">First</a>{% else %}First{% endif %}</li>
+        <li>{% if pagination.href.previous %}<a href="{{ pagination.href.previous }}">Previous</a>{% else %}Previous{% endif %}</li>
+    {%- for pageEntry in pagination.pages %}
+        <li><a href="{{ pagination.hrefs[ loop.index0 ] }}"{% if page.url == pagination.hrefs[ loop.index0 ] %} aria-current="page"{% endif %}>Page {{ loop.index }}</a></li>
+    {%- endfor %}
+        <li>{% if pagination.href.next %}<a href="{{ pagination.href.next }}">Next</a>{% else %}Next{% endif %}</li>
+        <li>{% if page.url != pagination.href.last %}<a href="{{ pagination.href.last }}">Last</a>{% else %}Last{% endif %}</li>
+        </ol>
+  </nav>
+
+
+    <pag-button
+        class="rwd-Review_QuoteActionBtn"
+        id="quotePrev"
+        aria-label="Icon-only pag-button"
+        type="pag-button"
+        disabled
+    >
+        <svg class="rwd-Review_QuoteActionSVG" aria-hidden="true" focusable="false">
+            <use xlink:href="#left-arrow"></use>
+        </svg>
+        Prev
+    </pag-button>
+    <pag-button
+        class="rwd-Review_QuoteActionBtn"
+        id="quoteNext"
+        aria-label="Icon-only pag-button"
+        type="pag-button"
+    >
+        Next
+        <svg class="rwd-Review_QuoteActionSVG" aria-hidden="true" focusable="false">
+            <use xlink:href="#right-arrow"></use>
+        </svg>
+    </pag-button>
+ -->

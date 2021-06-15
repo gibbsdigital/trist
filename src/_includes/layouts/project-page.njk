@@ -1,0 +1,27 @@
+{% extends "layouts/base.njk" %}  
+
+
+<section class="project-item">
+  <header class="hero">
+    <div class="hero__inner wrapper">
+      <div class="hero__content">
+        <h1 class="headline" data-highlight="quinary">
+          {{ title }}
+        </h1>
+        <p class="measure-short">{{ description }}</p>
+      </div>
+    </div>
+    <img src="{{ image }}" alt="{{ imageAlt }}" class="hero__image" width="500px" height="300px" />
+  </header>
+  <article>
+    <h2>Technology used</h2>
+    <ol>
+      {% for item in tech %}
+          <li>
+            <span>{{ item }}</span>
+          </li>
+      {% endfor %}
+    </ol>
+  </article>
+  
+</section>

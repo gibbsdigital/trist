@@ -1,0 +1,33 @@
+---
+layout: layouts/base.njk
+---
+
+    <header class="page-header {{ headerColor }}">
+        <div class="page-header__inner container">
+
+            <h1 class="title">
+                {{ title }}
+            </h1>
+            {% if description %}
+                <p class="lead">
+                    {{ description | safe }}
+                </p>
+            {% endif %}
+
+        </div>
+        <svg 
+            style="margin-bottom: -10px;" 
+            xmlns="http://www.w3.org/2000/svg" 
+            viewBox="0 0 1086 84"
+            aria-hidden="true" 
+            focusable="false">
+            <path path fill="#fff" d="M1086 30.45C728 62.9 354 79 0 0v84h1086z"></path>
+        </svg>
+    </header>
+
+
+
+    {{ content | safe }}
+
+
+    

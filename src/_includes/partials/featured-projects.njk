@@ -1,0 +1,20 @@
+<!-- 'projectListItems' must be set to use 'partials/project-list.njk' below -->
+{%- set projectListItems = collections.featuredProjects -%}
+
+<section class="section" aria-labelledby="featured-projects-heading">
+    
+    <div class="section__header">
+        <h2 id="featured-projects-heading">Featured projects</h2>
+    </div>
+
+    <div class="section__content">
+        {% include "partials/project-list.njk" %}
+    </div>
+
+    <div class="section__footer">
+        <a class="see-all-link" href="/projects/"
+            >View all projects &RightArrow;</a
+        >
+        <!-- include 'arrow-right.svg' -->
+    </div>
+</section>

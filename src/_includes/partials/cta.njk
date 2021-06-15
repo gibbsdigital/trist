@@ -1,0 +1,64 @@
+
+<style>
+    .cta-section {
+        /* border-top: 4px solid var(--color-grey); */
+       /*  border-bottom: 4px solid var(--color-grey); */
+    }
+    /* .cta-container {
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        grid-template-rows: repeat(3, auto);
+        gap: 1.33rem;
+    }
+    
+    #cta-heading {
+        grid-column: 1/9;
+        grid-row: 1;
+    }
+    .cta-text {
+        grid-column: 5/12;
+        grid-row: 2;
+    }
+    .cta-footer {
+        grid-column: 4/12;
+        grid-row: 3;
+    } */
+.section__content {
+    /* display: flex;
+    flex-wrap: wrap; */
+}
+.cta-section .lead {
+    flex: 1;
+}
+.cta-section .si {
+    flex: 1;
+    
+}
+</style>
+
+
+<section class="section cta-section" aria-labelledby="cta-heading" style="background-color: var(--color-bg);">
+    
+    <div class="cta-container projects-container">
+    
+        <h2 id="cta-heading" class="section__title h2-display" style="color: var(--dark);">Connect with me</h2>
+
+        <div class="section__content cta-text" style="color: var(--color-text);">
+            <p class="lead">If you have any questions about my services, 
+                or just want to say hello, feel free to contact me. 
+                Below are my social pages and a link to get in contact 
+                with me: 
+            </p>
+            <div class="si">
+                {% include "partials/social-icons-labels.njk" %}
+            </div>
+            
+        </div>
+
+
+        <div class="section__footer cta-footer">
+            <a class="cta-link btn" href="/contact/">Contact me</a>                 
+        </div>
+
+    </div>
+</section>

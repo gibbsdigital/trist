@@ -1,0 +1,149 @@
+{# Only renders this section if there are links to render #} 
+<!-- buttons by https://codepen.io/arturoalviar/pen/mBqZOK -->
+<style>
+    .pag-button {
+        font-size: .8em;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  border: 0;
+  border-radius: 50%;
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  margin: 1em;
+  width: 4em;
+  height: 4em;
+  transform-style: preserve-3d;
+}
+.pag-button.is-primary {
+  background: linear-gradient(135deg, #95f8c4 0%, #69f3e2 100%);
+  box-shadow: 0 6px 12px rgba(149,248,196,0.4);
+  color: #fff;
+  transition: all 0.3s ease;
+}
+.pag-button.is-primary:hover {
+  box-shadow: 0 8px 14px rgba(149,248,196,0.4);
+  transform: scale(1.2);
+}
+.arrow {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 100%;
+  width: 100%;
+}
+.arrow-piece {
+  background: #fff;
+  position: absolute;
+  left: calc(50% - 6px);
+  width: 16px;
+  height: 2px;
+}
+.arrow-piece.is-top {
+  top: calc(50% - 6px);
+  transition: transform 0.5s ease;
+  transform: rotate(45deg);
+}
+.arrow-piece.is-top.is-spinning {
+  -webkit-animation: arrow-top 0.5s ease;
+          animation: arrow-top 0.5s ease;
+}
+.arrow-piece.is-bottom {
+  bottom: calc(50% - 6px);
+  transition: transform 0.5s ease;
+  transform: rotate(-45deg);
+}
+.arrow-piece.is-bottom.is-spinning {
+  -webkit-animation: arrow-bottom 0.5s ease;
+          animation: arrow-bottom 0.5s ease;
+}
+.arrow.is-prev {
+  transform: translate(-50%, -50%) rotate(180deg);
+}
+@-webkit-keyframes arrow-top {
+  0% {
+    transform: rotate(45deg);
+  }
+  100% {
+    transform: rotate(-135deg);
+  }
+}
+@keyframes arrow-top {
+  0% {
+    transform: rotate(45deg);
+  }
+  100% {
+    transform: rotate(-135deg);
+  }
+}
+@-webkit-keyframes arrow-bottom {
+  0% {
+    transform: rotate(-45deg);
+  }
+  100% {
+    transform: rotate(135deg);
+  }
+}
+@keyframes arrow-bottom {
+  0% {
+    transform: rotate(-45deg);
+  }
+  100% {
+    transform: rotate(135deg);
+  }
+}
+
+</style>
+
+{% if pagination.href.next or pagination.href.previous %}
+
+    <nav class="pagination" aria-label="Pagination links">
+        {% if pagination.href.previous %}
+       
+        <a 
+            class="pag-button is-primary" 
+            href="{{ pagination.href.previous }}{{ paginationAnchor }}
+            rel="prev">
+            <div class="arrow is-prev"><span class="arrow-piece is-top"></span><span class="arrow-piece is-bottom"></span></div>
+          </a>
+        {% endif %} 
+        
+        {% if pagination.href.next %}
+        
+        <a 
+            class="pag-button is-primary" 
+            href="{{ pagination.href.next }}{{ paginationAnchor }}
+            rel="next">
+            <div class="arrow is-next"><span class="arrow-piece is-top"></span><span class="arrow-piece is-bottom"></span></div>
+          </a>
+        {% endif %}
+    </nav>
+
+{% endif %}
+
+<!-- 
+    <pag-button
+        class="rwd-Review_QuoteActionBtn"
+        id="quotePrev"
+        aria-label="Icon-only pag-button"
+        type="pag-button"
+        disabled
+    >
+        <svg class="rwd-Review_QuoteActionSVG" aria-hidden="true" focusable="false">
+            <use xlink:href="#left-arrow"></use>
+        </svg>
+        Prev
+    </pag-button>
+    <pag-button
+        class="rwd-Review_QuoteActionBtn"
+        id="quoteNext"
+        aria-label="Icon-only pag-button"
+        type="pag-button"
+    >
+        Next
+        <svg class="rwd-Review_QuoteActionSVG" aria-hidden="true" focusable="false">
+            <use xlink:href="#right-arrow"></use>
+        </svg>
+    </pag-button>
+ -->

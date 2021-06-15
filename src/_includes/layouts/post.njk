@@ -1,0 +1,167 @@
+--- 
+layout: layouts/base.njk
+shareText: 'Just finished reading '
+shareTwitter: ?share=twitter&nb=1
+shareFacebook: ?share=facebook&nb=1
+headerColor: bg-dark
+---
+
+<article 
+    id="{{ title | slug }}" 
+    class="post" 
+    role="article" 
+    aria-labelledby="{{ title | slug }}-title" 
+>
+    <header class="page-header {{ headerColor }}">
+        <div class="page-header__inner container">
+            <h1 class="title">
+                {{ title }}
+            </h1>
+            <p class="lead">
+                <div class="post__meta">
+                    <time class="post__date" datetime="{{ date | dateISO }}">{{ date | dateFriendly }}</time>
+                    <span aria-hidden="true" focusable="false">&sdot;</span><br>
+                    <span class="post__read-time">{{ content | wordcount | readTime }}</span>
+                    {% if draft %}
+                    <span aria-hidden="true" focusable="false">&sdot;</span> 
+                    <span class="post__status">(Draft)</span>
+                    {% endif %}
+        
+                    {% if tags %}
+                        <ul class="post__tags" aria-describedby="tags-desc">
+                        {% for tag in tags %}
+                            <li>
+                                <a href="/blog/tag/{{ tag | slug }}/">#{{ tag | replace(' ', '') }}</a>
+                            
+                            </li>
+                        {% endfor %}
+                        </ul>
+                    {% endif %}
+        
+                </div>
+            </p>
+        </div>
+        <svg 
+            style="margin-bottom: -10px;" 
+            xmlns="http://www.w3.org/2000/svg" 
+            viewBox="0 0 1086 84" 
+            aria-hidden="true" 
+            focusable="false">
+            <path path fill="#fff" d="M1086 30.45C728 62.9 354 79 0 0v84h1086z"></path>
+        </svg>
+    </header>
+
+
+    <div class="post__content markdown article-container">
+        
+        <!-- <div class="post__meta">
+            <time class="post__date" datetime="{{ date | dateISO }}">{{ date | dateFriendly }}</time>
+             <br>
+            <span class="post__read-time">{{ content | wordcount | readTime }}</span>
+            {% if draft %}
+            <span aria-hidden="true" focusable="false">&sdot;</span> 
+            <span class="post__status">(Draft)</span>
+            {% endif %}
+
+            {% if tags %}
+                <ul class="post__tags" aria-describedby="tags-desc">
+                {% for tag in tags %}
+                    <li>
+                        <a href="/blog/tag/{{ tag | slug }}/">#{{ tag | replace(' ', '') }}</a>
+                    
+                    </li>
+                {% endfor %}
+                </ul>
+            {% endif %}
+
+        </div> -->
+        <div class="article">
+            {{ content | safe }}
+        </div>
+        
+    </div>
+
+
+
+    <div class="post__footer container">
+        <!-- <div hidden>
+            <a class="u-url" href="{{ page.url | url | absoluteUrl(site.url) }}">{{ title }}</a>
+            <p class="h-card p-author">
+                <a class="p-name u-url" rel="author" href="{{ site.url }}">{{ site.author.name }}</a>
+                <img class="u-photo" src="https://mxb.dev/assets/images/avatar2.jpg">
+            </p>
+            <div class="post__footer__info post__meta">
+                Published on {{ date | dateFriendly }}
+            </div> 
+        </div> -->
+        
+        <div class="next-prev-post article-container">
+            {% set previousPost = collections.posts | getPreviousCollectionItem(page) %}
+            {% if previousPost %}
+                <div class="prev-post">
+                    <strong>Prev article: </strong><br> <a href="{{ previousPost.url }}">{{ previousPost.data.title }}</a></div>
+            {% endif %}
+
+            {% set nextPost = collections.posts | getNextCollectionItem(page) %}
+            {% if nextPost %}
+                <div class="next-post">
+                    <strong>Next article: </strong>
+                    <br> <a href="{{ nextPost.url }}">{{ nextPost.data.title }}</a></div>
+            {% endif %}
+        </div>
+
+        <p class="feeds article-container">
+            <a href="/blog/" class="button">
+                Back to blog
+            </a> 
+            <a  
+                href="https://twitter.com/share?text={{ shareText }}{{ title }}&amp;url={{ site.url }}{{ page.url }}"
+                target="_blank"
+                rel="noopener noreferrer"
+                title="Follow {{ site.author.name }} on Twitter"
+                class="btn btn--twitter"
+            >
+                {% include "assets/images/icons/twitter.svg" %} Share
+                <span class="sr-only">Click to share on Twitter (Opens in new window)</span>
+            </a> 
+        
+            <a href="/feed.xml" class="icon-button" title="RSS blog feed"> 
+                <svg class="icon icon--feed" focusable="false" aria-hidden="true" width="20" height="20" style="fill: currentColor;">
+                    <use xlink:href="#icon-rss"></use>
+                </svg>
+                <span class="sr-only">Subscribe to the RSS blog feed</span>
+            </a>
+        
+        </p>
+        
+        
+    </div>
+</article>
+
+
+
+{% include "partials/other-posts-section.njk" %}
+
+
+
+
+<!-- <a
+                
+                href="https://twitter.com/intent/follow?screen_name={{ site.author.social.twitter.name }}"
+                target="_blank"
+                rel="noopener noreferrer"
+                title="Follow {{ site.author.name }} on Twitter"
+                class="btn btn--twitter"
+            >
+                {% include "assets/images/icons/twitter.svg" %} Follow
+            </a>  -->
+<!-- <article>
+    <h2>Filter posts by tag</h2>
+    <ul>
+        {% for tag in collections.tagList %}
+            {% set tagUrl %}/tag/{{ tag | slug }}/{% endset %}
+            <li><a href="{{ tagUrl | url }}" class="tag">{{ tag }}</a> ({{ collections[tag].length }})</li>
+        {% endfor %}
+    </ul>
+</article>
+ -->

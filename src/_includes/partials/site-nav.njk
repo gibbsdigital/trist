@@ -1,0 +1,18 @@
+{# primary site navigation menu. Uses data from '_data/navigation.json' #} 
+
+<ul class="site-nav__list">
+    {% for item in navigation.items %}
+        {%- set isCurrent = (item.url == page.url) -%}
+        {%- set isParent = item.url != '/' and item.url in page.url -%}
+        <li class="site-nav__item{% if isCurrent or isParent %} active{% endif %}">
+            <a
+                href="{% if isCurrent %}#main{% else %}{{ item.url | url }}{% endif %}"
+                class="site-nav__link"
+                {% if isCurrent %}aria-current="page"{% endif %}
+            >
+                {{ item.text }}
+            </a>
+        </li>
+    {% endfor %}
+</ul>
+

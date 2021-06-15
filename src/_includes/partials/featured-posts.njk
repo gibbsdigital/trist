@@ -1,0 +1,19 @@
+<!-- 'postListItems' must be set to use 'partials/post-list.njk' below -->
+{% set postListItems = collections.featuredPosts %}
+
+
+<section class="section" aria-labelledby="featured-posts">
+
+    <div class="section__header">
+        <h2 id="featured-posts">Featured posts</h2>
+    </div>
+
+    <div class="section__content">
+        {% include "partials/post-list.njk" %}
+    </div>
+
+    <div class="section__footer">
+        <a class="see-all-link" href="/blog/">View all posts &RightArrow;</a>
+        <!-- include 'arrow-right.svg' -->
+    </div>
+</section>

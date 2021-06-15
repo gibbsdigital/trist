@@ -1,0 +1,115 @@
+
+<!-- https://mozilla.github.io/nunjucks/templating.html#cycler-item1-item2-itemn -->
+{% set cls = cycler("card-horizontal", "card-horizontal alt") %}
+<!-- call cls.next() to cycle through these values and apply 
+    the alt class to every other card in the loop 
+    class="card  cls.next() "  
+-->
+
+
+
+
+<ol class="project-list">
+
+    {% for project in projectListItems %}
+    
+    
+       <!--  <li class="card card-horizontal {{ cls.next() }}">
+            <figure class="card__img">
+                <img 
+                    src="{{ project.data.hero.image }}"
+                    alt="{{ project.data.hero.imageAlt }}"
+                    loading="lazy"
+                /> -->
+                <!-- <div class="sr-only">
+                    Direct link to the article Give your Eleventy Site Superpowers with Environment Variables
+                </div> -->
+            <!-- </figure>
+            <div class="card__body">
+                <h3 class="card__title" id="project-title">
+                    <a href="">
+                    {{ project.data.title }}
+                </a>
+                </h3>
+                <p class="card__text">
+                    {{ project.data.description }}
+                </p>
+                <div class="card__footer">
+                    <a 
+                        href="{{ project.data.url }}" 
+                        class="" >
+                        Live site
+                       <span class="visually-hidden">
+                           for {{ project.data.title }}
+                       </span>
+                    </a> -->
+                    <!-- <a 
+                        href="{{ project.url }}" 
+                        class="button">
+                        Site Info
+                    </a> -->
+                   <!--  <a 
+                        href="{{ project.data.repo }}" 
+                        class="" >
+                        <svg class="icon-github" aria-hidden="true" focusable="false" width="20"
+                            height="20">
+                            <use xlink:href="#icon-github"></use>
+                        </svg>
+                        Source code
+                        <span class="visually-hidden">
+                            for {{ project.data.title }}
+                        </span>
+                    </a>
+                </div>
+            </div>
+        </li> -->
+
+        
+        
+
+        <figure class="project">
+            <div class="project__media">
+            <img
+                class="radius"
+                src="../{{ project.data.hero.image }}"
+                alt="{{ project.data.hero.imageAlt }}"
+               
+                loading="lazy"
+            />
+            </div>
+            <figcaption class="project__content">
+                <h3 class="project__heading h3-display">
+                    {{ project.data.title }}
+                </h3>
+                <p class="project__summary">
+                    {{ project.data.description }}
+                </p>
+                <div class="links">
+                    <a 
+                    href="{{ project.data.url }}" 
+                    class="button">
+                    Live site
+                </a>
+                <!-- <a 
+                    href="{{ project.url }}" 
+                    class="button" 
+                    target="_blank"
+                    rel="noopener noreferrer">
+                    Site Info
+                </a> -->
+                <a 
+                    href="{{ project.data.repo }}" 
+                    class="button">
+                    Source code
+                </a>
+                </div>
+                
+            </figcaption>
+        </figure>
+
+
+        
+        
+    {% endfor %}
+
+</ol>
