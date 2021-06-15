@@ -1,0 +1,94 @@
+---
+layout: "layouts/base.njk"
+pagination:
+    data: collections
+    size: 1
+    alias: tag
+    filter:
+        - all
+        - nav
+        - blog
+        - posts
+        - featuredPosts
+        - projects
+        - featuredProjects
+        - rss
+title: Blog
+summary: A collection of my writings on Web development and design.
+eleventyComputed:
+    description: "Articles for <mark>{{ tag }}</mark>"
+permalink: "/blog/tag/{{ tag | slug }}/index.html"
+headerColor: bg-dark
+---
+
+
+<header class="page-header {{ headerColor }}">
+    <div class="page-header__inner container">
+
+        <h1 class="title">
+            {{ title }}
+        </h1>
+        {% if description %}
+            <p class="lead">
+                {{ description | safe }}
+            </p>
+        {% endif %}
+
+    </div>
+    <svg style="margin-bottom: -10px;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1086 84">
+        <path path fill="#fff" d="M1086 30.45C728 62.9 354 79 0 0v84h1086z"></path></svg>
+</header>
+
+
+
+<div class="blog-layout container">
+    
+    <section class="articles" aria-labelledby="articles">
+        <div class="">
+
+            <h2 id="articles" class="section__title">
+                Articles for <mark>{{ tag }}</mark>
+            </h2>
+
+            {% set postListItems = collections[ tag ] %} 
+            {% include "partials/post-list.njk" %}      
+        
+        </div>
+    </section>
+
+
+
+    <section class="topics" aria-labelledby="topics">
+        <div class="">
+
+            <h2 id="topics" class="section__title ">Topics</h2>
+
+            {% include "partials/tag-list.njk" %}
+            
+        </div>
+    </section>
+
+</div>
+
+
+<div class="rss-feed container">
+    <a href="/feed.xml" class="" title="RSS Feed"> 
+        <svg class="icon icon--feed" role="img" aria-hidden="true" width="20" height="20" style="fill: currentColor;">
+            <use xlink:href="#icon-rss"></use>
+        </svg>
+        <span class="label">Subscribe to the RSS Feed</span>
+    </a>
+</div>
+
+
+
+   
+    
+{% include "partials/other-posts-section.njk" %} 
+   
+    
+
+    
+
+
+  
