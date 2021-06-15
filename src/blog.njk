@@ -1,0 +1,61 @@
+---
+layout: layouts/page.njk
+title: "My Blog"
+description: A collection of my writings on Web development and design.
+image: '/assets/images/intro.png'
+imageAlt: 'A computer monitor with code'
+pagination:
+    data: collections.posts
+    size: 5
+permalink: "/blog{% if pagination.pageNumber > 0 %}/page/{{ pagination.pageNumber }}{% endif %}/index.html"
+paginationAnchor: "#post-list"
+headerColor: "bg-dark"
+---
+
+
+  
+<section class="articles" aria-labelledby="articles">
+    <div class="container">
+
+        <h2 id="articles" class="section__title">Articles</h2>
+        {% if meta.env == 'prod' %}
+        <h3>Production Env</h3>
+        {% endif %}
+        {% if meta.env == 'dev' %}
+        <h3>development Env</h3>
+        {% endif %}
+
+        {% set postListItems = pagination.items %} 
+        {% include "partials/post-list.njk" %} 
+
+        {% include "partials/pagination-nav.njk" %} 
+    
+    </div>
+</section>
+
+
+
+
+<section class="topics" aria-labelledby="topics">
+    <div class="container">
+
+        <h2 id="topics" class="section__title ">Topics</h2>
+
+        {% include "partials/tag-list.njk" %}
+        
+    </div>
+</section>
+
+
+
+
+<div class="rss-feed container">
+    <a href="/feed.xml" class="" title="RSS Feed"> 
+        <svg class="icon icon--feed" role="img" aria-hidden="true" width="20" height="20" style="fill: currentColor;">
+            <use xlink:href="#icon-rss"></use>
+        </svg>
+        <span class="label">Subscribe to the RSS Feed</span>
+    </a>
+</div>
+
+
