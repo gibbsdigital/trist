@@ -6,6 +6,7 @@ pagination:
     alias: tag
     filter:
         - all
+        - eleventy
         - nav
         - blog
         - posts
@@ -13,7 +14,6 @@ pagination:
         - projects
         - featuredProjects
         - rss
-        - eleventy
 permalink: "blog/tag/{{ tag | slug }}/index.html"
 title: Blog
 summary: A collection of my writings on Web development and design.
