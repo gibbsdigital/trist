@@ -1,0 +1,30 @@
+
+/* 
+    BUTTONS
+*/
+.btn,
+.button {
+    background-color: var(--primary);
+    padding: 1em 1.6em 1.1em;
+    color: white;
+    display: inline-block;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 0.8em;
+    font-weight: 700;
+    font-family: var(--font-family-display);
+    border-radius: 3px;
+    /* border: 2px solid var(--primary); */
+    transition: box-shadow 0.2s;
+}
+.btn:hover,
+.button:hover {
+    text-decoration: none;
+    color: white;
+   opacity: 0.9;
+   /*  box-shadow: inset 8px 8px 20px black; */
+}
+.btn + .btn, 
+.button + .button {
+    margin-left: 0.8em;
+}

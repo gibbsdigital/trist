@@ -1,0 +1,48 @@
+/* 
+    SOCIAL ICON LIST
+*/
+
+
+/* 
+    ICONS ONLY
+*/
+ .icon {
+    /*  width: 40px;
+     height: 40px; */
+     fill: currentColor;
+    /* fill: var(--color-text); */
+ }
+ .icon:hover {
+     color: var(--primary);
+     text-decoration: underline solid var(--primary);
+ }
+ .social-icons {
+     display: flex;
+     flex-direction: row;
+     flex-wrap: wrap;
+     overflow: auto;
+     padding-left: 0;
+     list-style: none;
+ }
+     
+ .social-icons > li + li {
+     margin-left: 1.5em;
+    /*  margin-top: 2.5em; */
+ }
+
+ .social-icons  a {
+     display: block;
+     padding: 0.5em;
+ 
+ }
+
+
+ /* 
+    ICONS WITH TEXT (LABELS)
+ */
+ .social-icons-lables > li + li {
+    margin-top: 1.5em;
+}
+.social-icons-lables a {
+    padding: 0.5em;
+}

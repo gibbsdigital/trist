@@ -1,0 +1,123 @@
+
+
+ .pagination ol {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    max-width: 65ch;
+   /*  padding: 0 1.5em; */
+   margin-top: 4em;
+}
+.pagination li {
+    margin-bottom: 2em;
+}
+.pagination a {
+    
+    font-size: 0.75em;
+    color: var(--color-text);
+    margin: 0 0.35em;
+    background-color: var(--color-bg);
+    border: 2px solid var(--gray);
+    border-radius: 50%;
+    border-radius: 38px;
+    text-align: center;
+   /*  box-shadow: 0px 3px 8px #aaa, inset 0px 2px 3px #fff; */
+    /* width: 70px;
+    height: 70px; */
+    padding: 10px 16px;
+    
+    /* border-radius: 35px; */
+    
+    /* line-height: 1.33; */
+    /* color: var(--primary2); */
+    /* text-transform: uppercase; */
+   /*  text-decoration: underline solid var(--primary2); */
+}
+
+/* 
+.pagination a:first-child {
+    margin-right: 1.2em;
+} 
+.pagination a:last-child {
+    
+    margin-left: 1.2em;
+} */
+
+.pagination a[aria-current="page"] {
+    background-color: var(--color-grey);
+    text-decoration: none;
+    
+   
+}
+
+.pagination a:hover {
+    color: var(--primary);
+    border-color: var(--primary);
+    text-decoration: none;
+
+    color: var(--color-bg);
+    background-color: var(--color-text);
+    border: 2px solid var(--color-text);
+    /* text-decoration: underline solid var(--primary2) 3px; */
+}
+
+a .right-arrow2,
+a .right-arrow {
+    display: inline-block;
+    transform: translateX(0px);
+    transition: transform 0.2s;
+}
+
+a:hover .right-arrow2,
+a:hover .right-arrow {
+    transform: translateX(10px);
+}
+
+a .left-arrow {
+    display: inline-block;
+    transform: translateX(0px);
+    transition: transform 0.2s;
+}
+a:hover .left-arrow {
+    transform: translateX(-10px);
+}
+
+.pagination .prev {
+    text-transform: uppercase;
+    margin-right: 1.1em;
+    border-radius: 38px;
+    padding: 0.625em 1em;
+    /* padding: 0.8em 1.4em 0.9em; */
+} 
+.pagination .next {
+    text-transform: uppercase;
+    margin-left: 1.1em;
+    border-radius: 38px;
+    /* padding: 0.625em 1.6em 0.7em; */
+    padding: 0.625em 1.1em;
+}
+/* 
+.pagination .last {
+    margin-left: auto;
+}
+.pagination .first {
+    margin-right: auto;
+} */
+
+
+.isDisabled {
+  cursor: not-allowed;
+  opacity: 0.5;           
+}
+a[aria-disabled="true"] {
+  color: currentColor;
+  display: inline-block;  /* For IE11/ MS Edge bug */
+  pointer-events: none;
+  text-decoration: none;
+}
+
+a[aria-disabled="true"]:focus {
+    
+}

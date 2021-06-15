@@ -1,0 +1,38 @@
+/* 
+<ul class="image-grid">              
+    <li class="image-container">
+        <a href="/gallery/terrace-with-green-plants-on-night-street" aria-label="Terrace with green plants">
+            <picture>
+                <source type="image/webp" srcset="/images/terrace-window-320.webp 320w, /images/terrace-window-480.webp 480w, /images/terrace-window-640.webp 640w, /images/terrace-window-1024.webp 1024w" sizes="(max-width: 480px) 33.3vw, (max-width: 640px) 50vw, 100vw">
+                <img srcset="/images/terrace-window-320.jpeg 320w, /images/terrace-window-480.jpeg 480w, /images/terrace-window-640.jpeg 640w, /images/terrace-window-1024.jpeg 1024w" sizes="(max-width: 480px) 33.3vw, (max-width: 640px) 50vw, 100vw" src="/images/terrace-window-320.jpeg" alt="Terrace outside shop window with green plants and pink tree on night street" loading="lazy" class="grid-image" width="640" height="800">
+            </picture>
+        </a>
+    </li>
+    
+    <li class="image-container">
+        <a href="/gallery/highway-covered-in-water" aria-label="Gallery image Highway covered in water">
+            <picture>
+                <source type="image/webp" srcset="/images/highway-water-320.webp 320w, /images/highway-water-480.webp 480w, /images/highway-water-640.webp 640w, /images/highway-water-1024.webp 1024w" sizes="(max-width: 480px) 33.3vw, (max-width: 640px) 50vw, 100vw">
+                <img srcset="/images/highway-water-320.jpeg 320w, /images/highway-water-480.jpeg 480w, /images/highway-water-640.jpeg 640w, /images/highway-water-1024.jpeg 1024w" sizes="(max-width: 480px) 33.3vw, (max-width: 640px) 50vw, 100vw" src="/images/highway-water-320.jpeg" alt="Skybridge over highway covered in water" loading="lazy" class="grid-image" width="640" height="800">
+            </picture>
+        </a>
+    </li>  
+</ul>
+*/
+
+.image-grid {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(18rem,1fr));
+    gap: 3px;
+    max-width: 1100px;
+    margin: 1rem auto 3rem auto;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+}
+
+.image-grid .image-container {
+    height: 18rem;
+    overflow: hidden;
+    border-radius: 2px;
+}

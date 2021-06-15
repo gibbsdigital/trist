@@ -1,0 +1,25 @@
+// MIXINS
+
+@mixin reset {
+    padding: 0;
+    margin: 0;
+}
+  
+@mixin resetlist {
+    list-style-type: none;
+    @include reset;
+}
+  
+// button-bg
+// use: .btn-grey { @include button-bg(#a9a9a9, #000); }
+@mixin button-bg($bg, $fg) {
+    background-color: $bg;
+    color: $fg;
+    &:hover {
+        background-color: darken($bg, 8%);
+        transition: all 0.2s ease;
+    }
+    &:active {
+        background-color: darken($bg, 30%);
+    }
+}

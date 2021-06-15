@@ -1,0 +1,44 @@
+/* 
+    NAVIGATION
+
+    .site-nav 
+    .footer-nav
+    .breadcrumb
+    
+*/
+
+/* 
+    SITE-NAV
+*/
+.nav-list,
+.site-nav__list {
+    display: flex;
+    flex-wrap: wrap;
+    overflow: auto;
+    padding-left: 0;
+    list-style: none;
+    text-transform: lowercase;
+    font-weight: 700;
+}
+.site-nav__list > li + li {
+    margin-left: 1.5em;
+}
+.site-nav__item {
+    margin-top: 0;
+}
+
+.site-nav__item > a {
+    display: block;
+    padding: 0.5em;
+    color: var(--color-bg);
+    /* color: var(--color-bg); */
+}
+.site-nav__item > a:hover,
+.site-nav__item.active a,
+[aria-current="page"] {
+    text-decoration-line: underline;
+    text-decoration-style: solid;
+    text-decoration-color: var(--primary);
+    text-decoration-thickness: 3px;
+}
+
