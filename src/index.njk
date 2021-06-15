@@ -1,7 +1,138 @@
 ---
-title: Home Page
 layout: layouts/base.njk
-description: Page description goes here.
+description: Personal website for web developer Tristan Gibbs.
+intro:
+    eyebrow: "Tristan Gibbs"
+    main: "Tristan Gibbs"
+    description: "I create performant, accessible, user friendly solutions for the Web."
+    buttonText: "See my work"
+    buttonUrl: "/projects"
+    image: "/images/bg/intro.png"
+    imageAlt: "Computer monitor displaying code"
+featuredProjects:
+    title: "Featured projects"
+    buttonText: "View all projects"
+    buttonUrl: "/projects"
+featuredPosts:
+    title: "Featured posts"
+    buttonText: "View all posts"
+    buttonUrl: "/blog"
+headerColor: bg-dark
 ---
 
-<h1>Hello 11ty</h1>
+
+<header class="page-header {{ headerColor }}">
+    <div class="page-header__inner intro-layout container">
+
+        <h1 id="intro-title" class="title color-white">
+            <div class="eyebrow color-secondary">
+                Hi, I'm Tristan
+            </div>
+            <div>
+                Front end <br>
+                Web developer <br>
+                & designer
+            </div>
+        </h1>
+        
+        <p class="lead color-white">
+            I create performant, accessible,<br> 
+            user-friendly solutions for the Web.
+        </p>
+        <!-- <div class="cta">
+            <a href="{{ intro.buttonUrl }}" class="btn">See my work</a>
+        </div> -->
+        <div class="side-img">
+            {% include "assets/images/monitor-and-tablet.svg" %}
+        </div>
+        <div class="cta">
+            <a href="{{ intro.buttonUrl }}" class="btn">See my work</a>
+        </div>
+    </div>
+    
+    <svg 
+        style="margin-bottom: -10px; fill: var(--color-bg);" 
+        xmlns="http://www.w3.org/2000/svg" 
+        viewBox="0 0 1086 84"
+        aria-hidden="true"
+        focusable="false">
+        <path d="M1086 30.45C728 62.9 354 79 0 0v84h1086z"></path>
+    </svg>
+</header>
+
+
+
+
+
+<section class="section" aria-labelledby="featured-projects" style="background-color: var(--color-bg);">
+    <div class="container">
+        
+        <h2 id="featured-projects" class="section__title">
+            <!-- <svg height="7" width="40"><line x1="0" y1="0" x2="100" y2="0" style="stroke: var(--secondary); stroke-width: 6;"></line></svg> -->
+            Featured projects
+        </h2>
+
+        <h3 class="conic-gradient-border">
+            Conic Gradient Border
+        </h3>
+
+        {%- from "partials/macro.njk" import button -%}
+
+        {{ button({
+        primary: 'Hey',
+        secondary: 'Tristan'
+        }) }}
+    
+        <div class="section__content">
+            {% set projectListItems = collections.featuredProjects %} 
+            {% include "partials/project-list.njk" %}
+        </div>
+
+        <div class="section__footer">
+            <a class="view-all-link button" href="/projects/">
+                View all projects
+                <!-- <svg class="right-arrow" fill="currentColor" aria-hidden="true" focusable="false" width="35" height="10">
+                    <use xlink:href="#right-arrow"></use>
+                </svg> -->
+                <!-- <svg class="right-arrow" fill="#fff" aria-hidden="true" focusable="false" width="25" height="10">
+                    <use xlink:href="#right-arrow"></use>
+                </svg> -->
+            </a>
+        </div>
+
+    </div>
+</section>
+
+
+
+
+<section class="section" aria-labelledby="featured-posts" style="background-color: var(--color-bg);">
+    <div class="container">
+
+        <h2 id="featured-posts" class="section__title">
+            Featured posts
+        </h2>
+
+        <div class="section__content">
+            {% set postListItems = collections.featuredPosts %} 
+            {% include "partials/post-list.njk" %}
+        </div>
+
+        <div class="section__footer">
+            <a class="view-all-link button" href="/blog/">
+                View all posts 
+                <!-- <svg class="right-arrow" fill="currentColor" aria-hidden="true" focusable="false" width="35" height="10">
+                    <use xlink:href="#right-arrow"></use>
+                </svg> -->
+                <!-- <svg class="right-arrow" fill="#fff" aria-hidden="true" focusable="false" width="25" height="10">
+                    <use xlink:href="#right-arrow"></use>
+                </svg> -->
+            </a>
+        </div>
+
+    </div>
+</section>
+
+
+
+{% include "partials/cta.njk" %}
