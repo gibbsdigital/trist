@@ -121,7 +121,10 @@ headerColor: bg-dark
                 title="Follow {{ site.author.name }} on Twitter"
                 class="btn btn--twitter"
             >
-                {% include "assets/images/icons/twitter.svg" %} Share
+                <svg class="icon" aria-hidden="true" focusable="false" width="22" height="22">
+                    <use xlink:href="#icon-twitter"></use>
+                </svg>
+                Share
                 <span class="sr-only">Click to share on Twitter (Opens in new window)</span>
             </a> 
         
@@ -153,7 +156,7 @@ headerColor: bg-dark
                 title="Follow {{ site.author.name }} on Twitter"
                 class="btn btn--twitter"
             >
-                {% include "assets/images/icons/twitter.svg" %} Follow
+
             </a>  -->
 <!-- <article>
     <h2>Filter posts by tag</h2>
