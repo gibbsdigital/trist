@@ -6,8 +6,8 @@ imageAlt: 'image of a computer monitor and tablet'
 date: 2020-04-13
 featured: true
 tags: 
-- Tutorial 
-- Learning
+- tutorial 
+- learning
 ---
 
 Placidis tamen. Amnem unda fores et nocent tellus. Ictu undis offensi nostra nempe dextra quod, illa causa expositum, dat. Cura rapta dum praepositam inhaesit, laeto sceleratus vicina utque. Annos nunc sumitur ignes ac nequit minanti.

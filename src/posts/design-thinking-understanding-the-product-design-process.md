@@ -5,7 +5,7 @@ get lost in a project. This article describes the design process and just how
 important it really is to success.'
 date: 2020-02-22
 featured: true
-tags: 'Design Thinking'
+tags: 'design thinking'
 ---
 
 Lorem markdownum purpura dolorem! Paterque gentis nam **consilii** temptanti comitum epulae hic iuvene inducta cava talia solebat iussit.

@@ -5,7 +5,7 @@ get lost in a project. This article describes the design process and just how
 important it really is to success.'
 image: "/images/projects/pattern-library-hero.png"
 date: 2019-12-04
-tags: ['Tips And Tricks']
+tags: ['tips and tricks']
 ---
 
 Lorem markdownum pectus neque! Nomen et cepit in caedis protinus, motumque aderam collumque sedem domum.

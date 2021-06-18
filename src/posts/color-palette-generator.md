@@ -4,7 +4,7 @@ description: 'To build something without planning first is a common way to
 get lost in a project. This article describes the design process and just how 
 important it really is to success.' 
 date: 2019-11-16
-tags: ['Tools']
+tags: ['tools']
 ---
 
 Lorem markdownum ait. Plaustrum gaudet: similis pulsarunt inmortalis multa cui et huic altera nil; non ingenio tormenta visa.

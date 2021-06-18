@@ -5,9 +5,9 @@ image: "/assets/images/monitor-and-tablet.svg"
 imageAlt: 'image of a computer monitor and tablet'
 date: 2020-01-02
 tags: 
-- Books
-- FrontEnd
-- WebDev
+- books
+- frontend
+- web dev
 ---
 
 

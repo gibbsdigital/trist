@@ -4,7 +4,7 @@ description: 'To build something without planning first is a common way to
 get lost in a project. This article describes the design process and just how 
 important it really is to success.'
 date: 2019-12-21
-tags: 'Design Systems'
+tags: 'design systems'
 ---
 Lorem markdownum, bracchia iuvenis teneo, nec urget, iuvenum nec adusque. Quaerit laborum parientibus inde eloquitur impune passu coronam sed maritae oculis, valuissent ne breve novis. Nec aliena facies agros sub cupiunt Credulitas, alumnus sermonibus, medium, gemellos. Sibi nec videbor negabat; et etiam offensi amnis interea donec sanguis forsitan descenderat nempe altior!
 

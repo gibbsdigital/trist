@@ -5,8 +5,8 @@ image: "/assets/images/intro.png"
 imageAlt: "image of a computer monitor and tablet"
 date: 2021-06-12
 tags: 
-- Eleventy
-- Tutorial
+- eleventy
+- tutorial
 ---
 
 # Starting an Eleventy Project

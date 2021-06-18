@@ -5,7 +5,7 @@ get lost in a project. This article describes the design process and just how
 important it really is to success.'
 date: 2020-02-03
 featured: true
-tags: ['UX', 'Testing']
+tags: ['ux', 'testing']
 ---
 Lorem markdownum tecta: sub candore removete cessit summum [laetitiae](#adigitque-qua)? Per et est micantia nisi fato? Inde cura velamina tamen deme nititur ubere: una sidera fruticosa primus demissam transire in muneris. Inter est repugnat [dempta](#medio-sine-quamvis), sinu, quisque.
 

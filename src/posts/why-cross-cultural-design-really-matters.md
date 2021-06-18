@@ -4,7 +4,7 @@ description: 'To build something without planning first is a common way to
 get lost in a project. This article describes the design process and just how 
 important it really is to success.'
 date: 2020-04-01
-tags: ['Culture', 'Design Thinking']
+tags: ['culture', 'design thinking']
 ---
 
 Lorem markdownum teneri dives, vota inarsit, numina qui mixto. Oculos quo vestro fero inrequieta magni. Ad inania pedes et volucrem, sub ex facti, nec huc curvamina! Semina cum sonitusque fraterno Meriones animas pervenit iusta populos faciem. Colebat et saepe!

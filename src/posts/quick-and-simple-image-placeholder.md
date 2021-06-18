@@ -4,7 +4,7 @@ description: 'To build something without planning first is a common way to
 get lost in a project. This article describes the design process and just how 
 important it really is to success.'
 date: 2019-09-28
-tags: ['Tips And Tricks']
+tags: ['tips and tricks']
 ---
 
 *Lorem markdownum* clamor, ver gemitus numen se dura mortalia inquit, sine telum durata licet teretes delphina, ex! Et genus. Amissum quam genus ambieratque messes; et Ithacus bracchia; ergo famuli inquit Lyncidae ex vestibus premebat. Rogis crimine nunc hae falsaque, dignus.
