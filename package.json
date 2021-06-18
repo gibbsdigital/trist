@@ -40,8 +40,6 @@
     "@11ty/eleventy-img": "^0.9.0",
     "@11ty/eleventy-plugin-rss": "^1.1.1",
     "@11ty/eleventy-plugin-syntaxhighlight": "^3.1.1",
-    "@babel/core": "^7.14.6",
-    "@babel/preset-env": "^7.14.5",
     "autoprefixer": "^10.2.6",
     "cross-env": "^7.0.3",
     "cssnano": "^5.0.6",

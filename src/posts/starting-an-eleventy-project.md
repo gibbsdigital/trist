@@ -471,6 +471,41 @@ site-header.njk, site-footer.njk, post-list.njk, project-list.njk,
 social-icons.njk, pagination-nav.njk, head-meta.njk, tag-list.njk, ect.
 
 
+17. Add Rollup.js for js bundling.
+
+    `npm i rollup rollup-plugin-terser --save-dev`
+
+    Then add **rollup.config.js** file. Then add:
+
+```js
+// rollup.config.js
+// https://www.sitepoint.com/rollup-javascript-bundler-introduction/
+import {terser} from 'rollup-plugin-terser';
+const sourcemap = process.env.DEV ? true : false;
+
+export default {
+    input: 'src/assets/js/main.js',
+    output: {
+        file: 'dist/assets/js/bundle.min.js',
+        format: 'iife',
+        sourcemap,
+        plugins: [terser()],
+    },
+    watch: {
+        clearScreen: false
+    },
+};
+```
+
+In npm scripts add:
+
+    "prod:js": "rollup --config",
+    "dev:js": "rollup --watch --config --environment DEV:true",
+
+18. 
+
+
+
 
 10.
 
