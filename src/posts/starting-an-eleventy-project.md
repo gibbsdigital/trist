@@ -497,6 +497,8 @@ export default {
 };
 ```
 
+Make sure the main js file in **src/assets/js/** is named **main.js**
+
 In npm scripts add:
 
     "prod:js": "rollup --config",
