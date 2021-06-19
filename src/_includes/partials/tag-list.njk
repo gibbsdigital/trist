@@ -1,20 +1,10 @@
 
-<style>
-    .tag-list {
-        max-width: 55ch;
-    }
-    .tag-list__item {
-        margin-left: 0.8em;
-    }
-</style>
-
-
 <ul class="tag-list">
     {% for tag in collections.tagList %}
 
         <li class="tag-list__item">
             <a href="/blog/tag/{{ tag | slug }}#tag-list" class="tag-list__link is-dark" rel="tag">
-                #{{ tag }} <!-- ({{ collections[tag].length }}) --> </a>
+                {{ tag }} <!-- ({{ collections[tag].length }}) --> </a>
         </li>
 
     {% endfor %}
