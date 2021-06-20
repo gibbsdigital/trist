@@ -5,12 +5,10 @@ const pluginSyntaxHighlight = require('@11ty/eleventy-plugin-syntaxhighlight');
 const markdownIt = require("markdown-it");
 const markdownItAttrs = require('markdown-it-attrs');
 const filters = require('./utils/filters.js');
-//const transforms = require('./utils/transforms.js');
+const transforms = require('./utils/transforms.js');
 const shortcodes = require('./utils/shortcodes.js');
 
 const IS_PRODUCTION = process.env.ELEVENTY_ENV === 'production'
-
-
 
 
 
@@ -35,14 +33,11 @@ module.exports = function (eleventyConfig) {
     eleventyConfig.addFilter("slice", filters.slice );
 
 
-    /**
-     * TODO: set up minifyHTML for use with svg-defs-sprite embed. Fix sprite, up arrow
-     */
+    
     // TRANSFORMS
-    /* eleventyConfig.addTransform('minifyCSS', transforms.minifyCSS );
     eleventyConfig.addTransform('minifyHTML', transforms.minifyHTML );
-    eleventyConfig.addTransform('minifyJS', transforms.minifyJS );
- */
+   
+
 
     // SHORTCODES
     eleventyConfig.addShortcode("year", shortcodes.year );
@@ -129,4 +124,4 @@ module.exports = function (eleventyConfig) {
         },
     };
 
-}; // END ELEVENTY eleventyConfig
+}; // END ELEVENTY CONFIG
