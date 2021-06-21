@@ -118,7 +118,7 @@ headerColor: bg-dark
                 href="https://twitter.com/share?text={{ shareText }}{{ title }}&amp;url={{ site.url }}{{ page.url }}"
                 target="_blank"
                 rel="noopener noreferrer"
-                title="Follow {{ site.author.name }} on Twitter"
+                title="Follow {{ author.name }} on Twitter"
                 class="btn btn--twitter"
             >
                 <svg class="icon" aria-hidden="true" focusable="false" width="22" height="22">
@@ -128,7 +128,7 @@ headerColor: bg-dark
                 <span class="sr-only">Click to share on Twitter (Opens in new window)</span>
             </a> 
         
-            <a href="/feed.xml" class="icon-button" title="RSS blog feed"> 
+            <a href="{{ site.feedUrl }}" class="icon-button" title="RSS blog feed"> 
                 <svg class="icon icon--feed" focusable="false" aria-hidden="true" width="20" height="20" style="fill: currentColor;">
                     <use xlink:href="#icon-rss"></use>
                 </svg>
@@ -150,10 +150,10 @@ headerColor: bg-dark
 
 <!-- <a
                 
-                href="https://twitter.com/intent/follow?screen_name={{ site.author.social.twitter.name }}"
+                href="https://twitter.com/intent/follow?screen_name={{author.social.twitter.name }}"
                 target="_blank"
                 rel="noopener noreferrer"
-                title="Follow {{ site.author.name }} on Twitter"
+                title="Follow {{ author.name }} on Twitter"
                 class="btn btn--twitter"
             >
 

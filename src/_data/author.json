@@ -1,0 +1,28 @@
+{
+    "name": "Tristan Gibbs",
+    "about": "Tristan Gibbs is a Web Developer and Designer who lives in California, USA. His specialty is writing inclusive, performant, websites using semantic HTML, modern CSS, and the JAMstack.",
+    "email": "tristan@trist.dev",
+    "image": "/assets/images/me-original.jpg",
+    "social": {
+        "twitter": {
+            "name": "gibbs_digital",
+            "url": "https://twitter.com/gibbs_digital"
+        },
+        "github": {
+            "name": "gibbsdigital",
+            "url": "https://github.com/gibbsdigital"
+        },
+        "linkedin": {
+            "name": "tristanmgibbs",
+            "url": "https://www.linkedin.com/in/tristanmgibbs/"
+        },
+        "codepen": {
+            "name": "gibbs_digital",
+            "url": "https://codepen.io/gibbs_digital"
+        },
+        "devto": {
+            "name": "gibbs_digital",
+            "url": "https://dev.to/gibbs_digital"
+        }
+    }
+}

@@ -18,11 +18,9 @@ headerColor: "bg-dark"
     <div class="container">
 
         <h2 id="articles" class="section__title">Articles</h2>
-        {% if meta.env == 'prod' %}
-        <h3>Production Env</h3>
-        {% endif %}
-        {% if meta.env == 'dev' %}
-        <h3>development Env</h3>
+        
+        {% if site.env == 'development' %}
+        <h3 class="conic-gradient-border">Development Env</h3>
         {% endif %}
 
         {% set postListItems = pagination.items %} 
@@ -50,7 +48,7 @@ headerColor: "bg-dark"
 
 
 <div class="rss-feed container">
-    <a href="/feed.xml" class="" title="RSS Feed"> 
+    <a href="{{ site.feedUrl }}" class="" title="RSS Feed"> 
         <svg class="icon icon--feed" role="img" aria-hidden="true" width="20" height="20" style="fill: currentColor;">
             <use xlink:href="#icon-rss"></use>
         </svg>
