@@ -76,6 +76,7 @@ overflow: hidden; */
     PAGE-HEADER
 */
 .page-header {
+    background-color: var(--color-text-offset);
     position: relative;
     padding: 3em 0 0;
     margin-bottom: 2em;
@@ -140,6 +141,7 @@ overflow: hidden; */
 
 .title {
     font-size: 4em;
+    color: var(--color-bg);
 }
 /* .title::after {
     content: "";
