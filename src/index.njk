@@ -40,23 +40,24 @@ headerColor: bg-dark
             user-friendly solutions for the Web.
         </p>
         <div class="side-img">
-            <svg class="icon icon-monitor-and-tablet" aria-hidden="true" focusable="false" width="100%" height="100%">
+            {% include "svg/monitor-and-tablet.svg" %}
+            <!-- <svg class="icon icon-monitor-and-tablet" aria-hidden="true" focusable="false" width="100%" height="100%">
                 <use xlink:href="#icon-monitor-and-tablet"></use>
-            </svg>
+            </svg> -->
         </div>
         <div class="cta">
             <a href="{{ intro.buttonUrl }}" class="btn">See my work</a>
         </div>
     </div>
-    
-    <svg 
+    {% include "svg/wave.svg" %}
+    <!-- <svg 
         style="margin-bottom: -10px; fill: var(--color-bg);" 
         xmlns="http://www.w3.org/2000/svg" 
         viewBox="0 0 1086 84"
         aria-hidden="true"
         focusable="false">
         <path d="M1086 30.45C728 62.9 354 79 0 0v84h1086z"></path>
-    </svg>
+    </svg> -->
 </header>
 
 
