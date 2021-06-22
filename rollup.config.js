@@ -5,7 +5,7 @@ const sourcemap = process.env.DEV ? true : false;
 export default {
     input: 'src/assets/js/main.js',
     output: {
-        file: 'dist/assets/js/bundle.min.js',
+        file: 'dist/assets/js/main.js',
         format: 'iife',
         sourcemap,
         plugins: [terser()],
