@@ -32,8 +32,8 @@ p {
     max-width: 65ch;
 }
 
-/* 
-    HEADINGS
+/**
+* HEADINGS
 */
 h1,
 h2,
@@ -235,8 +235,6 @@ a {
     color: inherit;
     color: var(--color-text);
     color: var(--accent-light);
-   /*  color: var(--primary2); */
-    /* color: var(--color-text); */
     font-family: var(--font-family-display);
     font-weight: 600;
     text-decoration: none;
@@ -245,25 +243,15 @@ a {
 a:hover,
 a:focus {
     color: var(--primary);
-   /*  color: var(--accent-light); */
-    /* text-decoration-line: underline;
-    text-decoration-style: solid;
-    text-decoration-color: var(--color-links);
-    text-decoration-thickness: 3px; */
     text-decoration: underline solid var(--primary) 2px;
-    /* text-decoration: underline solid var(--accent-light) 3px; */
 }
 
 p a {
     font-family: var(--font-primary);
     color: var(--color-links);
-    color: var(--accent-light);
-   /*  color: var(--primary2); */
     text-decoration-line: underline;
     text-decoration-style: solid;
     text-decoration-color: var(--color-links);
-    text-decoration-color: var(--accent-light);
-    /* text-decoration-color: var(--primary2); */
     text-decoration-thickness: 2px;
     display: inline-block;
     /* color: inherit;
@@ -330,10 +318,9 @@ https://gerardkcohen.me/writing/2017/voiceover-list-style-type.html */
 
 
 
-/* 
-    LAYOUT
+/**
+* LAYOUT
 */
-
 .container,
 .wrapper {
     /* width: 90%; */
@@ -348,21 +335,18 @@ https://gerardkcohen.me/writing/2017/voiceover-list-style-type.html */
 
 .section {
    padding: 6em 0;
-    /* padding: 3em 0; */
 }
-
 .section__title {
     /* margin-bottom: 1em; */
 }
-
 .section__footer {
     margin-top: 5em;
 }
 
 
 
-/*
-    GRID LAYOUTS
+/**
+* GRID LAYOUTS
 */
 .section-layout {
     display: grid;

@@ -8,8 +8,6 @@ const Image = require("@11ty/eleventy-img");
  * Perform build-time image transformations for both vector 
  * and raster images. Output multiple sizes, multiple formats, 
  * cache remote images locally. Uses Sharp image processor.
- * https://www.11ty.dev/docs/plugins/image/
- * https://www.zachleat.com/web/eleventy-image/
  * @param src file path to the image
  * @param alt alt text for the image
  * @param sizes the sizes for the sizes attribute
