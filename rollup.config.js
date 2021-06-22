@@ -6,7 +6,8 @@ export default {
     input: 'src/assets/js/main.js',
     output: {
         file: 'dist/assets/js/main.js',
-        format: 'iife',
+        //format: 'iife',
+        format: 'es',
         sourcemap,
         plugins: [terser()],
     },
