@@ -1,7 +1,7 @@
 ---
 title: 'To-Do Web Application'
 description: 'A user can add a task, mark a task as completed, and delete an already added task.'
-image: '/assets/images/projects/to-do-hero.png'
+image: /assets/images/projects/to-do-hero.png
 imageAlt: 'A screen shot of my to do app.'
 displayOrder: 4
 featured: false

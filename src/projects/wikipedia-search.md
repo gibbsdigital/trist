@@ -1,7 +1,7 @@
 ---
 title: 'Wikipedia Search Widget'
 description: 'A web application that searches Wikipedia and displays the results.'
-image: '/assets/images/projects/wikipedia-search-hero.jpg'
+image: /assets/images/projects/wikipedia-search-hero.jpg
 imageAlt: 'A screen shot of the Wikipedia Search Widget.'
 displayOrder: 6
 featured: false

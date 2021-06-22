@@ -1,7 +1,7 @@
 ---
 title: 'Quote Generator'
 description: 'An application that fetches a new random quote each time a button is pressed and displays it in the browser.'
-image: '/assets/images/projects/quote-generator-hero.png'
+image: /assets/images/projects/quote-generator-hero.png
 imageAlt: 'A screen shot of the Gibbs Digital Book Store Project.'
 displayOrder: 5
 featured: false

@@ -2,7 +2,7 @@
 title: 'Book Store'
 description: 'An E-Commerce Book Selling App. This app includes a shopping cart, 
 user accounts, authentication, and stripe payment integration'
-image: '/assets/images/projects/book-store-hero.png'
+image: /assets/images/projects/book-store-hero.png
 imageAlt: 'A screen shot of the Gibbs Digital Book Store Project.'
 displayOrder: 2
 featured: true
