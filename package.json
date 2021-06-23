@@ -5,6 +5,8 @@
   "scripts": {
     "build": "run-s clean prod:css prod:js build:hash prod:eleventy",
     "build:sass": "sass --no-source-map src/assets/sass/main.scss dist/assets/css/main.css",
+    "build:icons": "imagemin src/assets/images/icons/* --out-dir=src/_includes/icons --plugin=svgo",
+    "build:svg": "imagemin src/assets/images/svg/* --out-dir=src/_includes/svg --plugin=svgo",
     "build:postcss": "postcss dist/assets/css/main.css --no-map -r",
     "build:hash": "node buildHash.js",
     "clean": "rm -rf dist",
@@ -12,9 +14,11 @@
     "start": "npm run dev",
     "dev": "npm-run-all clean clean:hash --parallel dev:*",
     "dev:sass": "sass --watch --style=expanded src/assets/sass:dist/assets/css",
+    "dev:img": "run-s build:icons build:svg",
     "dev:js": "rollup --watch --config --environment DEV:true",
     "dev:eleventy": "cross-env ELEVENTY_ENV=development eleventy --serve",
     "prod:css": "run-s build:sass build:postcss",
+    "prod:img": "run-s build:icons build:svg",
     "prod:js": "rollup --config",
     "prod:eleventy": "cross-env ELEVENTY_ENV=production eleventy"
   },
@@ -44,6 +48,7 @@
     "cssnano": "^5.0.6",
     "dotenv": "^10.0.0",
     "html-minifier": "^4.0.0",
+    "imagemin-cli": "^6.0.0",
     "markdown-it": "^12.0.6",
     "markdown-it-attrs": "^4.0.0",
     "md5": "^2.3.0",
