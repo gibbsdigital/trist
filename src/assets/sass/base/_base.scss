@@ -47,8 +47,6 @@ h5 {
     font-weight: 500;
     line-height: 1.1;
     max-width: 40ch;
-   /*  opacity: 0.825; */
-  /* text-transform: lowercase; */
    color: var(--color-text);
 }
 
@@ -62,9 +60,7 @@ h1 {
 h2 {
     font-size: 2em;
     position: relative;
-   /*  width: fit-content; */
     z-index: 1;
-   /*  opacity: 0.9; */
 }
 
 h3 {
@@ -97,7 +93,7 @@ h5 {
 }
 
 
-
+/* TITLE, SECTION-TITLE */
 .section__title {
     font-size: 1.5rem;
     font-weight: 500;
@@ -119,11 +115,10 @@ h5 {
     
     
 }
-
-
 /* 
-    GREAT SECTION TITLE
-    WITH LINES ON EACH SIDE
+    GREAT TITLE HEADINGS
+    WITH DIFFERENT EFFECTS LIKE:
+    (SIDE-LINES, HIGHLIGHTS, UNDERLINES)
 */
 .title-sidelines {
     text-align: center;
@@ -147,9 +142,6 @@ h5 {
     margin: 0 0 0 1em;
 }
 
-
-
-
 .sidelines {
     display: grid;
     grid-template-columns: clamp(1em, 8vw, 6ch) 1fr clamp(1em, 8vw, 6ch);
@@ -157,7 +149,6 @@ h5 {
     align-items: center;
     text-align: center;
   }
-  
   .sidelines::before,
   .sidelines::after {
     content: "";
@@ -197,7 +188,6 @@ h2::after {
     z-index: -1; */
     background-color: var(--secondary);
 }
-
 .highlight::after {
     content: '';
     width: 100%;
@@ -213,7 +203,6 @@ h2::after {
     z-index: -1;
 
 }
-
 .underline::after {
     content: "";
     display: block;
@@ -225,16 +214,22 @@ h2::after {
 } 
 
 
-/* 
-    LINKS
 
-    order => a:link, a:visited, a:hover, a:active 
+
+/* 
+    ANCHOR LINKS
+
+    LINK ORDER: 
+        a:link, 
+        a:visited, 
+        a:hover, 
+        a:active 
+        
     (see pg 16 CSS in Depth)
  */
 a {
     color: inherit;
     color: var(--color-text);
-    color: var(--accent-light);
     font-family: var(--font-family-display);
     font-weight: 600;
     text-decoration: none;
@@ -267,6 +262,7 @@ p a:focus {
 
 
 
+/* SCREEN READER ONLY TEXT AND FOCUS STYLES */
 .sr-only:not(:focus):not(:active),
 .sr-skip-link:not(:focus),
 .visually-hidden {
@@ -293,7 +289,7 @@ p a:focus {
 
 
 /* 
-    LISTS
+  LISTS
 */
 ul,
 ol {
@@ -333,27 +329,20 @@ https://gerardkcohen.me/writing/2017/voiceover-list-style-type.html */
 
 
 
-.section {
-   padding: 6em 0;
-}
-.section__title {
-    /* margin-bottom: 1em; */
-}
-.section__footer {
-    margin-top: 5em;
-}
-
-
-
 /**
-* GRID LAYOUTS
+*   SECTION LAYOUTS
 */
+/*  SECTION GRID LAYOUT */
 .section-layout {
     display: grid;
     grid-template-rows: repeat(3, auto);
     grid-template-columns: repeat(12, 1fr);
     gap: 1.33rem;
 }
+.section {
+    padding: 6em 0;
+ }
+ 
 .section__title {
     grid-row: 1; /* occupy row 1 */
     grid-column: 1 / 9; /* span columns 1 to 8 */
@@ -366,30 +355,29 @@ https://gerardkcohen.me/writing/2017/voiceover-list-style-type.html */
     grid-row: 3;
     grid-column: 4 / 12;
 }
-
-/* .cta-container {
-    display: grid;
-    grid-template-columns: repeat(12, 1fr);
-    grid-template-rows: repeat(3, auto);
-    gap: 1.33rem;
+.section__footer {
+    margin-top: 5em;
 }
-#cta-heading {
-    grid-column: 1/9;
-    grid-row: 1;
+
+
+
+
+/* AMAZING COLOR GRADIENT SQUARE BORDER */
+.conic-gradient-border {
+    padding: 1em;
+    border: 25px solid;
+    border-image-slice: 1;
+    border-image-source: conic-gradient(
+        hsl(100 100% 60%),
+        hsl(200 100% 60%),
+        hsl(100 100% 60%)
+    );
 }
-.cta-text {
-    grid-column: 4/12;
-    grid-row: 2;
-}
-.cta-footer {
-    grid-column: 3/12;
-    grid-row: 3;
-} */
 
 
 
 
-
+/* SOME UTILITY CLASSES */
 .color-primary {
     color: var(--primary);
 }
@@ -427,17 +415,12 @@ https://gerardkcohen.me/writing/2017/voiceover-list-style-type.html */
 .bg-dark .title {
     color: white !important;
 }
-
-
-
-
-.conic-gradient-border {
-    padding: 1em;
-    border: 25px solid;
-    border-image-slice: 1;
-    border-image-source: conic-gradient(
-        hsl(100 100% 60%),
-        hsl(200 100% 60%),
-        hsl(100 100% 60%)
-    );
+.color-header {
+    background-color:var(--color-header);
+    text-shadow: 0.2em 0.2em 0.9em #000;
+    color: white;
 }
+.color-header .title {
+    color: white !important;
+}
+

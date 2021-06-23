@@ -1,19 +1,19 @@
-// MAIN STYLESHEET STYLES.SCSS
+// MAIN STYLESHEET MAIN.SCSS
 
 
-// VENDORS - third party partials
-@import 'vendors/prism-atom-dark';
+// SETTINGS - CONFIG
+@import 'settings/variables';
+@import 'settings/mixins';
+@import 'settings/fonts';
 
 
-// BASE - global scope partials
-@import 'base/variables';
-@import 'base/mixins';
-@import 'base/fonts';
-@import 'base/reset';
+// BASE - GLOBAL SCOPE PARTIALS
+@import 'base/normalize';
+@import 'base/prism-atom-dark';
 @import 'base/base';
 
 
-// COMPONENTS - local scope partials
+// COMPONENTS - LOCAL SCOPE PARTIALS
 @import 'components/header';
 @import 'components/footer';
 @import 'components/navigation';
@@ -21,7 +21,7 @@
 @import 'components/button';
 @import 'components/card';
 @import 'components/form';
-@import 'components/tags';
+@import 'components/tag-list';
 @import 'components/social-icons';
 @import 'components/post-list';
 @import 'components/post';

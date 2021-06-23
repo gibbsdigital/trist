@@ -44,7 +44,7 @@
     display: block;
     width: 100%;
     background-color: var(--color-bg);
-    border: 1px solid var(--color-text-offset);
+    border: 1px solid var(--color-header);
     font-size: 1rem;
     font-weight: 500;
     padding: .5rem 1rem;
@@ -69,27 +69,27 @@
 }
 
 .form ::-webkit-input-placeholder {
-    color: var(--color-text-offset)
+    color: var(--color-header)
 }
 
 .form ::-moz-placeholder {
-    color: var(--color-text-offset)
+    color: var(--color-header)
 }
 
 .form :-ms-input-placeholder {
-    color: var(--color-text-offset)
+    color: var(--color-header)
 }
 
 .form ::-ms-input-placeholder {
-    color: var(--color-text-offset)
+    color: var(--color-header)
 }
 
 .form ::placeholder {
-    color: var(--color-text-offset)
+    color: var(--color-header)
 }
 
 .form ::-moz-placeholder {
-    color: var(--color-text-offset)
+    color: var(--color-header)
 }
 
 .form--signup .form__actions {

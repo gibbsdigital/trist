@@ -1,0 +1,38 @@
+
+:root {
+
+    /* Theme Colors - checkout https://www.w3schools.com/colors/colors_analogous.asp*/
+    --primary: #4b6cc1; 
+    --primary-hover: hsl(var(--primary), 100%, 39%);
+    --accent-one: #4BA7C1;
+    --accent-two: #654BC1;
+    --color-header: #222725;
+    --color-bg: #fffffe;
+    --color-text: #364152;
+    --color-text-hover: hsl(var(--color-text), 100%, 39%);
+    --color-links: #1a4b95;
+    --color-links-hover: hsl(var(--color-links), 100%, 39%);
+    --color-gray: #6b7280;
+    --color-light-gray: #D2D7DF;
+    --dark: #2e4057;
+    --light: #f9f9f9;
+
+    /* Box Shadows */
+    --shadow-01: 0px 2px 4px rgba(37, 37, 37, 0.1);
+    --shadow-02: 0px 4px 8px rgba(37, 37, 37, 0.1);
+    --shadow-03: 0px 8px 16px rgba(37, 37, 37, 0.1);
+    --shadow-04: 0px 16px 24px rgba(37, 37, 37, 0.1);
+    --shadow-05: 0px 24px 32px rgba(37, 37, 37, 0.1);
+
+    --font-primary: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", 
+    Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", 
+    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+
+    --font-family-display: 'Barlow', Arial, sans-serif;
+
+}
+/* 
+Setting CSS Variables with JS:
+element.style.setProperty(’--color’, ’green’);
+element.style = "--color: green";   (sets the variable inline).
+*/

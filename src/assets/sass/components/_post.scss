@@ -86,8 +86,8 @@
     justify-content: space-between;
     margin-top: 5em;
     padding: 1em 0;
-    border-top: 1px solid var(--color-grey);
-    border-bottom: 1px solid var(--color-grey);
+    border-top: 1px solid var(--color-light-gray);
+    border-bottom: 1px solid var(--color-light-gray);
     font-size: 0.9em;
 }
 .prev-post,
@@ -102,8 +102,8 @@
     display: flex;
     justify-content: flex-start;
     padding: 3em 0;
-   /*  border-top: 1px solid var(--color-grey);
-    border-bottom: 1px solid var(--color-grey); */
+   /*  border-top: 1px solid var(--color-light-gray);
+    border-bottom: 1px solid var(--color-light-gray); */
 }
 .icon-button {
 padding: 0.8em 1.2em;

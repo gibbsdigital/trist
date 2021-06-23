@@ -1,10 +1,8 @@
 /**
 * HEADER
+* Contains:
+* [ .site-header, .page-header, .hero, .intro ]
 *
-* .site-header
-* .page-header
-* .hero
-* .intro
 */
 
 
@@ -32,16 +30,15 @@
     font-size: 1.8rem;
 }
 .site-header__brand svg {
-    color: var(--color-grey);
+    color: var(--color-light-gray);
     width: 28px;
 }
-
 
 
 .wave svg {
     position:absolute;
     z-index: -1;
-    fill: var(--color-text-offset);
+    fill: var(--color-header);
     /* fill: currentColor; */
     /* fill="#222725" */
    
@@ -60,7 +57,7 @@
 * PAGE-HEADER
 */
 .page-header {
-    background-color: var(--color-text-offset);
+    background-color: var(--color-header);
     position: relative;
     padding: 3em 0 0;
     margin-bottom: 2em;
@@ -175,7 +172,7 @@
 }
 .lead {
     grid-area: lead;
-    color: var(--color-grey);
+    color: var(--color-light-gray);
 }
 .cta {
     grid-area: cta;
@@ -184,6 +181,6 @@
 .side-img {
     grid-area: side-img;
     max-width: 20em;
-    color: var(--color-grey);
+    color: var(--color-light-gray);
     margin: 2em 0 4em;
 }
