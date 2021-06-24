@@ -1,31 +1,29 @@
 // SHORTCODES
 const Image = require("@11ty/eleventy-img");
-
-
-
 /**
- * * Eleventy Image
- * Perform build-time image transformations for both vector 
- * and raster images. Output multiple sizes, multiple formats, 
- * cache remote images locally. Uses Sharp image processor.
+ * ELEVENTY IMAGE PLUGIN - Responsive image generator
+ * Outputs multiple sizes, formats, levels of optimization.
  * @param src file path to the image
  * @param alt alt text for the image
- * @param sizes the sizes for the sizes attribute
+ * @param sizes optional sizes list
+ * @param className optional class name
  */
-const eleventyImage =  async function imageShortcode(src, alt, sizes) {
+const eleventyImage =  async function imageShortcode(src, alt, sizes, className ) {
     let srcPath = "./src" + src;
-
-    // Image(src, options) returns the generated images in a 
-    // 'meta-data' object, which is then passed to Image.generateHTML()
+    let formats = (process.env.ELEVENTY_ENV === 'development') 
+            ? ["avif", "webp", "jpeg"] 
+            : ["jpeg"]; 
+    
     let images = await Image(srcPath, {
-        widths: [320, 640, 1024],
-        formats: ["avif", "webp", "jpeg"],
+        formats,
+        widths: [320, 480, 640, 1024],
         urlPath: "/assets/images/",
         outputDir: "./dist/assets/images/"
     });
     let imageAttributes = {
         alt,
-        sizes: sizes || "(min-width: 450px) 33.3vw, 100vw",
+        sizes: sizes || "(min-width: 640px) 50vw, (min-width: 998px) 33.3vw, 100vw",
+        class: className || "res-Img",
         loading: "lazy",
         decoding: "async",
     };
@@ -36,6 +34,11 @@ const eleventyImage =  async function imageShortcode(src, alt, sizes) {
 
 
 
+/**
+ * * Icon - SVG Icon shortcode
+ * @param {name} name 
+ * @returns <svg> element icon with all the right attributes
+ */
 const icon = (name) => {
     return `<svg class="icon icon-${name}" role="img" aria-hidden="true" width="24" height="24">
                 <use xlink:href="#icon-${name}"></use>
@@ -60,7 +63,21 @@ module.exports = {
 
 
 /* 
-const eleventyImage =  async function imageShortcode(src, alt, sizes) {
+/**
+ * * Eleventy Image
+ * Perform build-time image transformations for both vector 
+ * and raster images. Output multiple sizes, multiple formats, 
+ * cache remote images locally. Uses Sharp image processor.
+ * 
+ *  Image(src, options) returns the generated images in a 
+ * object, which is then passed to Image.generateHTML(images, imageAttributes)
+ * 
+ * @param src file path to the image
+ * @param alt alt text for the image
+ * @param sizes the sizes for the sizes attribute
+ */
+
+/* const eleventyImage =  async function imageShortcode(src, alt, sizes) {
     let options = {
         widths: [320, 640, 1024],
         formats: ["jpeg"],
@@ -94,3 +111,4 @@ jpeg: [
     }
   ]
  */
+ 

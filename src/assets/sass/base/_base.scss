@@ -229,7 +229,7 @@ h2::after {
  */
 a {
     color: inherit;
-    color: var(--color-text);
+    color: var(--color-links);
     font-family: var(--font-family-display);
     font-weight: 600;
     text-decoration: none;
@@ -237,8 +237,8 @@ a {
 }
 a:hover,
 a:focus {
-    color: var(--primary);
-    text-decoration: underline solid var(--primary) 2px;
+    color: var(--color-links-hover);
+    text-decoration: underline solid var(--color-links-hover) 2px;
 }
 
 p a {
@@ -255,10 +255,54 @@ p a {
 }
 p a:hover,
 p a:focus {
-    color: var(--primary);
-    text-decoration-color: var(--primary);
+    color: var(--color-links-hover);
+    text-decoration: underline solid var(--color-links-hover) 2px;
     /* border-color: #00b3e5; */
 }
+
+/* 
+LINK HOVER TRANSITION FROM LEFT TO RIGHT
+
+<a class="hov-effect" href="#">
+    <span data-content="Link Hover" aria-hidden="true"></span>
+    Link Hover
+</a> */
+  a.hov-effect {
+    position: relative;
+    display: inline-block;
+    font-weight: 700;
+    text-decoration: underline;
+    // text-decoration: none;
+    vertical-align: bottom;
+    overflow: hidden;
+    span {
+      position: absolute;
+      vertical-align: bottom;
+      top: 0;
+      left: 0;
+      overflow: hidden;
+      transform: translateX(-100%);
+      transition: transform 275ms ease;
+      &::before {
+        display: inline-block;
+        content: attr(data-content);
+        //color to be filled
+        color: midnightblue;
+        transform: translateX(100%);
+        transition: transform 275ms ease;
+        text-decoration: underline;
+      }
+    }
+    &:hover {
+      span {
+        transform: translateX(0);
+        &::before {
+          transform: translateX(0);
+        }
+      }
+    }
+  }
+
 
 
 
