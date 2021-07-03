@@ -69,22 +69,23 @@ figcaption {
  .project {
     margin: 0;
 }
-img {
-   max-width: 100%;
- min-height: 100%;
- width: auto;
- height: auto;
- object-fit: cover;
- object-position: 50% 50%;
- box-shadow: 0 1px 5px rgba(0,0,0,.05), 0 5px 30px rgba(0,0,0,.2);
-   border-radius: 3px;
-}
+
 .project + .project  {
    margin-top: 8.77rem;
 }
 .project__media {
    flex: 1.5;
 }
+.project__media img {
+    max-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    object-fit: cover;
+    object-position: 50% 50%;
+    box-shadow: 0 1px 5px rgba(0,0,0,.05), 0 5px 30px rgba(0,0,0,.2);
+    border-radius: 3px;
+ }
 .project__content {
    display: flex;
    flex-direction: column;

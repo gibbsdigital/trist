@@ -14,11 +14,9 @@
     "start": "npm run dev",
     "dev": "npm-run-all clean clean:hash --parallel dev:*",
     "dev:sass": "sass --watch --style=expanded src/assets/sass:dist/assets/css",
-    "dev:img": "run-s build:icons build:svg",
     "dev:js": "rollup --watch --config --environment DEV:true",
     "dev:eleventy": "cross-env ELEVENTY_ENV=development eleventy --serve",
     "prod:css": "run-s build:sass build:postcss",
-    "prod:img": "run-s build:icons build:svg",
     "prod:js": "rollup --config",
     "prod:eleventy": "cross-env ELEVENTY_ENV=production eleventy"
   },

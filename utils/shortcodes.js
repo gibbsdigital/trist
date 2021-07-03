@@ -10,7 +10,7 @@ const Image = require("@11ty/eleventy-img");
  */
 const eleventyImage =  async function imageShortcode(src, alt, sizes, className ) {
     let srcPath = "./src" + src;
-    let formats = (process.env.ELEVENTY_ENV === 'development') 
+    let formats = (process.env.ELEVENTY_ENV === 'production') 
             ? ["avif", "webp", "jpeg"] 
             : ["jpeg"]; 
     
