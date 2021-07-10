@@ -55,7 +55,9 @@ a .right-arrow {
 }
 
 a:hover .right-arrow2,
-a:hover .right-arrow {
+a:hover .right-arrow,
+a:focus .right-arrow2,
+a:focus .right-arrow {
     transform: translateX(10px);
 }
 

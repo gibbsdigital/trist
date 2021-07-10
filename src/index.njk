@@ -26,13 +26,17 @@ headerColor: bg-dark
 
         <h1 id="intro-title" class="title color-white">
             <div class="eyebrow color-secondary">
-                Hi, I'm Tristan
+                Hi, I'm<!--Tristan -->
             </div>
             <div>
+                Tristan <br>
+                Gibbs
+            </div>
+            <!-- <div>
                 Front end <br>
                 Web developer <br>
                 & designer
-            </div>
+            </div> -->
         </h1>
         
         <p class="lead color-white">
@@ -46,7 +50,7 @@ headerColor: bg-dark
             </svg> -->
         </div>
         <div class="cta">
-            <a href="{{ intro.buttonUrl }}" class="btn">See my work</a>
+            <a href="{{ intro.buttonUrl }}" class="btn btn--primary">See my work</a>
         </div>
     </div>
     {% include "svg/wave.svg" %}
@@ -57,9 +61,9 @@ headerColor: bg-dark
 <section class="section" aria-labelledby="featured-projects" style="background-color: var(--color-bg);">
     <div class="container">
 
-        <h2 class="conic-gradient-border">
+       <!--  <h2 class="conic-gradient-border">
             This site is under active development
-        </h2>
+        </h2> -->
         
         <h2 id="featured-projects" class="h-display-box">
             Featured projects
@@ -71,8 +75,11 @@ headerColor: bg-dark
         </div>
 
         <div class="section__footer">
-            <a class="view-all-link button" href="/projects/">
+            <a class="view-all-link" href="/projects/">
                 View all projects
+                <svg class="right-arrow" fill="currentColor" aria-hidden="true" focusable="false" width="35" height="10">
+                    <use xlink:href="#right-arrow"></use>
+                </svg>
             </a>
         </div>
 
@@ -95,11 +102,11 @@ headerColor: bg-dark
         </div>
 
         <div class="section__footer">
-            <a class="view-all-link button" href="/blog/">
+            <a class="view-all-link " href="/blog/">
                 View all posts 
-                <!-- <svg class="right-arrow" fill="currentColor" aria-hidden="true" focusable="false" width="35" height="10">
+                <svg class="right-arrow" fill="currentColor" aria-hidden="true" focusable="false" width="35" height="10">
                     <use xlink:href="#right-arrow"></use>
-                </svg> -->
+                </svg>
             </a>
         </div>
 

@@ -97,7 +97,8 @@ h5 {
 .h-display-box {
     width: fit-content;
     background-color: var(--secondary);
-    background-color: var(--color-links);
+    background-color: var(--color-links-hover);
+    background-color: var(--primary);
     color: var(--color-bg);
     padding: 1rem;
     box-shadow: .5rem .5rem var(--color-text);
@@ -250,6 +251,10 @@ a:hover,
 a:focus {
     color: var(--color-links-hover);
     text-decoration: underline solid var(--color-links-hover) 2px;
+}
+a:focus {
+    color: var(--color-links-hover);
+    text-decoration: none;
 }
 
 p a {
