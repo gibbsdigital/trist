@@ -17,7 +17,7 @@ headerColor: "bg-dark"
 <section class="articles" aria-labelledby="articles">
     <div class="container">
 
-        <h2 id="articles" class="section__title">Articles</h2>
+        <h2 id="articles" class="h-display-box">Articles</h2>
         
         {% if site.env == 'development' %}
         <h3 class="conic-gradient-border">Development Env</h3>
@@ -37,7 +37,8 @@ headerColor: "bg-dark"
 <section class="topics" aria-labelledby="topics">
     <div class="container">
 
-        <h2 id="topics" class="title-sidelines">Topics</h2>
+        <!-- <h2 id="topics" class="title-sidelines">Topics</h2> -->
+        <h2 id="topics" class="h-display-box mb-1">Topics</h2>
 
         {% include "partials/tag-list.njk" %}
         
@@ -48,7 +49,7 @@ headerColor: "bg-dark"
 
 
 <div class="rss-feed container">
-    <a href="{{ site.feedUrl }}" class="button" title="RSS Feed" style="border-radius: 38px;"> 
+    <a href="{{ site.feedUrl }}" class="btn btn--primary" title="RSS Feed" style="border-radius: 38px;"> 
         <svg class="icon icon-rss" role="img" aria-hidden="true" width="20" height="20" style="fill: currentColor;">
             <use xlink:href="#icon-rss"></use>
         </svg>

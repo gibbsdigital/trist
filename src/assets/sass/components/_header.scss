@@ -79,6 +79,7 @@
 .title {
     font-size: 4em;
     color: var(--color-bg);
+    font-weight: 700;
 }
 /* .title::after {
     content: "";
@@ -120,10 +121,7 @@
     z-index: 10;
 }
 
-.eyebrow {
-    font-size: 0.3em;
-    /* color: var(--secondary); */
-}
+
 .hero__text {
     font-size: 1.2em;
 }
@@ -169,6 +167,13 @@
 }
 .intro-title {
     grid-area: intro-title;
+}
+.eyebrow {
+    font-size: 0.3em;
+    color: var(--secondary);
+}
+.name {
+    font-weight: 700;
 }
 .lead {
     grid-area: lead;

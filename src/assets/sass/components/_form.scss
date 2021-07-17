@@ -1,114 +1,153 @@
 
 
-
-
-.form {
-    width: 100%
+/* FORMS */
+.field {
+    max-width: 26em;
+    margin-bottom: 30px;
 }
 
-.form__fields {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-row-gap: 1rem;
-    grid-column-gap: 2rem
+.field label, .field legend {
+    font-size: 1.2em;
+    line-height: 1.38889;
+    margin-bottom: 5px;
+    display: block;
 }
-
-@media (min-width: 670px) {
-    .form__fields {
-        grid-template-columns:repeat(2,1fr)
-    }
-}
-
-.form__field {
-    display: -webkit-box;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    flex-direction: column;
-    -webkit-box-pack: center;
-    justify-content: center
-}
-
-.form__field--full {
-    grid-column: 1/-1
-}
-
-.form__label {
+.field-label {
+    font-size: 1.2em;
     display: block;
     font-weight: 700;
-    font-size: .875rem;
-    margin-bottom: .25rem
+    color: #2d3748;
 }
-
-.form__input {
+.field-hint {
+    font-size: 0.9em;
+    color: #4a5568;
+    color: var(--color-gray);
+    margin-bottom: 5px;
     display: block;
+    
+}
+fieldset {
+    border: none;
+    padding: 0;
+}
+.field-radioButton label, 
+.field-checkbox label {
+    background-color: #e2e8f0;
+    margin-bottom: 5px;
+    display: block;
+    padding: 13px 18px;
+    border: 2px solid #e2e8f0;
+    border-radius: 5px;
+    color: #2d3748;
+}
+
+.field-radioButton label:hover, 
+.field-checkbox label:hover {
+    border-color: #4a5568;
+}
+.field-radioButton input, 
+.field-checkbox input {
+    margin-right: 10px;
+    -ms-transform: scale(1.5);
+    -moz-transform: scale(1.5);
+    -webkit-transform: scale(1.5);
+    -o-transform: scale(1.5);
+    transform: scale(1.5);
+}
+/* .field-checkbox label {
+    background-color: #e2e8f0;
+    margin-bottom: 5px;
+    display: block;
+    padding: 13px 18px;
+    border: 2px solid #e2e8f0;
+    color: #2d3748;
+}
+.field-checkbox input {
+    margin-right: 10px;
+    -ms-transform: scale(1.5);
+    -moz-transform: scale(1.5);
+    -webkit-transform: scale(1.5);
+    -o-transform: scale(1.5);
+    transform: scale(1.5);
+} */
+[type="date"],
+[type="email"],
+[type="number"],
+[type="password"],
+[type="search"],
+[type="tel"],
+[type="text"],
+textarea {
     width: 100%;
-    background-color: var(--color-bg);
-    border: 1px solid var(--color-header);
-    font-size: 1rem;
-    font-weight: 500;
-    padding: .5rem 1rem;
-    box-sizing: border-box
+    padding: 10px;
+    font-size: 1.2em;
+    /* line-height: 1.25; */
+    font-family: inherit;
+    appearance: none;
+    border: 2px solid #718096;
+}
+input:focus {
+    outline: 5px solid lightblue;
 }
 
-.form__checkbox {
-    margin-right: .25rem
+textarea {
+    height: 10em;
+}
+#expiry {
+    width: 5em;
+}
+#cvc {
+    width: 4em;
+}
+#postcode {
+    width: 8em;
 }
 
-.form__settings {
-    margin: 1rem 0
+
+::-ms-reveal {
+    display: none;
+}
+#reveal {
+    padding: 8px 10px;
+}
+[aria-pressed="true"] {
+/*box-shadow: inset 0 0 0 0.15rem #000, inset 0.25em 0.25em 0 #fff;*/
 }
 
-.form__actions {
-    margin: 1rem 0;
-    text-align: right
+.errorSummary {
+    border: 4px solid #e53e3e;
+    padding: 16px;
+    margin-bottom: 20px;
+    max-width: 40em;
 }
-
-.form__feedback {
-    margin-top: 1rem
+.errorSummary h2 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    color: #2d3748;
 }
-
-.form ::-webkit-input-placeholder {
-    color: var(--color-header)
+.errorSummary ul {
+    font-size: 1em;
+    line-height: 1.25;
+    color: #e53e3e;
+    list-style: none;
+    margin-left: 0;
+    margin-bottom: 0;
+    padding: 0;
 }
-
-.form ::-moz-placeholder {
-    color: var(--color-header)
+.errorSummary a {
+    color: #e53e3e;
+    font-weight: 700;
 }
-
-.form :-ms-input-placeholder {
-    color: var(--color-header)
+.field-error {
+    color: #e53e3e;
+    font-weight: 700;
+    margin-bottom: 10px;
+    display: block;
 }
-
-.form ::-ms-input-placeholder {
-    color: var(--color-header)
-}
-
-.form ::placeholder {
-    color: var(--color-header)
-}
-
-.form ::-moz-placeholder {
-    color: var(--color-header)
-}
-
-.form--signup .form__actions {
-    text-align: left;
-    display: -webkit-box;
-    display: flex;
-    -webkit-box-align: start;
-    align-items: flex-start;
-    flex-wrap: wrap
-}
-
-@media (min-width: 670px) {
-    .form--signup .form__feedback {
-        margin-top:0;
-        -webkit-box-flex: 1;
-        flex: 1 0 0%
-    }
-
-    .form--signup .btn--primary {
-        margin-right: 2rem
-    }
+.field-error svg {
+    margin-top: 5px;
+    vertical-align: bottom;
+    width: 1.5625em;
+    fill: #e53e3e;
+    margin-right: 5px;
 }
