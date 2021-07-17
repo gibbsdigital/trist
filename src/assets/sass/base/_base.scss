@@ -92,9 +92,18 @@ h5 {
     font-weight: 700;
 }
 
+.markdown h2, .markdown h3, .markdown h4 {
+    position: relative;
+    margin-top: 1.5em;
+    margin-bottom: .5em;
+}
+.markdown>* {
+    margin-bottom: 1.5em;
+}
 
 /* TITLE, SECTION-TITLE */
 .h-display-box {
+    font-weight: 700;
     width: fit-content;
     background-color: var(--secondary);
     background-color: var(--color-links-hover);
@@ -351,15 +360,15 @@ LINK HOVER TRANSITION FROM LEFT TO RIGHT
 /* 
   LISTS
 */
-ul,
+/* ul,
 ol {
     padding-left: 0;
     margin: 0;
 }
 ul li, 
 ol li {
-    list-style-type: none; /* remove bullets */
-}
+    list-style-type: none;  remove bullets 
+} */
 ul li::before, 
 ol li::before {
     content: "\200B"; /* add zero-width space */
@@ -506,7 +515,34 @@ svg {
 }
 
 
-
+/* .markdown pre[class*=language-] {
+    display: block;
+    font-size: 1rem;
+    padding: 2rem 1.5rem;
+    overflow-x: auto;
+} */
+.markdown pre[class*=language-]>code {
+    width: 100%;
+    max-width: 85ch;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+.post .markdown pre[class*=language-] {
+    margin: 2rem calc(50% - 50vw);
+}
+@media (min-width: 940px) {
+.markdown pre[class*=language-] {
+    padding: 2rem 3rem;
+}
+}
+@media (min-width: 1040px) {
+.post .markdown pre[class*=language-] {
+    margin-left: -170px;
+    margin-right: -170px;
+    border-radius: .5rem;
+}
+}
 
 /**
  * Add the correct display in IE 10.

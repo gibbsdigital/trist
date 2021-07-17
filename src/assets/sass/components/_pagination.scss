@@ -1,6 +1,8 @@
 
 
  .pagination ol {
+     padding-left: 0;
+     margin: 0;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -11,6 +13,7 @@
 }
 .pagination li {
     margin-bottom: 2em;
+    list-style: none;
 }
 .pagination a {
     

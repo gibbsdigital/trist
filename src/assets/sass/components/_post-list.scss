@@ -22,9 +22,14 @@
 
  
 
+.post-list {
+    padding-left: 0;
+    margin: 0;
+}
 .post-list__item {
     /*  border-bottom: 2px solid lightgrey; */
     /*  max-width: 50ch; */
+    list-style: none;
      margin-bottom: 2em;
  }
  
@@ -41,9 +46,13 @@
  
  .post-list__tags {
      display: flex;
+     padding-left: 0;
      margin: 0;
      font-size: .9em;
      /* opacity: 0.8; */
+ }
+ .post-list__tags li {
+     list-style: none;
  }
  .post-list__tags > li + li {
      margin-left: 0.5em;
