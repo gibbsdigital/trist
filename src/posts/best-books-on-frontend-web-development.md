@@ -3,7 +3,7 @@ title: Best Books for Front-end Web Development
 description: Website redesign can be tricky. Here are some tips for your consideration.
 image: "/assets/images/monitor-and-tablet.svg"
 imageAlt: 'image of a computer monitor and tablet'
-date: 2020-01-02
+date: 2021-01-02
 tags: 
 - books
 - frontend

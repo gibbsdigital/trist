@@ -97,9 +97,7 @@ h5 {
     margin-top: 1.5em;
     margin-bottom: .5em;
 }
-.markdown>* {
-    margin-bottom: 1.5em;
-}
+
 
 /* TITLE, SECTION-TITLE */
 .h-display-box {
@@ -329,6 +327,46 @@ LINK HOVER TRANSITION FROM LEFT TO RIGHT
   }
 
 
+/* ARROW LINK SVG EFFECT */
+.view-all-link,
+.arrow-link,
+.cta-link {
+    color: var(--color-links);
+    text-transform: uppercase;
+    text-decoration: underline solid var(--color-links) 3px;
+    padding: 0.5em;
+}
+.arrow-link:hover,
+.cta-link:hover, 
+.view-all-link:focus {
+    color: var(--color-links-hover);
+    text-transform: uppercase;
+    text-decoration: underline solid var(--color-links-hover) 3px;
+    text-decoration: none;
+    padding: 0.5em;
+}
+a .right-arrow2,
+a .right-arrow {
+    display: inline-block;
+    transform: translateX(0px);
+    transition: transform 0.2s;
+}
+a:hover .right-arrow2,
+a:hover .right-arrow,
+a:focus .right-arrow2,
+a:focus .right-arrow {
+    transform: translateX(10px);
+}
+a .left-arrow {
+    display: inline-block;
+    transform: translateX(0px);
+    transition: transform 0.2s;
+}
+a:hover .left-arrow {
+    transform: translateX(-10px);
+}
+/* END ARROW LINK SVG EFFECT */
+
 
 
 /* SCREEN READER ONLY TEXT AND FOCUS STYLES */
@@ -413,7 +451,69 @@ svg {
    /*  max-width: 1100px */
 }
 
+.article-container {
+    width: 100%;
+    max-width: 75ch;
+    padding: 0 1.33rem;
+    /* max-width: 41rem; */
+    margin-left: auto;
+    margin-right: auto;
+    /* padding-top: 5em; */
+}
+.article-layout {
+   display: grid;
+   grid-template-areas: "meta"
+                       "article";
+   grid-template-columns: 1fr;
+   grid-template-rows: auto;
+   column-gap: 2.5em;
+}
 
+@media (min-width: 768px) {
+   .article-layout {
+       display: grid;
+       grid-template-areas: "meta article";
+       grid-template-columns: max-content 1fr;
+       grid-template-rows: auto;
+   }
+}
+
+.article {
+   margin-bottom: 5em;
+   grid-area: article;
+}
+
+.markdown > * {
+    margin-bottom: 1.5em;
+}
+/* .markdown pre[class*=language-] {
+    display: block;
+    font-size: 1rem;
+    padding: 2rem 1.5rem;
+    overflow-x: auto;
+} */
+.markdown pre[class*=language-]>code {
+    width: 100%;
+    max-width: 85ch;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+.post .markdown pre[class*=language-] {
+    margin: 2rem calc(50% - 50vw);
+}
+@media (min-width: 940px) {
+.markdown pre[class*=language-] {
+    padding: 2rem 3rem;
+}
+}
+@media (min-width: 1040px) {
+.post .markdown pre[class*=language-] {
+    margin-left: -170px;
+    margin-right: -170px;
+    border-radius: .5rem;
+}
+}
 
 /**
 *   SECTION LAYOUTS
@@ -426,7 +526,7 @@ svg {
     gap: 1.33rem;
 }
 .section {
-    padding: 6em 0;
+    padding: 3em 0 6em;
  }
  
 .section__title {
@@ -463,7 +563,9 @@ svg {
 
 
 
-/* SOME UTILITY CLASSES */
+
+
+/* UTILITY CLASSES */
 .color-primary {
     color: var(--primary);
 }
@@ -515,34 +617,8 @@ svg {
 }
 
 
-/* .markdown pre[class*=language-] {
-    display: block;
-    font-size: 1rem;
-    padding: 2rem 1.5rem;
-    overflow-x: auto;
-} */
-.markdown pre[class*=language-]>code {
-    width: 100%;
-    max-width: 85ch;
-    margin-left: auto;
-    margin-right: auto;
-    display: block;
-}
-.post .markdown pre[class*=language-] {
-    margin: 2rem calc(50% - 50vw);
-}
-@media (min-width: 940px) {
-.markdown pre[class*=language-] {
-    padding: 2rem 3rem;
-}
-}
-@media (min-width: 1040px) {
-.post .markdown pre[class*=language-] {
-    margin-left: -170px;
-    margin-right: -170px;
-    border-radius: .5rem;
-}
-}
+
+
 
 /**
  * Add the correct display in IE 10.

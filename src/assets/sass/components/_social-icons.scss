@@ -1,7 +1,42 @@
 /* 
     SOCIAL ICON LIST
 */
+.social-icons,
+.social-icons-lables {
+    padding-left: 0;
+}
+.social-icons li,
+.social-icons-lables li {
+   list-style-type: none;
+}
 
+
+.social-icons {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    overflow: auto;
+}
+.social-icons > li + li {
+    margin-left: 1.5em;
+   /*  margin-top: 2.5em; */
+}
+.social-icons  a {
+    display: block;
+    padding: 0.5em;
+
+}
+
+
+/* 
+   ICONS WITH TEXT (LABELS)
+*/
+.social-icons-lables > li + li {
+   margin-top: 1.5em;
+}
+.social-icons-lables a {
+   padding: 0.5em;
+}
 
 /* 
     ICONS ONLY
@@ -16,33 +51,4 @@
      color: var(--primary);
      text-decoration: underline solid var(--primary);
  }
- .social-icons {
-     display: flex;
-     flex-direction: row;
-     flex-wrap: wrap;
-     overflow: auto;
-     padding-left: 0;
-     list-style: none;
- }
-     
- .social-icons > li + li {
-     margin-left: 1.5em;
-    /*  margin-top: 2.5em; */
- }
-
- .social-icons  a {
-     display: block;
-     padding: 0.5em;
  
- }
-
-
- /* 
-    ICONS WITH TEXT (LABELS)
- */
- .social-icons-lables > li + li {
-    margin-top: 1.5em;
-}
-.social-icons-lables a {
-    padding: 0.5em;
-}

@@ -1,6 +1,12 @@
+/* PAGINATION STYLES */
 
+.pagination {
+    display: flex;
+    justify-content: space-between;
+    max-width: 65ch;
+}
 
- .pagination ol {
+ .pagination-numbered ol {
      padding-left: 0;
      margin: 0;
     display: flex;
@@ -11,11 +17,12 @@
     max-width: 65ch;
    margin-top: 4em;
 }
-.pagination li {
+.pagination-numbered li {
     margin-bottom: 2em;
     list-style: none;
 }
-.pagination a {
+
+.pagination-numbered a {
     
     font-size: 0.75em;
     color: var(--color-text);
@@ -28,6 +35,20 @@
    /*  box-shadow: 0px 3px 8px #aaa, inset 0px 2px 3px #fff; */
     padding: 10px 16px;
 }
+
+/* PREV AND NEXT BUTTONS */
+.pag-btn {
+    color: var(--color-links);
+    text-transform: uppercase;
+    text-decoration: underline solid var(--color-links) 3px;
+    padding: 0.9em;
+}
+.pag-btn:hover,
+.pag-btn:focus {
+    color: var(--color-links-hover);
+    text-transform: uppercase;
+    text-decoration: underline solid var(--color-links-hover) 3px;
+}
 /* 
 .pagination a:first-child {
     margin-right: 1.2em;
@@ -36,41 +57,18 @@
     margin-left: 1.2em;
 } */
 
-.pagination a[aria-current="page"] {
+.pagination-numbered a[aria-current="page"] {
     background-color: var(--color-light-gray);
     text-decoration: none;
 }
 
-.pagination a:hover {
+.pagination-numbered a:hover {
     color: var(--primary);
     border-color: var(--primary);
     text-decoration: none;
     color: var(--color-bg);
     background-color: var(--color-text);
     border: 2px solid var(--color-text);
-}
-
-a .right-arrow2,
-a .right-arrow {
-    display: inline-block;
-    transform: translateX(0px);
-    transition: transform 0.2s;
-}
-
-a:hover .right-arrow2,
-a:hover .right-arrow,
-a:focus .right-arrow2,
-a:focus .right-arrow {
-    transform: translateX(10px);
-}
-
-a .left-arrow {
-    display: inline-block;
-    transform: translateX(0px);
-    transition: transform 0.2s;
-}
-a:hover .left-arrow {
-    transform: translateX(-10px);
 }
 
 .pagination .prev {
@@ -85,21 +83,16 @@ a:hover .left-arrow {
     border-radius: 38px;
     padding: 0.625em 1.1em;
 }
-/* 
-.pagination .last {
-    margin-left: auto;
-}
-.pagination .first {
-    margin-right: auto;
-} */
 
 
 .isDisabled {
-  cursor: not-allowed;
+  /* cursor: not-allowed; */
   opacity: 0.5;           
 }
 a[aria-disabled="true"] {
   color: currentColor;
+  background-color: transparent;
+  fill: #c7c7c7;
   display: inline-block;  /* For IE11/ MS Edge bug */
   pointer-events: none;
   text-decoration: none;
@@ -108,3 +101,6 @@ a[aria-disabled="true"] {
 a[aria-disabled="true"]:focus {
     text-decoration: none;
 }
+
+
+

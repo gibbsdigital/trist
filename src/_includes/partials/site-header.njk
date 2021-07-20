@@ -3,10 +3,12 @@
 <header id="site-header" class="site-header" role="banner" >
     <div class="site-header__inner">
 
-        <a class="site-header__brand" href="/" aria-label="{{ site.name }} - home">
-            <!--  include "svg/monitor-and-tablet.svg"  -->
-            <strong>Trist.dev</strong>
-        </a>
+        <div class="site-header__brand">
+            <a href="/" aria-label="{{ site.name }} - home">
+                <!--  include "svg/monitor-and-tablet.svg"  -->
+                <span class="logo">TG</span>
+            </a>
+        </div>
     
         <nav id="site-nav" class="site-nav" aria-label="Primary">
             {% include "partials/site-nav.njk" %}

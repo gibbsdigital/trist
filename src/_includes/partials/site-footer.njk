@@ -8,15 +8,15 @@
             {% include "partials/site-nav.njk" %}
         </nav>
     
-        <a href="#" aria-label="Back to top" title="Back to top" >
+        <a href="#" class="back-to-top" aria-label="Back to top" title="Back to top" >
             <span>back to top </span><!-- <strong> &uparrow;</strong> --> 
-            <span aria-hidden="true" focusable="false" style="font-size: 1.1em;"> &uparrow;</span>
+            <!-- <span aria-hidden="true" focusable="false" style="font-size: 1.1em;"> &uparrow;</span> -->
             <!-- <span aria-hidden="true" focusable="false" style="font-size: 1.2em;"> &#8679;</span> -->
-            <!-- <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" 
+            <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="28" height="24" viewBox="0 0 32 32" 
             style="fill: currentColor;" class="icon-button__icon" aria-hidden="true" focusable="false">
                 <path d="M0 16c0 8.837 7.163 16 16 16s16-7.163 16-16-7.163-16-16-16-16 7.163-16 16zM29 16c0 7.18-5.82 13-13 13s-13-5.82-13-13 5.82-13 13-13 13 5.82 13 13z"></path>
                 <path d="M22.086 20.914l2.829-2.829-8.914-8.914-8.914 8.914 2.828 2.828 6.086-6.086z"></path>
-            </svg> -->
+            </svg>
         </a>
         
        
@@ -26,14 +26,14 @@
         
             <span class="footer__item" style="font-size: 0.8em;">
                 &copy;{% year %}<a class="home-link" rel="me" href="{{ site.url }}">{{ author.name }}</a> | 
-                <a href="/about/" title="My Resume" rel="me">
+                <a class="link-resume" href="/about/" title="My Resume" rel="me">
                     <svg class="icon" aria-hidden="true" focusable="false" width="16" height="16">
                         <use xlink:href="#icon-file-pdf-solid"></use>
                     </svg>
                     <span class="label">resume</span>
                 </a>
                 <br>
-                <div>Built with <a href="https://www.11ty.dev/">Eleventy</a>. Hosted on <a href="https://www.netlify.com/">Netlify</a></div>
+                <div>Built with <a class="link-11ty" href="https://www.11ty.dev/">Eleventy</a>. Hosted on <a class="link-netlify" href="https://www.netlify.com/">Netlify</a></div>
                 <!-- <div>Icons made by <a href="https://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div> -->
             </span>
             <!-- <p class="footer__item">
