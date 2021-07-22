@@ -11,7 +11,7 @@
 body {
     font-family: var(--font-primary);
     /* font-size: calc(0.333vw + 0.9rem); */
-    font-size: 1rem;
+    font-size: 1.125rem;
     line-height: 1.65;
     font-weight: 400;
     color: var(--color-text);
@@ -21,11 +21,6 @@ body {
     text-rendering: optimizeSpeed;
 }
 
-@media (min-width: 768px) {
-    body {
-        font-size: 1.25rem;
-    }
-}
 
 p {
     margin: 0 0 1.5rem;
@@ -234,6 +229,15 @@ h2::after {
 
 
 
+.hr {
+    background-color: var(--color-gray);
+    border: 0;
+    height: 1px;
+    margin: 0 0 12px;
+    width: 100%;
+}
+
+
 
 /* 
     ANCHOR LINKS
@@ -250,12 +254,12 @@ a {
     color: inherit;
     color: var(--color-links);
     font-family: var(--font-family-display);
-    font-weight: 600;
+    font-weight: 700;
     text-decoration: none;
+    
     /* text-decoration: underline solid var(--primary) 4px; */
 }
-a:hover,
-a:focus {
+a:hover {
     color: var(--color-links-hover);
     text-decoration: underline solid var(--color-links-hover) 2px;
 }
@@ -279,9 +283,12 @@ p a {
 p a:hover,
 p a:focus {
     color: var(--color-links-hover);
-    text-decoration: underline solid var(--color-links-hover) 2px;
+    text-decoration: none;
+    /* text-decoration: underline solid var(--color-links-hover) 2px; */
     /* border-color: #00b3e5; */
 }
+
+
 
 /* 
 LINK HOVER TRANSITION FROM LEFT TO RIGHT
@@ -290,12 +297,11 @@ LINK HOVER TRANSITION FROM LEFT TO RIGHT
     <span data-content="Link Hover" aria-hidden="true"></span>
     Link Hover
 </a> */
-  a.hov-effect {
+ /*  a.hov-effect {
     position: relative;
     display: inline-block;
     font-weight: 700;
     text-decoration: underline;
-    // text-decoration: none;
     vertical-align: bottom;
     overflow: hidden;
     span {
@@ -309,7 +315,6 @@ LINK HOVER TRANSITION FROM LEFT TO RIGHT
       &::before {
         display: inline-block;
         content: attr(data-content);
-        //color to be filled
         color: midnightblue;
         transform: translateX(100%);
         transition: transform 275ms ease;
@@ -324,21 +329,18 @@ LINK HOVER TRANSITION FROM LEFT TO RIGHT
         }
       }
     }
-  }
+  } */
 
 
 /* ARROW LINK SVG EFFECT */
-.view-all-link,
-.arrow-link,
-.cta-link {
+.arrow-link {
     color: var(--color-links);
     text-transform: uppercase;
     text-decoration: underline solid var(--color-links) 3px;
     padding: 0.5em;
 }
 .arrow-link:hover,
-.cta-link:hover, 
-.view-all-link:focus {
+.arrow-link:focus {
     color: var(--color-links-hover);
     text-transform: uppercase;
     text-decoration: underline solid var(--color-links-hover) 3px;
@@ -384,12 +386,14 @@ a:hover .left-arrow {
     white-space: nowrap;
 }
 
+/* remove focus styles from clicks, not keyboard events: */
 :focus:not(:focus-visible) {
     outline: 0;
 }
 
+
 :focus-visible {
-    outline: 2px solid inherit;
+    outline: 4px solid var(--color-light-blue);
 }
 
 
@@ -542,7 +546,7 @@ svg {
     grid-column: 4 / 12;
 }
 .section__footer {
-    margin-top: 5em;
+    margin-top: 3em;
 }
 
 

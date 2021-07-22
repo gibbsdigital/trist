@@ -3,7 +3,7 @@
     BLOG | ARTICLES
 */
 .articles {
-    margin-bottom: 5em;
+    margin-bottom: 6em;
     grid-area: articles;
     /* padding: 1.5em; */
  }
@@ -75,7 +75,7 @@
  .post-list__tags > li > a {
     font-family: var(--font-family-display);
     color: var(--gray);
-    opacity: .9;
+    font-weight: 500;
  }
 
 

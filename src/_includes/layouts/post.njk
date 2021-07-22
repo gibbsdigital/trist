@@ -87,6 +87,124 @@ headerColor: bg-dark
                 Published on {{ date | dateFriendly }}
             </div> 
         </div> -->
+        <style>
+            .blog-post-details__social {
+    margin: 30px 0 10px;
+}
+            .blog-post-details__share a {
+    display: inline-block;
+    text-decoration: none;
+    margin-left: 4px;
+}
+.blog-post-details__share {
+    float: right;
+}
+        </style>
+        
+            <!-- <div class="blog-post-details__share">
+                <span class="hide-xs">
+                Share this article:
+                </span>
+                <a href="https://twitter.com/intent/tweet?url=https%3a%2f%2fswimburger.net%2fblog%2fweb%2fsocial-sharing-buttons-with-zero-javascript-to-twitter-reddit-linkedin-and-facebook%3futm_source%3dtwitter%26utm_medium%3dsocial&amp;via=RealSwimburger&amp;related=RealSwimburger" target="_blank" rel="noopener nofollow" aria-label="Share to Twitter">
+                <img src="https://swimburger.net/content/img/twitter.svg" height="40" width="40" alt="Share to Twitter" decoding="async" loading="lazy">
+                </a>
+                <a href="https://www.reddit.com/submit?url=https%3a%2f%2fswimburger.net%2fblog%2fweb%2fsocial-sharing-buttons-with-zero-javascript-to-twitter-reddit-linkedin-and-facebook%3futm_source%3dreddit%26utm_medium%3dsocial&amp;title=Social+Sharing+Buttons+with+zero+JavaScript+to+Twitter%2c+Reddit%2c+LinkedIn%2c+and+Facebook" target="_blank" rel="noopener nofollow" aria-label="Share to Reddit">
+                <img src="https://swimburger.net/content/img/reddit.svg" height="40" width="40" alt="Share to Reddit" decoding="async" loading="lazy">
+                </a>
+                <a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3a%2f%2fswimburger.net%2fblog%2fweb%2fsocial-sharing-buttons-with-zero-javascript-to-twitter-reddit-linkedin-and-facebook%3futm_source%3dlinkedin%26utm_medium%3dsocial" target="_blank" rel="noopener nofollow" aria-label="Share to LinkedIn">
+                <img src="https://swimburger.net/content/img/linkedin.svg" height="40" width="40" alt="Share to LinkedIn" decoding="async" loading="lazy">
+                </a>
+                <a href="https://www.facebook.com/sharer.php?u=https%3a%2f%2fswimburger.net%2fblog%2fweb%2fsocial-sharing-buttons-with-zero-javascript-to-twitter-reddit-linkedin-and-facebook%3futm_source%3dfacebook%26utm_medium%3dsocial" target="_blank" rel="noopener nofollow" aria-label="Share to Facebook">
+                <img src="https://swimburger.net/content/img/facebook.svg" height="40" width="40" alt="Share to Facebook" decoding="async" loading="lazy">
+                </a>
+                </div> -->
+                <!-- <div id="widget">
+                    <div class="btn-o" data-scribe="component:button" style="width: 76px;">
+                        <a href="https://twitter.com/intent/tweet?original_referer=https%3A%2F%2Fdeveloper.twitter.com%2F&amp;ref_src=twsrc%5Etfw&amp;text=Guides%20%7C%20Docs%20%7C%20Twitter%20Developer%20Platform&amp;tw_p=tweetbutton&amp;url=https%3A%2F%2Fdeveloper.twitter.com%2Fen%2Fdocs%2Ftwitter-for-websites%2Ftweet-button%2Foverview" 
+                        class="btn" 
+                        id="b">
+                        <i></i><span class="label" id="l">Tweet</span></a>
+                    </div>
+                  </div> -->
+            <div class="footer-section article-container">
+
+            <div class="share">
+            <strong>Share this article</strong>
+            <ul class="share-list">
+                <li>
+                    <a  
+                        href="https://twitter.com/share?text={{ shareText }}{{ title }}&amp;url={{ site.url }}{{ page.url }}"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        title="Share on Twitter"
+                        class="share-twitter"
+                    >
+                        <svg class="icon" aria-hidden="true" focusable="false" width="22" height="22">
+                            <use xlink:href="#icon-twitter"></use>
+                        </svg>
+                        <span class="sr-only">Click to share on Twitter (Opens in new window)</span>
+                    </a> 
+                </li>
+                <li>
+                   <!-- href for sharing on facebook:
+                        https://www.facebook.com/dialog/share
+                        ?app_id=145634995501895
+                        &display=popup
+                        &href=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2F
+                        &redirect_uri=https%3A%2F%2Fdevelopers.facebook.com%2Ftools%2Fexplorer -->
+                    <a 
+                        href="https://www.facebook.com/sharer.php?u=https%3a%2f%2fswimburger.net%2fblog%2fweb%2fsocial-sharing-buttons-with-zero-javascript-to-twitter-reddit-linkedin-and-facebook%3futm_source%3dfacebook%26utm_medium%3dsocial" 
+                        target="_blank" 
+                        rel="noopener nofollow" 
+                        class="share-twitter"
+                        >
+                        <svg class="icon" aria-hidden="true" focusable="false" width="22" height="22">
+                            <use xlink:href="#icon-facebook"></use>
+                        </svg>
+                        <span class="sr-only">Click to share on Facebook (Opens in new window)</span>
+                    </a>
+                    
+                </li>
+                <li>
+                    <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3a%2f%2fwww.swimburger.net%2fblog%2fazure%2fcreating-a-discord-bot-using-net-core-and-azure-app-services%3futm_source%3dlinkedin%26utm_medium%3dsocial"
+                        target="_blank">
+                        <svg class="icon" aria-hidden="true" focusable="false" width="20" height="20">
+                            <use xlink:href="#icon-linkedin"></use>
+                        </svg>
+                    </a>
+                </li>
+                <!-- <li>
+                    <a  
+                        href="https://twitter.com/share?text={{ shareText }}{{ title }}&amp;url={{ site.url }}{{ page.url }}"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        title="Share on Twitter"
+                        class="share-twitter"
+                    >
+                        <svg class="icon" aria-hidden="true" focusable="false" width="22" height="22">
+                            <use xlink:href="#icon-twitter"></use>
+                        </svg>
+                        <span class="sr-only">Click to share on Twitter (Opens in new window)</span>
+                    </a> 
+                    
+                </li> -->
+            </ul>
+
+        </div>
+
+        <!-- <div class="rss">
+            <strong>Subscribe to the feed</strong>
+            <a href="{{ site.feedUrl }}" class="rss-link" title="RSS blog feed"> 
+                <svg class="icon icon--feed" focusable="false" aria-hidden="true" width="20" height="20" style="fill: currentColor;">
+                    <use xlink:href="#icon-rss"></use>
+                </svg>
+                RSS
+                <span class="sr-only">Subscribe to the RSS blog feed</span>
+            </a>
+        </div> -->
+
+    </div>
+
         
         <div class="next-prev-post article-container">
             {% set previousPost = collections.posts | getPreviousCollectionItem(page) %}
@@ -103,11 +221,73 @@ headerColor: bg-dark
             {% endif %}
         </div>
 
-        <p class="feeds article-container">
-            <a href="/blog/" class="btn btn--primary">
+
+        
+<!-- Twitter buttons for sharing and following
+     https://publish.twitter.com/# 
+    
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@nytimes">
+<meta name="twitter:creator" content="@SarahMaslinNir">
+<meta name="twitter:title" content="Parade of Fans for Houston’s Funeral">
+<meta name="twitter:description" content="NEWARK - The guest list and parade of limousines with celebrities emerging from them seemed more suited to a red carpet event in Hollywood or New York than than a gritty stretch of Sussex Avenue near the former site of the James M. Baxter Terrace public housing project here.">
+<meta name="twitter:image" content="http://graphics8.nytimes.com/images/2012/02/19/us/19whitney-span/19whitney-span-articleLarge.jpg">
+<meta name="twitter:image:alt" content="alternative text for accessibility">
+
+<meta property="og:url"                content="http://www.nytimes.com/2015/02/19/arts/international/when-great-minds-dont-think-alike.html" />
+<meta property="og:type"               content="article" />
+<meta property="og:title"              content="When Great Minds Don’t Think Alike" />
+<meta property="og:description"        content="How much does culture influence creative thinking?" />
+<meta property="og:image"              content="http://static01.nyt.com/images/2015/02/19/arts/international/19iht-btnumbers19A/19iht-btnumbers19A-facebookJumbo-v2.jpg" />
+<meta property="og:image:alt"          content="alternative description of the image" />
+
+-->
+  
+<p class="article-container">
+    {% include "partials/other-posts-section.njk" %}
+</p>
+
+        <p class="actions article-container">
+
+            <a class="arrow-link back" href="/blog/">
+                <svg class="left-arrow" fill="currentColor" aria-hidden="true" focusable="false" width="35" height="10">
+                    <use xlink:href="#left-arrow"></use>
+                </svg>
+                <span>
+                    Back to the blog
+                </span>
+            </a>
+           <!--  <a href="/blog/" class="btn btn--primary">
                 Back to blog
-            </a> 
-            <a  
+            </a>  -->
+            <!-- <a href="{{ site.feedUrl }}" class="icon-btn btn--primary" title="RSS blog feed"> 
+                <svg class="icon icon--feed" focusable="false" aria-hidden="true" width="20" height="20" style="fill: currentColor;">
+                    <use xlink:href="#icon-rss"></use>
+                </svg>
+                <span class="sr-only">Subscribe to the RSS blog feed</span>
+            </a> -->
+            <a href="{{ site.feedUrl }}" class="rss-link" title="RSS blog feed"> 
+                <svg class="icon icon--feed" focusable="false" aria-hidden="true" width="20" height="20" style="fill: currentColor;">
+                    <use xlink:href="#icon-rss"></use>
+                </svg>
+                Subscribe
+                <span class="sr-only">Subscribe to the RSS blog feed</span>
+            </a>
+            
+           <!--  <a  
+                href="https://twitter.com/share?text={{ shareText }}{{ title }}&amp;url={{ site.url }}{{ page.url }}"
+                target="_blank"
+                rel="noopener noreferrer"
+                title="Share on Twitter"
+                class="share-twitter"
+            >
+                <svg class="icon" aria-hidden="true" focusable="false" width="22" height="22">
+                    <use xlink:href="#icon-twitter"></use>
+                </svg>
+                Share
+                <span class="sr-only">Click to share on Twitter (Opens in new window)</span>
+            </a>  -->
+            <!-- <a  
                 href="https://twitter.com/share?text={{ shareText }}{{ title }}&amp;url={{ site.url }}{{ page.url }}"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -119,16 +299,99 @@ headerColor: bg-dark
                 </svg>
                 Share
                 <span class="sr-only">Click to share on Twitter (Opens in new window)</span>
-            </a> 
-        
-            <a href="{{ site.feedUrl }}" class="icon-btn btn--primary" title="RSS blog feed"> 
-                <svg class="icon icon--feed" focusable="false" aria-hidden="true" width="20" height="20" style="fill: currentColor;">
-                    <use xlink:href="#icon-rss"></use>
-                </svg>
-                <span class="sr-only">Subscribe to the RSS blog feed</span>
+            </a>  -->
+            <a 
+                href="https://twitter.com/gibbs_digital?ref_src=twsrc%5Etfw" 
+                class="twitter-follow-button" 
+                data-size="large" 
+                data-lang="en" 
+                data-show-count="false">
+                Follow @gibbs_digital
             </a>
-        
+            <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+            <!-- <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-size="large" data-text="Social Sharing Buttons with zero JavaScript" data-url="https://swimburger.net/blog/web/social-sharing-buttons-with-zero-javascript-to-twitter-reddit-linkedin-and-facebook" data-show-count="false">
+                Tweet
+            </a>
+            <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> -->
+            <div class="separator"><span>Topics</span></div>
         </p>
+<style>
+    .separator {
+    display: block;
+    position: relative;
+    text-align: center;
+    font-size: 1.1em;
+    font-weight: 500;
+    color: var(--color-gray);
+    padding-bottom: 2px;
+}
+.separator:before {
+    content: " ";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    background: #a02c56;
+    background: var(--color-gray);
+    height: 2px;
+}
+.separator:after {
+    content: " ";
+    position: absolute;
+    top: 0;
+    left: calc(50% - 50px);
+    right: calc(50% - 50px);
+    background: #fff;
+    height: 25px;
+}
+.separator span {
+    position: relative;
+    z-index: 2;
+}
+
+@keyframes spinner-border {
+  to { transform: rotate(360deg) }
+}
+.spinner-border {
+    display: inline-block;
+    width: 2rem;
+    height: 2rem;
+    vertical-align: -.125em;
+    border: .25em solid currentColor;
+    border-right-color: transparent;
+    border-radius: 50%;
+    -webkit-animation: .75s linear infinite spinner-border;
+    animation: .75s linear infinite spinner-border;
+    color: #0dcaf0;
+    color: #0d6efd;
+}
+.sm {
+    width: 1rem;
+    height: 1rem;
+}
+.lg {
+    width: 3rem;
+    height: 3rem;
+}
+.visually-hidden, .visually-hidden-focusable:not(:focus):not(:focus-within) {
+    position: absolute!important;
+    width: 1px!important;
+    height: 1px!important;
+    padding: 0!important;
+    margin: -1px!important;
+    overflow: hidden!important;
+    clip: rect(0,0,0,0)!important;
+    white-space: nowrap!important;
+    border: 0!important;
+}
+</style>
+
+       <!--  <p>
+            <div class="spinner-border color-primary" role="status" style="text-align: center;">
+                <span class="visually-hidden">Loading...</span>
+              </div>
+        </p> -->
         
         
     </div>
@@ -136,7 +399,7 @@ headerColor: bg-dark
 
 
 
-{% include "partials/other-posts-section.njk" %}
+
 
 
 

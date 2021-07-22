@@ -4,39 +4,86 @@ title: Contact
 summary: "Send me a message."
 description: A contact form to get in touch with me.
 permalink: "/contact/index.html"
-formID: ""
-headerColor: "bg-dark"
 ---
 
  
-<section class="contact" aria-labelledby="contact">
+<section class="contact section" aria-labelledby="contact">
     <div class="container">
 
         <h2 id="contact" class="h-display-box mb-1">Send me a message</h2>
 
+        <!-- <svg style="display: none">
+            <symbol id="error-icon" viewBox="0 0 24 24">
+                  <path d="M0 0h24v24H0z" fill="none"></path><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"></path>
+            </symbol>
+          </svg> -->
 
-        <!-- Netlify Contact Form  https://snipcart.com/blog/netlify-forms  -->
-        <form method="post" name="Contact Form 2" action="/thankyou.html" 
-                data-netlify-recaptcha="true" netlify-honeypot="hpfield" data-netlify="true">
-            <input class="hidden" name="hpfield">
-            <p>
-                <label for="name">Name:</label>
-                <input type="text" name="name" id="name">
+            <div 
+                tabindex="-1" 
+                role="group" 
+                id="errorSummary" 
+                class="errorSummary" 
+                aria-labelledby="errorSummary-heading" 
+                hidden
+            >
+                <h2 id="errorSummary-heading">There's a problem</h2>
+                <ul>
+                <li><a href="#email">Enter your email address</a></li>
+                <li><a href="#name">Enter your name</a></li>
+                <li><a href="#message">Enter a message</a></li>
+                </ul>
+          </div>
+
+        
+
+
+
+        <!-- CONTACT FORM  (Netlify Contact Form  https://snipcart.com/blog/netlify-forms)  -->
+        <form class="contact">
+           <!--  <input class="hidden" name="hpfield"> -->
+            <p class="field ">
+                <label for="email">
+                  <span class="field-label">Email address</span>
+                  <span class="field-error" hidden>
+                    <svg width="1.3em" height="1.3em">
+                      <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-error"></use>
+                    </svg>Enter your email address</span>
+                </label>
+                <input type="email" id="email" name="email" maxLength="50">
             </p>
-            <p>
-                <label for="email">Email:</label>
-                <input type="email" name="email" id="email">
+
+            <p class="field ">
+                <label for="name">
+                  <span class="field-label">Name</span>
+                  <span class="field-error" hidden>
+                    <svg width="1.3em" height="1.3em">
+                      <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-error"></use>
+                    </svg>Enter your name</span>
+                </label>
+                <input type="text" id="name" name="name" maxLength="50">
             </p>
-            <p>
-                <label for="comments">Comments:</label><br/>
-                <textarea name="comments" id="comments"></textarea>
+
+            <p class="field">
+                <label for="message">
+                    <span class="field-label">Message</span>
+                    <!-- <span class="field-hint">Max characters allowed: 100</span> -->
+                    <span class="field-error" hidden>
+                        <svg width="1.3em" height="1.3em">
+                            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-error"></use>
+                        </svg>Enter a message</span>
+                </label>
+                <textarea id="message" name="message" maxlength="500"></textarea>
+                <!-- <div class="indicator" role="status" aria-live="polite">You have 100 characters remaining.</div> -->
             </p>
-            <div data-netlify-recaptcha="true"></div>
-            <p>
-                <input type="submit" class="btn btn--primary" value="send">
-            </p>
+           
+            <input type="submit" class="btn btn--primary" name="contact" value="Send">
         </form>
         <!-- Netlify Contact Form -->
+
+
+    </div>
+</section>
+        
 
 
 

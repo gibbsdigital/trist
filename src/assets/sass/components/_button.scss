@@ -1,32 +1,89 @@
 
 /* 
-    BUTTONS
+BUTTONS
 */
+/* 
+Try max's btn
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    user-select: none;
+    transition: all .2s ease-in-out;
+    font-size: .875rem;
+    padding: .75rem 1.5rem;
+    border: 2px solid rgba(0,0,0,.2);
+    border-radius: .25rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: .025em
+}
+.btn--primary {
+    background-color: var(--color-primary);
+    border-color: transparent;
+    color: #fff;
+    transform: translateY(0);
+    box-shadow: 0 4px 6px rgba(50,50,93,.11),0 1px 3px rgba(0,0,0,.08);
+    text-shadow: 0 1px 3px rgba(0,0,0,.15);
+    transition: all .15s ease
+}
+.btn--twitter {
+    background-color: #1da1f2;
+    border-color: #1da1f2;
+    color: #fff;
+}
+.btn--twitter:focus, .btn--twitter:hover {
+    color: #1da1f2;
+    background-color: transparent;
+}
+
+.js-focus-visible :focus:not(.focus-visible) {
+    outline: 0;
+}
+*/
+
 .btn,
 .button {
-    background-color: var(--primary);
+   /*  background-color: var(--primary); */
     padding: 1em 1.6em 1.1em;
-    color: white;
-    display: inline-block;
+    padding: 0.8em 1.5em;
+    color: var(--color-bg);
+    display: inline-flex;
+    align-items: center;
     text-decoration: none;
     text-transform: uppercase;
     font-size: 0.8em;
     font-weight: 700;
     font-family: var(--font-family-display);
+    border-color: #dbdbdb;
+    border: 3px solid transparent;
     border-radius: 3px;
     /* border: 2px solid var(--primary); */
     transition: box-shadow 0.1s;
+
+   
 }
-.btn:hover,
-.button:hover {
+.btn:hover {
     text-decoration: none;
-    color: white;
-   opacity: 0.9;
+    color: var(--color-bg);
+    opacity: 0.9;
    /*  box-shadow: inset 8px 8px 20px black; */
+}
+.btn:hover svg {
+    color: var(--color-bg);
 }
 .btn + .btn, 
 .button + .button {
     margin-left: 0.8em;
+}
+
+.btn.rounded {
+    border-radius: 9999px;
+    padding-left: calc(1em + .25em);
+    padding-right: calc(1em + .25em);
 }
 
 .icon-btn {
@@ -40,10 +97,67 @@
     }
 .icon-btn:hover {
 text-decoration: none;
-color: white;
+color: var(--color-bg);
 opacity: 0.9;
 /*  box-shadow: inset 8px 8px 20px black; */
 }
+.icon-btn:hover svg {
+    color: var(--color-bg);
+}
+
+
+/* BUTTON COLORS */
+.btn--primary {
+    background-color: var(--primary);
+   /*  border: 3px solid transparent; */
+    border-color: transparent;
+    color: var(--color-bg);
+    border-radius: 38px;
+    box-shadow: .1rem .3rem var(--color-text);
+   /*  box-shadow: 0 0 0 0.2rem var(--color-text); */
+    text-shadow: .125rem .125rem var(--color-text);
+}
+
+.btn--primary.outlined {
+    background-color: transparent;
+    border-color: var(--primary);
+    color: var(--primary);
+    box-shadow: none;
+    text-shadow: none;
+}
+/* .btn-bd-primary {
+    font-weight: 600;
+    color: $white;
+    background-color: $bd-purple-bright;
+    border-color: $bd-purple-bright;
+  
+    &:hover,
+    &:active {
+      color: $white;
+      background-color: shade-color($bd-purple-bright, 20%);
+      border-color: shade-color($bd-purple-bright, 20%);
+    }
+  
+    &:focus {
+      box-shadow: 0 0 0 3px rgba($bd-purple-bright, .25);
+    }
+  }
+   */
+.btn--secondary {
+    background-color: var(--secondary);
+    border-color: transparent;
+    color: var(--color-bg);
+    border-radius: 38px;
+    box-shadow: .2rem .3rem var(--color-text);
+   /*  box-shadow: 0 0 0 0.2rem var(--color-text); */
+    text-shadow: .125rem .125rem var(--color-text);
+}
+
+.cta .btn:focus {
+    color: var(--color-bg);
+}
+
+
 /* 
 .pag-btn[aria-disabled=true],
 button.btn--delete[aria-disabled=true],
@@ -65,13 +179,3 @@ button[disabled].icon-btn>svg {
     background-color: transparent;
     fill: #c7c7c7;
 } */
-
-/* BUTTON COLORS */
-.btn--primary {
-    background-color: var(--primary);
-    border: 2px solid var(--primary);
-    color: white;
-    border-radius: 38px;
-    box-shadow: .2rem .4rem var(--color-text);
-    text-shadow: .125rem .125rem var(--color-text);
-}

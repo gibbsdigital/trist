@@ -81,14 +81,21 @@ textarea {
     width: 100%;
     padding: 10px;
     font-size: 1.2em;
-    /* line-height: 1.25; */
     font-family: inherit;
     appearance: none;
     border: 2px solid #718096;
+    border-radius: 5px;
+    scroll-margin-top: 3em;
 }
-input:focus {
-    outline: 5px solid lightblue;
+input:focus, 
+textarea:focus {
+    /* outline: 5px solid lightblue;
+    outline: 5px solid var(--color-light-blue); */
+    border: 2px solid var(--color-light-blue);
+    outline: 0;
+    box-shadow: 0 0 0 0.3rem rgb(0 123 255 / 25%);
 }
+
 
 textarea {
     height: 10em;
@@ -137,6 +144,7 @@ textarea {
 .errorSummary a {
     color: #e53e3e;
     font-weight: 700;
+    text-decoration: underline;
 }
 .field-error {
     color: #e53e3e;
@@ -150,4 +158,12 @@ textarea {
     width: 1.5625em;
     fill: #e53e3e;
     margin-right: 5px;
+}
+
+
+#name,
+#email,
+#password,
+#message {
+    
 }

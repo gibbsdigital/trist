@@ -2,10 +2,33 @@
 
 {% set otherPosts = collections.posts | excludePost(page) | slice(-3) %}
 
-<section class="section" aria-labelledby="other-posts" style="background-color: var(--dark);">
-    <div class="container">
+<style>
+    /* .other-posts {
+        background-color: var(--dark);
+    }
+    .other-posts .section__title,
+    .other-posts .post-list__title {
+        color: var(--color-bg);
+    }
+    .other-posts .post-list__meta {
+        color: var(--color-light-gray);
+    } */
+    .other-posts .post-list__meta a {
+        color: var(--color-gray) !important;
+    }
+    #other-posts {
+        font-size: 1.125rem;
+    line-height: 1.65;
+    font-weight: 700;
+    color: var(--color-text);
+    }
+</style>
+
+<section class="section other-posts" aria-labelledby="other-posts">
+    <div class="article-container">
     
-        <h2 id="other-posts" class="section__title h2-display" style="color: var(--light);">More from the blog</h2>
+        <h2 id="other-posts">More from the blog</h2>
+        <!-- <h2 id="other-posts" class="section__title h2-display">More from the blog</h2> -->
 
         <div class="section__content">
             <ol reversed class="post-list">
@@ -17,7 +40,7 @@
                             href="{{ post.url | url }}"
                             class="post-list__link"
                             rel="bookmark"
-                            style="color: var(--light);"
+                            
                         >
                             {{ post.data.title }}
                         </a>
@@ -35,7 +58,7 @@
                             <ul class="post__tags" aria-describedby="tags-desc">
                                 {% for tag in post.data.tags %}
                                 <li>
-                                    <a href="/blog/tag/{{ tag | slug }}/" style="color: var(--color-grey);">#{{ tag | replace(' ', '') }}</a>
+                                    <a href="/blog/tag/{{ tag | slug }}/">#{{ tag | replace(' ', '') }}</a>
                                 </li>
                                 {% endfor %}
                             </ul>
@@ -54,7 +77,7 @@
         </div>
 
         <div class="section__footer">
-            <a class="see-more btn btn--primary" href="/blog/">See all posts</a>
+            <a class="btn btn--primary" href="/blog/">See all posts</a>
         </div>
 
     </div>
