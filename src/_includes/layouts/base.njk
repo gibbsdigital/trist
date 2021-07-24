@@ -27,10 +27,6 @@
             {{ content | safe }}
         </main>
         {% include "partials/site-footer.njk" %}
-        <!-- <script src="/assets/js/main{{ version.js }}.js" defer></script> -->
-        {%- if page.url == '/contact' or layout == 'note' -%}
-            <!-- {% include "js/contact.js" %}
-            <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> -->
-        {%- endif -%}
+        <script src="/assets/js/main{{ version.js }}.js" defer></script>
     </body>
 </html>

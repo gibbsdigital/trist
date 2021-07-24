@@ -16,12 +16,7 @@
             </a>
         </h3>
         <div class="post-list__meta">
-            <!-- <time
-                class="post-list__date"
-                datetime="{{ post.data.date | dateISO }}"
-            >
-                {{ post.data.date | dateFriendly }}
-            </time> -->
+            
             {% if post.data.tags %}
                 <ul class="post__tags" aria-describedby="tags-desc">
                     {% for tag in post.data.tags %}
