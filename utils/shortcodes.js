@@ -52,12 +52,18 @@ const year = () => {
 };
 
 
+const randomColor = () => {
+    const randomColor = Math.floor(Math.random()*16777215).toString(16);
+    return `#${randomColor}`
+  }
+  
 
 
 module.exports = {
     eleventyImage: eleventyImage,
     icon: icon,
-    year: year
+    year: year,
+    randomColor
 }
 
 

@@ -1,0 +1,15 @@
+
+:root {
+    @each $color, $value in $colors {
+        --#{$color}: #{$value};
+    }
+
+    --font-primary: #{inspect($font-primary)};
+}
+
+:root {
+--font-primary: system-ui, -apple-system, BlinkMacSystemFont, San Francisco, 
+                    Segoe UI, Roboto, Helvetica Neue, sans-serif;
+
+    --font-family-display: 'Barlow', Arial, sans-serif;
+}

@@ -2,28 +2,31 @@
 
 
 // SETTINGS - CONFIG
-@import 'settings/variables';
-@import 'settings/mixins';
-@import 'settings/fonts';
+@import '01-settings/variables';
+@import '01-settings/mixins';
+@import '01-settings/fonts';
 
 
 // BASE - GLOBAL SCOPE PARTIALS
-@import 'base/normalize';
-@import 'base/prism-atom-dark';
-@import 'base/base';
+@import '02-base/normalize';
+@import '02-base/prism-atom-dark';
+@import '02-base/base';
 
 
-// COMPONENTS - LOCAL SCOPE PARTIALS
-@import 'components/header';
-@import 'components/footer';
-@import 'components/navigation';
-@import 'components/pagination';
-@import 'components/button';
-@import 'components/card';
-@import 'components/form';
-@import 'components/tag-list';
-@import 'components/social-icons';
-@import 'components/post-list';
-@import 'components/post';
-@import 'components/project-list';
-@import 'components/themetoggle';
+// 03-conponents - LOCAL SCOPE PARTIALS
+@import '03-components/header';
+@import '03-components/footer';
+@import '03-components/navigation';
+@import '03-components/pagination';
+@import '03-components/button';
+@import '03-components/card';
+@import '03-components/form';
+@import '03-components/tag-list';
+@import '03-components/social-icons';
+@import '03-components/post-list';
+@import '03-components/post';
+@import '03-components/project-list';
+
+
+// UTILS
+@import '04-utils/utilities'

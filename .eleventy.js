@@ -41,7 +41,8 @@ module.exports = function (eleventyConfig) {
 
     // SHORTCODES
     eleventyConfig.addShortcode("year", shortcodes.year );
-    eleventyConfig.addNunjucksAsyncShortcode("image", shortcodes.eleventyImage);
+    eleventyConfig.addNunjucksAsyncShortcode("image", shortcodes.eleventyImage );
+    eleventyConfig.addShortcode("randomColor", shortcodes.randomColor );
 
 
 

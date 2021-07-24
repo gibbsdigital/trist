@@ -1,5 +1,5 @@
 ---
-layout: "layouts/base.njk"
+layout: "layouts/page.njk"
 pagination:
     data: collections
     size: 1
@@ -20,75 +20,44 @@ eleventyComputed:
     description: "Articles for <mark>{{ tag }}</mark>"
 headerColor: bg-dark
 ---
+<section class="articles" aria-labelledby="articles">
+    <div class="container">
 
-
-<header class="page-header {{ headerColor }}">
-    <div class="page-header__inner container">
-
-        <h1 class="title">
-            {{ title }}
-        </h1>
-        {% if description %}
-            <p class="lead">
-                {{ description | safe }}
-            </p>
+        <h2 id="articles" class="">
+            Articles for topic:  <mark>{{ tag }}</mark>
+        </h2>
+        
+        {% if site.env == 'development' %}
+        <h3 class="conic-gradient-border">Development Env</h3>
         {% endif %}
 
-    </div>
-    <svg style="margin-bottom: -10px;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1086 84">
-        <path path fill="#fff" d="M1086 30.45C728 62.9 354 79 0 0v84h1086z"></path></svg>
-</header>
-
-
-
-<div class="blog-layout container">
-    
-    <section class="articles" aria-labelledby="articles">
-        <div class="">
-
-            <h2 id="articles" class="section__title">
-                Articles for <mark>{{ tag }}</mark>
-            </h2>
-
-            {% set postListItems = collections[ tag ] %} 
+        {% set postListItems = collections[ tag ] %} 
             {% include "partials/post-list.njk" %}      
+    
+    </div>
+</section>
+
+
+
+<section class="topics" aria-labelledby="topics">
+    <div class="container">
+
+        <!-- <h2 id="topics" class="title-sidelines">Topics</h2> -->
+        <h2 id="topics" class="h2-display">Topics</h2>
+
+        {% include "partials/tag-list.njk" %}
         
-        </div>
-    </section>
+    </div>
+</section>
 
+<div class="container">
+        <h2 id="rssFeed">Subscribe to the feed</h2>
 
-
-    <section class="topics" aria-labelledby="topics">
-        <div class="">
-
-            <h2 id="topics" class="section__title ">Topics</h2>
-
-            {% include "partials/tag-list.njk" %}
-            
-        </div>
-    </section>
-
-</div>
-
-
-<div class="rss-feed container">
-    <a href="/feed.xml" class="" title="RSS Feed"> 
-        <svg class="icon icon--feed" role="img" aria-hidden="true" width="20" height="20" style="fill: currentColor;">
+    <a href="{{ site.feedUrl }}" class="btn btn--primary outlined" title="RSS Feed" style="border-radius: 38px;"> 
+        <svg class="icon icon-rss" role="img" aria-hidden="true" width="20" height="20" style="fill: currentColor;">
             <use xlink:href="#icon-rss"></use>
         </svg>
-        <span class="label">Subscribe to the RSS Feed</span>
+        <span class="label">RSS Feed</span>
     </a>
+
 </div>
-
-
-
-   
-    
-{% include "partials/other-posts-section.njk" %} 
-   
-    
-
-    
-
-
-  

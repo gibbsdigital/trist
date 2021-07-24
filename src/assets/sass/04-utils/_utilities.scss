@@ -1,0 +1,81 @@
+/* UTILITY CLASSES */
+
+/* AMAZING COLOR GRADIENT SQUARE BORDER */
+.conic-gradient-border {
+    padding: 1em;
+    border: 25px solid;
+    border-image-slice: 1;
+    border-image-source: conic-gradient(
+        hsl(100 100% 60%),
+        hsl(200 100% 60%),
+        hsl(100 100% 60%)
+    );
+}
+
+
+
+
+
+
+/* UTILITY CLASSES */
+.color-primary {
+    color: var(--primary);
+}
+.color-secondary {
+    color: var(--secondary);
+}
+.color-white {
+    color: var(--color-bg);
+}
+.bg-offset { 
+    background-color: var(--color-bg-offset);
+}
+.bg-grey {
+    background-color: var(--color-grey);
+}
+.color-text {
+    color: var(--color-text);
+}
+.bg-light-blue {
+    background-color: var(--light-blue);
+}
+.bg-gradient {
+    background: linear-gradient(45deg, black, transparent);
+    color: white !important;
+}
+.bg-gradient .title {
+    color: white !important;
+}
+.bg-dark {
+    background-color:var(--color-text-offset);
+   /*  background-color: var(--dark); */
+    text-shadow: 0.2em 0.2em 0.9em #000;
+    color: white;
+}
+.bg-dark .title {
+    color: white !important;
+}
+.color-header {
+    background-color:var(--color-header);
+    text-shadow: 0.2em 0.2em 0.9em #000;
+    color: white;
+}
+.color-header .title {
+    color: white !important;
+}
+
+.mb-1 {
+    margin-bottom: 1em;
+}
+
+
+
+
+
+/**
+ * Add the correct display in IE 10.
+ */
+ [hidden],
+ .hidden {
+    display: none !important;
+}

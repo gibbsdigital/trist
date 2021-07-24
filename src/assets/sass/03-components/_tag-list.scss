@@ -80,11 +80,11 @@ Styleguide Tag List
     border-color: transparent;
     color: #ffffff;
  */
-    color: var(--color-bg);
+    color: var(--color-header);
     background-color: var(--color-links);
     border: 2px solid var(--color-links);
-    background-color: var(--primary);
-    border: 2px solid var(--primary);
+    background-color: var(--color-light-blue);
+    border: 2px solid var(--color-light-blue);
     text-decoration: none;
 }
 .tag-list__link.is-dark:hover {
