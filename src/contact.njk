@@ -34,8 +34,13 @@ permalink: "/contact/index.html"
 
 
         <!-- CONTACT FORM  (Netlify Contact Form  https://snipcart.com/blog/netlify-forms)  -->
-        <form class="contact">
-           <!--  <input class="hidden" name="hpfield"> -->
+        <form 
+            name="contact" 
+            method="POST" 
+            data-netlify="true"
+            action="/thankyou.njk"
+            netlify-honeypot="hpfield">
+            <input class="hidden" name="hpfield">
             <p class="field ">
                 <label for="email">
                   <span class="field-label">Email address</span>
