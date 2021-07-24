@@ -5,7 +5,7 @@ const ENV = process.env.ELEVENTY_ENV;
 const siteName = "trist.dev";
 const siteTitle = "trist.dev";
 const siteDescription = "Personal Site for front-end Web Developer Tristan Gibbs";
-const siteImage = "/assets/images/monitor-and-tablet.svg";
+const siteImage = "/assets/images/intro.png";
 const siteImageAlt = "computer monitor and tablet";
 const siteUrl = ENV === 'production' ? "https://trist.dev" : "http://localhost:8080";
 const siteFeedUrl = siteUrl + "/feed.xml";
