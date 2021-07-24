@@ -1,7 +1,7 @@
 ---
 title: 10 Tips for Website Redesign in 2020
 description: 'Website redesign can be tricky. Here are some tips for your consideration.'
-image: "/assets/images/intro.png"
+image: "/assets/images/posts/laptop.jpg"
 imageAlt: 'image of a computer monitor and tablet'
 date: 2020-01-02
 tags: 

@@ -1,7 +1,7 @@
 ---
 title: A Complete Guide to Wireframe Design
 description: 'Wireframing is an important part of the planning process. Here is a guide to help.'
-image: "/assets/images/monitor-and-tablet.svg"
+image: "/assets/images/posts/mobile.jpg"
 imageAlt: 'image of a computer monitor and tablet'
 date: 2020-04-13
 featured: true

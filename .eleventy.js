@@ -103,6 +103,7 @@ module.exports = function (eleventyConfig) {
 
     // PASSTHROUGH FILE COPY
     eleventyConfig.addPassthroughCopy("./src/assets/images/favicons");
+    eleventyConfig.addPassthroughCopy("./src/assets/images/posts/")
     eleventyConfig.addPassthroughCopy("./src/assets/fonts");
     
 

@@ -2,7 +2,7 @@
 layout: layouts/page.njk
 title: about
 description: A little bit about me.
-image: "/assets/images/intro.png"
+image: "/assets/images/posts/writing.jpg"
 imageAlt: 'image of a computer monitor and tablet'
 permalink: "/about/index.html"
 ---
