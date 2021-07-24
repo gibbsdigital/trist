@@ -3,6 +3,7 @@ title: Making design tokens a single source of truth
 description: 'To build something without planning first is a common way to 
 get lost in a project. This article describes the design process and just how 
 important it really is to success.'
+image: "/assets/images/posts/labtop.jpg"
 date: 2019-12-21
 tags: 'design systems'
 ---

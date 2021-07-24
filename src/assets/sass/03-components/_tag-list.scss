@@ -36,7 +36,7 @@ Styleguide Tag List
     padding: 0;
     list-style: none;
    /*  list-style: disc; */
-    max-width: 55ch;
+    max-width: 50ch;
 }
 .tag-list__item {
     margin-left: 0.8em;
@@ -45,11 +45,9 @@ Styleguide Tag List
 .tag-list__link {
     
 }
-/* .tag-list__link {
+.tag-list__link {
     color: var(--color-bg);
     background-color: var(--color-links);
-    border: 2px solid var(--color-links);
-    border: 1px solid #b5b5b5;
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -57,7 +55,6 @@ Styleguide Tag List
     margin-right: 0.7rem;
     margin-bottom: 0.3rem;
     line-height: 1.2;
-    border-radius: .3em;
     text-align: center;
     white-space: nowrap;
     cursor: pointer;
@@ -73,18 +70,20 @@ Styleguide Tag List
     background-color: #555;
     border-color: transparent;
     color: #ffffff;
-} */
+}
 
 .tag-list__link.is-dark {
    /*  background-color:var(--secondary);
     border-color: transparent;
     color: #ffffff;
  */
-    color: var(--color-header);
+    color: var(--color-bg);
+    background-color: #3a6297;
     background-color: var(--color-links);
-    border: 2px solid var(--color-links);
-    background-color: var(--color-light-blue);
-    border: 2px solid var(--color-light-blue);
+    padding: .2em .5em;
+    
+    /* background-color: var(--color-light-blue);
+    border: 2px solid var(--color-light-blue); */
     text-decoration: none;
 }
 .tag-list__link.is-dark:hover {

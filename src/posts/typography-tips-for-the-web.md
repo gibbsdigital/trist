@@ -3,7 +3,7 @@ title: Typography tips for the web
 description: 'To build something without planning first is a common way to 
 get lost in a project. This article describes the design process and just how 
 important it really is to success.'
-image: "/images/projects/pattern-library-hero.png"
+image: "/assets/images/posts/writing.jpg"
 date: 2019-12-04
 tags: ['tips and tricks']
 ---

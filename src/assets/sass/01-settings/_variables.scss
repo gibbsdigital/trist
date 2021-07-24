@@ -38,6 +38,7 @@
 :root[data-theme="light"] {
     /* Theme Colors - checkout https://www.w3schools.com/colors/colors_analogous.asp*/
     --primary: #4b6cc1; 
+    
     --primary-hover: hsl(var(--primary), 100%, 39%);
     --secondary: #4BA7C1;
     --tertiary: #654BC1;
@@ -63,6 +64,7 @@
   /* Dark Mode */
   :root[data-theme="dark"] {
     --primary: #4b6cc1; 
+    --primary: #477bff;
     --primary-hover: hsl(var(--primary), 100%, 39%);
     --secondary: #4BA7C1;
     --tertiary: #654BC1;
