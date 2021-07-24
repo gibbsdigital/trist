@@ -8,14 +8,10 @@
         <link rel="stylesheet" href="/assets/css/main{{ version.css }}.css">
         <link rel="preload" href="/assets/fonts/barlow-v5-latin-500.woff2" as="font" type="font/woff2" crossorigin>
         <link rel="preload" href="/assets/fonts/barlow-v5-latin-700.woff2" as="font" type="font/woff2" crossorigin>
-        <link href="/assets/images/favicons/favicon.ico" rel="icon" type="image/x-icon"/>
-        <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/favicons/apple-touch-icon.png">
-        <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicons/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="/assets/images/favicons/favicon-16x16.png">
-        <link rel="manifest" href="/assets/images/favicons/site.webmanifest">
         <link type="application/atom+xml" rel="alternate" href="{{ site.feedUrl }}" title="{{ site.title }}">
         <link rel="canonical" href="{{ site.url + page.url }}" />
-        {% include "partials/head-meta.njk" %}
+        {% include "partials/favicons.njk" %}
+        {% include "partials/meta.njk" %}
         <script type="module">
             document.documentElement.classList.remove('no-js');
             document.documentElement.classList.add('js');

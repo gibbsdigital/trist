@@ -1,23 +1,19 @@
 ---
 layout: layouts/base.njk
 description: Personal website for web developer Tristan Gibbs.
+image: "/assets/images/monitor-and-tablet.svg"
+imageAlt: 'image of a computer monitor and tablet'
 intro:
-    eyebrow: "Tristan Gibbs"
+    eyebrow: "Hi, I'm"
     main: "Tristan Gibbs"
-    description: "I create performant, accessible, user friendly solutions for the Web."
-    buttonText: "See my work"
-    buttonUrl: "/projects"
+    name:
+        first: Tristan
+        last: Gibbs
+    lead: 'I create performant, accessible, user-friendly solutions for the Web.'
     image: "/images/bg/intro.png"
     imageAlt: "Computer monitor displaying code"
-featuredProjects:
-    title: "Featured projects"
-    buttonText: "View all projects"
+    buttonText: "See my work"
     buttonUrl: "/projects"
-featuredPosts:
-    title: "Featured posts"
-    buttonText: "View all posts"
-    buttonUrl: "/blog"
-headerColor: bg-dark
 ---
 
 
@@ -26,31 +22,22 @@ headerColor: bg-dark
 
         <h1 id="intro-title" class="title">
             <div class="eyebrow">
-                Hi, I'm<!--Tristan -->
+                {{ intro.eyebrow }}
             </div>
             <div class="name">
-                Tristan <br>
-                Gibbs
+                {{ intro.name.first }}
+                <br>
+                {{ intro.name.last }}
             </div>
-            <!-- <div>
-                Front end <br>
-                Web developer <br>
-                & designer
-            </div> -->
         </h1>
-        
         <p class="lead color-white">
-            I create performant, accessible,<br> 
-            user-friendly solutions for the Web.
+            {{ intro.lead }}
         </p>
         <div class="side-img">
             {% include "svg/monitor-and-tablet.svg" %}
-            <!-- <svg class="icon icon-monitor-and-tablet" aria-hidden="true" focusable="false" width="100%" height="100%">
-                <use xlink:href="#icon-monitor-and-tablet"></use>
-            </svg> -->
         </div>
         <div class="cta">
-            <a href="{{ intro.buttonUrl }}" class="btn btn--primary">See my work</a>
+            <a href="{{ intro.buttonUrl }}" class="btn btn--primary">{{ intro.buttonText }}</a>
         </div>
     </div>
     {% include "svg/wave.svg" %}
@@ -58,7 +45,9 @@ headerColor: bg-dark
 
 
 
-<section class="section" aria-labelledby="featured-projects" style="background-color: var(--color-bg);">
+
+
+<section class="section" aria-labelledby="featured-projects">
     <div class="container">
 
         <p class="conic-gradient-border">
@@ -67,7 +56,7 @@ headerColor: bg-dark
             The projects are not mine, just filler for development purposes.
         </p>
         
-        <h2 id="featured-projects" class="h-display-box mb-1">
+        <h2 id="featured-projects" class="h-display-box">
             Featured projects
         </h2>
     
@@ -79,7 +68,13 @@ headerColor: bg-dark
         <div class="section__footer">
             <a class="arrow-link" href="/projects/">
                 View all projects
-                <svg class="right-arrow" fill="currentColor" aria-hidden="true" focusable="false" width="35" height="10">
+                <svg 
+                    class="right-arrow" 
+                    fill="currentColor" 
+                    aria-hidden="true" 
+                    focusable="false" 
+                    width="35" 
+                    height="10">
                     <use xlink:href="#right-arrow"></use>
                 </svg>
             </a>
@@ -91,10 +86,10 @@ headerColor: bg-dark
 
 
 
-<section class="section" aria-labelledby="featured-posts" style="background-color: var(--color-bg);">
+<section class="section" aria-labelledby="featured-posts">
     <div class="container">
 
-        <h2 id="featured-posts" class="h-display-box mb-1">
+        <h2 id="featured-posts" class="h-display-box">
             Featured posts
         </h2>
 
@@ -106,7 +101,13 @@ headerColor: bg-dark
         <div class="section__footer">
             <a class="arrow-link " href="/blog/">
                 View all posts 
-                <svg class="right-arrow" fill="currentColor" aria-hidden="true" focusable="false" width="35" height="10">
+                <svg 
+                    class="right-arrow" 
+                    fill="currentColor" 
+                    aria-hidden="true" 
+                    focusable="false" 
+                    width="35" 
+                    height="10">
                     <use xlink:href="#right-arrow"></use>
                 </svg>
             </a>

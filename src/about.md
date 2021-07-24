@@ -2,7 +2,8 @@
 layout: layouts/page.njk
 title: about
 description: A little bit about me.
-socialImage: '/images/bg/intro.png'
+image: "/assets/images/intro.png"
+imageAlt: 'image of a computer monitor and tablet'
 permalink: "/about/index.html"
 ---
 
@@ -53,3 +54,4 @@ Et [oculis](#misit-aures) vadit flavusque. Responsa sceleris ibat nitentem Crena
 Gravis si nona urbes aggere, tulit **vivat tulit caeleste** in virgine vidit, diligis. Tibi quid. Illo sua, Palladis, iunctis. Lustrabere regnum Aeneia verba est quo accipis habet Hebe: cum.
 
 </div>
+

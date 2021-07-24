@@ -98,11 +98,10 @@ h5 {
 .h-display-box {
     font-weight: 700;
     width: fit-content;
-    background-color: var(--secondary);
-    background-color: var(--color-links-hover);
     background-color: var(--primary);
     color: var(--color-bg);
     padding: 1rem;
+    margin-bottom: 1em;
     box-shadow: .5rem .5rem var(--color-text);
     letter-spacing: .1rem;
     text-shadow: .125rem .125rem var(--color-text);
@@ -483,7 +482,7 @@ svg {
 }
 
 .article {
-   margin-bottom: 5em;
+   margin-bottom: 1em;
    grid-area: article;
 }
 

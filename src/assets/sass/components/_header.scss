@@ -186,6 +186,7 @@
 .lead {
     grid-area: lead;
     color: var(--color-light-gray);
+    max-width: 25ch;
 }
 .cta {
     grid-area: cta;

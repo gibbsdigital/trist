@@ -125,6 +125,13 @@ opacity: 0.9;
     box-shadow: none;
     text-shadow: none;
 }
+.btn--primary.outlined:hover {
+    background-color: var(--primary);
+   /*  border: 3px solid transparent; */
+    border-color: transparent;
+    color: var(--color-bg);
+    border-radius: 38px;
+}
 /* .btn-bd-primary {
     font-weight: 600;
     color: $white;

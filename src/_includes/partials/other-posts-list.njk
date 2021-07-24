@@ -1,0 +1,44 @@
+{# 'otherPosts' is 3 posts from posts collection minus the current post #}
+
+{% set otherPosts = collections.posts | excludePost(page) | slice(-3) %}
+
+<ol reversed class="post-list">
+    {% for post in otherPosts | reverse %}
+
+    <li class="post-list__item {% if post.data.draft %}post-list__item--draft{% endif %}">
+        <h3 class="post-list__title h3-display">
+            <a
+                href="{{ post.url | url }}"
+                class="post-list__link"
+                rel="bookmark"
+            >
+                {{ post.data.title }}
+            </a>
+        </h3>
+        <div class="post-list__meta">
+            <!-- <time
+                class="post-list__date"
+                datetime="{{ post.data.date | dateISO }}"
+            >
+                {{ post.data.date | dateFriendly }}
+            </time> -->
+            {% if post.data.tags %}
+                <ul class="post__tags" aria-describedby="tags-desc">
+                    {% for tag in post.data.tags %}
+                    <li>
+                        <a href="/blog/tag/{{ tag | slug }}/">#{{ tag | replace(' ', '') }}</a>
+                    </li>
+                    {% endfor %}
+                </ul>
+            {% endif %} 
+
+            {% if post.data.draft %}
+            <span aria-hidden="true">&sdot;</span>
+            <span class="post-list__status">(Draft)</span>
+            {% endif %}
+
+        </div>
+    </li>
+
+    {% endfor %}
+</ol>

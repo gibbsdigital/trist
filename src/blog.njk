@@ -1,7 +1,7 @@
 ---
 layout: layouts/page.njk
 title: "My Blog"
-description: A collection of my writings on Web development and design.
+description: A collection of articles from my Web development blog.
 image: '/assets/images/intro.png'
 imageAlt: 'A computer monitor with code'
 pagination:
@@ -9,7 +9,6 @@ pagination:
     size: 5
 permalink: "/blog{% if pagination.pageNumber > 0 %}/page/{{ pagination.pageNumber }}{% endif %}/index.html"
 paginationAnchor: "#post-list"
-headerColor: "bg-dark"
 ---
 
 
@@ -45,16 +44,26 @@ headerColor: "bg-dark"
     </div>
 </section>
 
+<div class="container">
+        <h2 id="rssFeed">Subscribe to the feed</h2>
+
+    <a href="{{ site.feedUrl }}" class="btn btn--primary outlined" title="RSS Feed" style="border-radius: 38px;"> 
+        <svg class="icon icon-rss" role="img" aria-hidden="true" width="20" height="20" style="fill: currentColor;">
+            <use xlink:href="#icon-rss"></use>
+        </svg>
+        <span class="label">RSS Feed</span>
+    </a>
+
+</div>
 
 
-
-<div class="rss-feed container">
+<<!-- div class="rss-feed container">
     <a href="{{ site.feedUrl }}" class="btn btn--primary outlined" title="RSS Feed" style="border-radius: 38px;"> 
         <svg class="icon icon-rss" role="img" aria-hidden="true" width="20" height="20" style="fill: currentColor;">
             <use xlink:href="#icon-rss"></use>
         </svg>
         <span class="label">Subscribe to the RSS Feed</span>
     </a>
-</div>
+</div> -->
 
 

@@ -3,6 +3,8 @@ title: Color Palette Generator
 description: 'To build something without planning first is a common way to 
 get lost in a project. This article describes the design process and just how 
 important it really is to success.' 
+image: "/assets/images/intro.png"
+imageAlt: 'image of a computer monitor and tablet'
 date: 2019-11-16
 tags: ['tools']
 ---

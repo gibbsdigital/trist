@@ -3,6 +3,8 @@ title: How to create a remote usability test for fast, actionable insights
 description: 'To build something without planning first is a common way to 
 get lost in a project. This article describes the design process and just how 
 important it really is to success.'
+image: "/assets/images/intro.png"
+imageAlt: 'image of a computer monitor and tablet'
 date: 2020-02-03
 featured: true
 tags: ['ux', 'testing']
