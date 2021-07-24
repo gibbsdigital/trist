@@ -1,5 +1,7 @@
 # trist.dev
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/f3bad41f-5bfa-4113-8b0c-0b47f995fe77/deploy-status)](https://app.netlify.com/sites/trist/deploys)
+
 Source code for [trist.dev](https://trist.dev), personal website of Tristan Gibbs.
 
 ## Features
