@@ -4,7 +4,7 @@
     {% for tag in collections.tagList %}
 
         <li class="tag-list__item">
-            <a href="/blog/tag/{{ tag | slug }}#tag-list" class="tag-list__link is-dark" rel="tag">
+            <a href="/blog/tag/{{ tag | slug }}#tag-list" class="tag-list__link" rel="tag">
                 {{ tag }} <!-- ({{ collections[tag].length }}) --> </a>
         </li>
 
