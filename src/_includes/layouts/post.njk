@@ -20,7 +20,7 @@ headerColor: bg-dark
             <p class="lead">
                 <div class="post__meta">
                     <time class="post__date" datetime="{{ date | dateISO }}">{{ date | dateFriendly }}</time>
-                    <span aria-hidden="true" focusable="false">&sdot;</span><br>
+                    <span aria-hidden="true" focusable="false">&sdot;</span>
                     <span class="post__read-time">{{ content | wordcount | readTime }}</span>
                     {% if draft %}
                     <span aria-hidden="true" focusable="false">&sdot;</span> 

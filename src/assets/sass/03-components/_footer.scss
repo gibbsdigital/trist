@@ -42,8 +42,6 @@
 .site-footer a {
     padding: .5em .3em;
     color: var(--color-light-gray);
-    text-decoration: underline;
-    font-weight: 700;
 }
 .site-footer a:hover, 
 .site-footer a:active {
@@ -112,7 +110,10 @@
 .site-footer__bottom a {
     padding: .5em .1em;
     color: var(--color-light-gray);
-    text-decoration: 1px solid underline var(--color-light-gray);
+    text-decoration-line: underline;
+    text-decoration-style: solid;
+    text-decoration-color: var(--color-light-gray);
+    text-decoration-thickness: 2px;
     
     
 }

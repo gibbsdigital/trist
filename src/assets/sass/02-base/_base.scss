@@ -14,7 +14,7 @@
 body {
     font-family: var(--font-primary);
     /* font-size: calc(0.333vw + 0.9rem); */
-    font-size: 1rem;
+    font-size: 1.125rem;
     line-height: 1.65;
     font-weight: 400;
     color: var(--color-text);
@@ -22,6 +22,7 @@ body {
     margin: 0;
     min-height: 100vh;
     text-rendering: optimizeSpeed;
+    overflow-x: hidden;
 }
 
 
@@ -50,6 +51,7 @@ h5 {
 
 h1 {
     font-size: 3em;
+    font-weight: 700;
     text-transform: capitalize;
     /* width: fit-content; */
     z-index: 1;
@@ -342,7 +344,10 @@ LINK HOVER TRANSITION FROM LEFT TO RIGHT
 .arrow-link {
     color: var(--color-links);
     text-transform: uppercase;
-    text-decoration: underline solid var(--color-links) 3px;
+    text-decoration-line: underline;
+    text-decoration-style: solid;
+    text-decoration-color: var(--color-links);
+    text-decoration-thickness: 3px;
     padding: 0.5em;
 }
 .arrow-link:hover,

@@ -174,7 +174,7 @@
     grid-area: side-img;
     max-width: 15em;
     color: var(--color-light-gray);
-    margin: 1em 0 2em;
+    /* margin: 1em 0 2em; */
 }
 
 
@@ -199,7 +199,8 @@
         column-gap: 2.5em;
     }
     .side-img {
-        max-width: 20em;
+        max-width: 18em;
+        margin-right: 2em;
     }
     
 }
