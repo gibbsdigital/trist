@@ -45,8 +45,7 @@
 }
 .site-footer a:hover, 
 .site-footer a:active {
-    text-decoration: underline;
-    text-decoration-color: var(--primary);
+    text-decoration: none;
     color: var(--color-bg);
 }
 
@@ -113,7 +112,7 @@
     text-decoration-line: underline;
     text-decoration-style: solid;
     text-decoration-color: var(--color-light-gray);
-    text-decoration-thickness: 2px;
+    text-decoration-thickness: 1px;
     
     
 }
@@ -165,11 +164,8 @@ a.back-to-top:hover {
 
 @media (min-width: 768px) {
     .site-footer__top, 
-.site-footer__bottom {
-   flex-direction: row; 
-}
-    .site-footer__top a {
-        /* font-size: 1.2em; */
+    .site-footer__bottom {
+    flex-direction: row; 
     }
     .site-footer__nav {
         margin: 0;

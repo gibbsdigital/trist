@@ -115,6 +115,7 @@ figcaption {
    color: var(--color-bg);
    background-color: var(--color-text);
    border: 2px solid var(--color-text);
+   text-decoration: none;
 }
 
 @media (min-width: 768px) {
@@ -134,8 +135,5 @@ figcaption {
        }
        .project > * {
            margin-inline-start:2.36rem;
-       }
-       .project__media {
-           /*  padding: 2em; */
        }
 }

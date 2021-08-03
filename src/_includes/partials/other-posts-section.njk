@@ -60,7 +60,7 @@
                         </time> -->
 
                         {% if post.data.tags %}
-                            <ul class="post__tags" aria-describedby="tags-desc">
+                            <ul class="post-list__tags" aria-describedby="tags-desc">
                                 {% for tag in post.data.tags %}
                                 <li>
                                     <a href="/blog/tag/{{ tag | slug }}/">#{{ tag | replace(' ', '') }}</a>

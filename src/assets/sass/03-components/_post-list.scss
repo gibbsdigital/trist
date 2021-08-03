@@ -54,7 +54,7 @@
  .post-list__meta {
     /* font-size: .9em; */
     font-family: var(--font-family-display);
-    color: var(--color-gray);
+    color: var(--color-text-offset);
     margin: .4em 0;
     /* opacity: 0.75;
     font-size: 0.9em; */
@@ -73,10 +73,12 @@
  }
  .post-list__tags > li > a {
     font-family: var(--font-family-display);
-    color: var(--gray);
+    color: var(--color-text-offset);
     font-weight: 500;
 
     padding: .7em .1em;
  }
-
+ .post-list__tags > li > a:hover {
+    color: var(--color-links-hover);
+ }
 

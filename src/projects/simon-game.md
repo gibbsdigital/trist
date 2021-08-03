@@ -1,7 +1,7 @@
 ---
 title: 'Simon Classic Memory Game'
 description: 'Repeat a series of random tile clicks. The sequence becomes progressively longer and more complex after each round.'
-image: /assets/images/projects/simon-game-hero.jpg
+image: /assets/images/projects/simon-game.png
 imageAlt: 'A screen shot of the Simon Memory Game Project.'
 displayOrder: 3
 featured: true
