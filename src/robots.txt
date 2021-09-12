@@ -1,0 +1,4 @@
+Sitemap: https://trist.dev/sitemap.xml
+
+User-agent: *
+Disallow:

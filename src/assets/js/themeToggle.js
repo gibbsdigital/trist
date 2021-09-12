@@ -1,206 +1,56 @@
 
-class ThemeSwitcher {
-    constructor() {
-        // define some state variables
-        this.activeTheme = 'default'
+// Variables
+const toggleBtn = document.querySelector(".btn-toggle");
+const colorLight = '#eee';
+const colorDark = '#222';
 
-        // get all the theme buttons from before
-        this.themeSelectBtns = document.querySelectorAll('button[data-theme-id]')
-        this.init()
+// Get Themes
+let initialTheme = 'light';
+const systemTheme = window.matchMedia('(prefers-color-scheme: dark)').matches;
+const systemThemeLight = window.matchMedia('(prefers-color-scheme: light)').matches;
+const storedTheme = localStorage.getItem("theme");
+
+// Set initial Theme
+if (storedTheme) {
+    initialTheme = storedTheme;
+} else if (systemTheme) {
+    initialTheme = systemTheme;
+}
+document.documentElement.setAttribute('data-theme', initialTheme );
+
+
+
+// Functions
+function getSystemPreferences() {
+    if (window.matchMedia) {
+        if (window.matchMedia("(prefers-color-scheme: light)").matches) {
+            return "light";
+          } else if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+            return "dark";
+          } else if (window.matchMedia("(prefers-color-scheme: no-preference)").matches) {
+            return false
+          }
     }
+}
 
-    init() {
-        // determine if there is a preferred theme
-        const systemPreference = this.getSystemPreference()
-        const storedPreference = this.getStoredPreference()
 
-        // explicit choices overrule system defaults
-        if (storedPreference) {
-            this.activeTheme = storedPreference
-        } else if (systemPreference) {
-            this.activeTheme = systemPreference
-        }
-
-        // when clicked, get the theme id and pass it to a function
-        Array.from(this.themeSelectBtns).forEach((btn) => {
-            const id = btn.dataset.themeId
-            btn.addEventListener('click', () => this.setTheme(id))
-        })
-    }
-
-    getSystemPreference() {
-        // check if the system default is set to darkmode
-        if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
-            return 'dark'
-        }
-        return false
-    }
-
-    getStoredPreference() {
-        // check if the user has selected a theme before
-        if (typeof Storage !== 'undefined') {
-            return localStorage.getItem("theme")
-        }
-        return false
-    }
-
-    setTheme(id) {
-        // set the theme id on the <html> element...
-        this.activeTheme = id
-        document.documentElement.setAttribute('data-theme', id)
+function toggleTheme() {
+    let currentTheme = document.documentElement.getAttribute('data-theme');
     
-        // and save the selection in localStorage for later
-        if (this.hasLocalStorage) {
-            localStorage.setItem("theme", id)
-        }
+    if (currentTheme == 'dark') {
+        document.documentElement.setAttribute('data-theme', 'light');
+        localStorage.setItem("theme", 'light');
+        const metaTag = document.querySelector('meta[name="theme-color"]')
+        metaTag.setAttribute('content', colorLight );
+    } else {
+        document.documentElement.setAttribute('data-theme', 'dark' );
+        localStorage.setItem("theme", 'dark');
+        const metaTag = document.querySelector('meta[name="theme-color"]')
+        metaTag.setAttribute('content', colorDark );
     }
     
 }
 
-// this whole thing only makes sense if custom properties are supported -
-// so let's check for that before initializing our switcher.
-if (window.CSS && CSS.supports('color', 'var(--fake-var)')) {
-    new ThemeSwitcher()
-}
 
-
-
-
-
-
-
-
-
-
-
-const SELECTORS = {
-    picker: '.js-themepicker',
-    toggleBtn: '.js-themepicker-toggle',
-    themeSelectBtn: '.js-themepicker-themeselect',
-    closeBtn: '.js-themepicker-close',
-    navToggleBtn: '.js-nav-toggle'
-}
-const CLASSES = {
-    open: 'is-open',
-    active: 'is-active'
-}
-const THEME_STORAGE_KEY = 'theme'
-
-
-
-
-class ThemePicker {
-    constructor() {
-        this.isOpen = false
-        this.activeTheme = 'default'
-        this.hasLocalStorage = typeof Storage !== 'undefined'
-
-        this.picker = document.querySelector(SELECTORS.picker)
-        this.toggleBtn = document.querySelector(SELECTORS.toggleBtn)
-        this.navToggleBtn = document.querySelector(SELECTORS.navToggleBtn)
-        this.closeBtn = document.querySelector(SELECTORS.closeBtn)
-        this.themeSelectBtns = Array.from(
-            document.querySelectorAll(SELECTORS.themeSelectBtn)
-        )
-
-        this.init()
-    }
-
-    init() {
-        const systemPreference = this.getSystemPreference()
-        const storedPreference = this.getStoredPreference()
-
-        if (storedPreference) {
-            this.activeTheme = storedPreference
-        } else if (systemPreference) {
-            this.activeTheme = systemPreference
-        }
-
-        this.setActiveItem()
-        this.bindEvents()
-    }
-
-    bindEvents() {
-        this.toggleBtn.addEventListener('click', () => this.togglePicker())
-        this.closeBtn.addEventListener('click', () => this.togglePicker(false))
-
-        this.navToggleBtn.addEventListener('click', () => {
-            if (this.isOpen) {
-                this.togglePicker(false)
-            }
-        })
-
-        this.themeSelectBtns.forEach((btn) => {
-            const id = btn.dataset.theme
-            if (id) {
-                btn.addEventListener('click', () => this.setTheme(id))
-            }
-        })
-    }
-
-    getSystemPreference() {
-        if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
-            return 'dark'
-        }
-        return false
-    }
-
-    getStoredPreference() {
-        if (this.hasLocalStorage) {
-            return localStorage.getItem(THEME_STORAGE_KEY)
-        }
-        return false
-    }
-
-    setActiveItem() {
-        this.themeSelectBtns.forEach((btn) => {
-            btn.parentNode.classList.remove(CLASSES.active)
-            btn.removeAttribute('aria-checked')
-
-            if (btn.dataset.theme === this.activeTheme) {
-                btn.parentNode.classList.add(CLASSES.active)
-                btn.setAttribute('aria-checked', 'true')
-            }
-        })
-    }
-
-    setTheme(id) {
-        this.activeTheme = id
-        document.documentElement.setAttribute('data-theme', id)
-
-        if (this.hasLocalStorage) {
-            localStorage.setItem(THEME_STORAGE_KEY, id)
-        }
-
-        this.setActiveItem()
-    }
-
-    togglePicker(force) {
-        this.isOpen = typeof force === 'boolean' ? force : !this.isOpen
-
-        this.toggleBtn.setAttribute('aria-expanded', String(this.isOpen))
-
-        if (this.isOpen) {
-            this.picker.removeAttribute('hidden')
-            window.setTimeout(() => {
-                this.picker.classList.add(CLASSES.open)
-            }, 1)
-            this.themeSelectBtns[0].focus()
-        } else {
-            const transitionHandler = () => {
-                this.picker.removeEventListener(
-                    'transitionend',
-                    transitionHandler
-                )
-                this.picker.setAttribute('hidden', true)
-            }
-            this.picker.addEventListener('transitionend', transitionHandler)
-            this.picker.classList.remove(CLASSES.open)
-            this.toggleBtn.focus()
-        }
-    }
-}
-
-if (window.CSS && CSS.supports('color', 'var(--fake-var)')) {
-    new ThemePicker()
-}
+// Events
+toggleBtn.addEventListener("click", toggleTheme );

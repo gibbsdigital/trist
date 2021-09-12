@@ -372,7 +372,10 @@ a:hover .left-arrow {
 
 
 
-/* SCREEN READER ONLY TEXT AND FOCUS STYLES */
+
+
+
+/* SCREEN READER ONLY, TEXT, AND FOCUS STYLES */
 .sr-only:not(:focus):not(:active),
 .sr-skip-link:not(:focus),
 .visually-hidden {
@@ -387,16 +390,16 @@ a:hover .left-arrow {
     white-space: nowrap;
 }
 
-/* remove focus styles from clicks, not keyboard events: */
+/* Focus from clicks not keyboard events. 
+    From mouse, touch, or stylus */
 :focus:not(:focus-visible) {
     outline: 0;
 }
-
-
+/* Focus with a keyboard */
 :focus-visible {
-    outline: 4px solid var(--color-light-blue);
+  outline: 3px solid #3d68a7;
+  outline: 4px solid var(--color-light-blue);
 }
-
 
 
 

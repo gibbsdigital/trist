@@ -63,6 +63,7 @@ module.exports = {
     },
 
 
+
     getTagList: function(collection) {
         let tagSet = new Set();
         collection.getAllSorted().forEach(function(item) {

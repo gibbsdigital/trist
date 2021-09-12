@@ -1,0 +1,210 @@
+/* SIDENAV MENU */
+/* 
+<nav aria-labelledby="hamburger">
+        <button 
+          id="hamburger" 
+          class="hamburger" 
+          aria-label="Open Menu" 
+          aria-expanded="false" 
+          aria-controls="navMenu" 
+          tabindex="0">
+          <!-- ☰ -->
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+
+        <!-- <button id="hamburger" type="button" class="navbar-toggle" aria-label="Open menu">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+      </button> -->
+      
+        <div id="navMenu" class="navMenu">
+          <button id="closeNavMenu" class="closeBtn" aria-label="Close Menu">×</button>
+          <ul role="list">
+            <li><a href="#">Company</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Portfolio</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </div>
+      </nav>
+*/
+.navMenu {
+    width: 0;
+    visibility: hidden;
+    color: var(--side-color);
+    background: #333;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100%;
+    transition: width .1s linear;
+    z-index: 10;
+  }
+
+  .no-js .navMenu {
+    visibility: visible;
+    width: var(--nav-width);
+  }
+  
+  .closeBtn {
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    color: inherit;
+    padding: 0 5px;
+    background: #333;
+    font-size: 2em;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .hamburger {
+    position: absolute;
+    top: 10px;
+    right: 12px;
+    padding: 0.2px 5px 4px;
+    font-size: 2em;
+    background: none;
+    border: none;
+    cursor: pointer;
+    z-index: 12;
+    transition: margin .1s linear;
+  }
+  .no-js .hamburger,
+  .no-js .closeBtn {
+    margin-left: var(--nav-width);
+    visibility: hidden;
+  }
+
+  .hamburger[aria-expanded="true"] {
+    visibility: hidden;
+  }
+  
+  .hamburger-z {
+    z-index: 1;
+  }
+  
+  .hidden {
+    width: 0;
+  }
+
+  .visible {
+    visibility: visible;
+  }
+  .active {
+    width: 250px;
+    width: var(--nav-width);
+  }
+  
+  
+  /* 
+  ul {
+    list-style: none;
+    padding: 1.4em;
+    line-height: 1.4;
+    background: #333;
+  }
+  
+  ul li {
+    padding: 5px 0;
+  } */
+  
+  .navMenu a {
+    text-decoration: none;
+    font-weight: bold;
+    color: inherit;
+    font-size: 1.2em;
+  }
+  
+  .navMenu a:hover {
+    border-bottom: solid 1px;
+  }
+  
+  
+  .no-js main {
+    margin-left: var(--nav-width);
+  }
+  
+  
+  .main-right {
+    /* padding-left: 4em; */  
+  }
+  
+  .menuOpen {
+    /* margin-right: var(--nav-width); */
+  }
+  
+  .overlay {
+    position: fixed;
+    z-index: 8;
+    top: 0;
+    right: 0;
+    /* left: var(--nav-width); */
+    left: 0;
+    bottom: 0;
+    background: rgba(0,0,0,.3);
+    height: 100%;
+  }
+  
+  @media (max-width: 480px) {
+    .navMenu {
+      width: 100%;
+    }
+    .closeBtn {
+      margin: 1em;
+    }
+    
+    /* .menuOpen {
+      margin-left: 0;
+    } */
+  
+  }
+
+
+
+
+/* TOGGLE BUTTON HAMBURGER */
+  .navbar-toggle {
+    cursor: pointer;
+    border: none;
+    background-color: transparent;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.icon-bar {
+    display: block;
+    width: 25px;
+    height: 4px;
+    margin: 3px;
+    transition: background-color 0.2s ease-in-out,
+                transform 0.2s ease-in-out,
+                opacity 0.2s ease-in-out;
+    background-color: black;
+}
+.navbar-toggle:focus .icon-bar,
+.navbar-toggle:hover .icon-bar {
+    background-color: var(--navbar-text-color-focus);
+}
+#navbar.opened .navbar-toggle .icon-bar:first-child,
+#navbar.opened .navbar-toggle .icon-bar:last-child {
+    position: absolute;
+    margin: 0;
+    width: 30px;
+}
+#navbar.opened .navbar-toggle .icon-bar:first-child {
+    transform: rotate(45deg);
+}
+#navbar.opened .navbar-toggle .icon-bar:nth-child(2) {
+    opacity: 0;
+}
+#navbar.opened .navbar-toggle .icon-bar:last-child {
+    transform: rotate(-45deg);
+}

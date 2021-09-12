@@ -83,8 +83,8 @@ module.exports = function (eleventyConfig) {
             )
             .filter((p) => p.data.featured);
     });
+     
 
-    
     eleventyConfig.addCollection("tagList", filters.getTagList );
    
 
