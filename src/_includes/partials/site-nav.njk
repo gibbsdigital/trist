@@ -1,6 +1,6 @@
 {# primary site navigation menu. Uses data from '_data/navigation.json' #} 
 
-<ul class="site-nav__list">
+<ul class="site-nav__list" role="list">
     {% for item in navigation.items %}
         {%- set isCurrent = (item.url == page.url) -%}
         {%- set isParent = item.url != '/' and item.url in page.url -%}

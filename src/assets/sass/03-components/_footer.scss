@@ -91,6 +91,7 @@
 .site-footer .site-nav__list a {
     text-decoration: none;
     color: var(--color-light-gray);
+    font-size: 0.9em;
 }
 .footer strong {
     font-size: 115%;
@@ -117,7 +118,7 @@
     
 }
 .site-footer__bottom .info {
-    padding: 0.5em 0.8em;
+    /* padding: 0.5em 0.8em; */
     display: flex;
     flex-direction: column;
     align-items: center;
