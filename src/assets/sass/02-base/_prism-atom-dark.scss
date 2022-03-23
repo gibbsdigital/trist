@@ -10,7 +10,9 @@
 ```Liquid Custom Tag {% highlight %}
     Nunjucks Paired Shortcode {% highlight %}
  */
-
+ :root {
+    --code-bg: #161b22;
+ }
  code[class*="language-"],
  pre[class*="language-"] {
      color: #c5c8c6;

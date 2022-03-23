@@ -12,40 +12,27 @@ paginationAnchor: "#post-list"
 ---
 
 
-  
 <section class="articles" aria-labelledby="articles">
     <div class="container">
-
         <h2 id="articles" class="h-display-box">Articles</h2>
-        
-        {% if site.env == 'development' %}
-        <h3 class="conic-gradient-border">Development Env</h3>
-        {% endif %}
-
         {% set postListItems = pagination.items %} 
         {% include "partials/post-list.njk" %} 
-
         {% include "partials/pagination-nav.njk" %} 
-    
     </div>
 </section>
-
 
 
 
 <section class="topics" aria-labelledby="topics">
     <div class="container">
-
-        <!-- <h2 id="topics" class="title-sidelines">Topics</h2> -->
         <h2 id="topics" class="h-display-box mb-1">Topics</h2>
-
         {% include "partials/tag-list.njk" %}
-        
     </div>
 </section>
 
+
 <div class="rss container mb-6">
-        <h2 id="rssFeed">Subscribe to the feed</h2>
+    <h2 id="rssFeed">Subscribe to the feed</h2>
 
     <a href="{{ site.feedUrl }}" class="btn btn--primary outlined" title="RSS Feed" style="border-radius: 38px;"> 
         <svg class="icon icon-rss" role="img" aria-hidden="true" width="20" height="20" style="fill: currentColor;">

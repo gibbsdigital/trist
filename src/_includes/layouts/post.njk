@@ -6,6 +6,7 @@ shareFacebook: ?share=facebook&nb=1
 headerColor: bg-dark
 ---
 
+
 <article 
     id="{{ title | slug }}" 
     class="post" 
@@ -57,8 +58,7 @@ headerColor: bg-dark
 
     <footer class="post__footer">
 
-        <div class="">
-
+        <div class="footer-section">
             <div class="share article-container">
                 <strong>Share this article</strong>
                 <ul class="share-list">
@@ -102,6 +102,23 @@ headerColor: bg-dark
 
             </div>
 
+        </div>
+
+        <div class="footer-section">
+            <div class="share-widget article-container">
+              <ul role="list" class="share-list-2">
+                <strong>Share this article:</strong>
+                <li>
+                    <a href="https://twitter.com/intent/tweet?url=http://www.nngroup.com/articles/in-page-links/&amp;text=Anchors OK? Re-Assessing In-Page Links&amp;via=nngroup" data-share-type="Twitter">Twitter</a>
+                    <span aria-hidden="true"> | </span>
+                </li>
+                <li>
+                    <a href="http://www.linkedin.com/shareArticle?mini=true&amp;url=http://www.nngroup.com/articles/in-page-links/&amp;title=Anchors OK? Re-Assessing In-Page Links&amp;source=Nielsen%20Norman%20Group" data-share-type="LinkedIn">LinkedIn</a>
+                    <span aria-hidden="true"> | </span>
+                </li>
+                <li><a href="mailto:?subject=NN/g Article: Anchors OK? Re-Assessing In-Page Links&amp;body=https://www.nngroup.com/articles/in-page-links/" data-share-type="Email">Email</a></li>
+              </ul>
+            </div>
         </div>
 
         <div class="footer-section">

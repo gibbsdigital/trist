@@ -5,10 +5,23 @@ npm-debug.*
 *.swp
 .DS_Store
 Thumbs.db
-.sass-cache
-.env
-.cache
 
-# Node modules and output
+# Node modules
 node_modules
+node_modules/
+
+# Output folder
 dist
+_dist
+_site
+
+# Env Variables
+.env
+
+# Cache
+.sass-cache
+.cache
+cache
+_cache
+
+functions

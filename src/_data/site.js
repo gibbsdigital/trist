@@ -11,6 +11,7 @@ const siteUrl = ENV === 'production' ? "https://trist.dev" : "http://localhost:8
 const siteFeedUrl = siteUrl + "/feed.xml";
 const siteRepo = "https://github.com/gibbsdigital/trist";
 
+
 module.exports = {
     ENV: ENV,
     IS_PRODUCTION: ENV === 'production' ? true : false,
@@ -22,5 +23,6 @@ module.exports = {
     url: siteUrl,
     feedUrl: siteFeedUrl,
     repo: siteRepo,
-    date: new Date()
+    date: new Date(),
+    url2: process.env.URL || "http://localhost:8080"
 };

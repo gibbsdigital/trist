@@ -6,7 +6,7 @@ important it really is to success.'
 image: "/assets/images/posts/planning.jpg"
 imageAlt: 'image of a computer monitor and tablet'
 date: 2020-02-03
-featured: true
+featured: false
 tags: ['ux', 'testing']
 ---
 Lorem markdownum tecta: sub candore removete cessit summum [laetitiae](#adigitque-qua)? Per et est micantia nisi fato? Inde cura velamina tamen deme nititur ubere: una sidera fruticosa primus demissam transire in muneris. Inter est repugnat [dempta](#medio-sine-quamvis), sinu, quisque.

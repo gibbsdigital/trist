@@ -53,13 +53,114 @@ POST
 .post__content {
            
 }
-/* .article-container {
-    width: 100%;
-    max-width: 75ch;
-    padding: 0 1.33rem;
-    margin-left: auto;
-    margin-right: auto;
+
+
+
+
+
+/* ARTICLE ANCHOR LINKS */
+.anchor-wrapper {
+    margin-top: 2em;
+    margin-bottom: 0.65em;
+    /* display: flex;
+    align-items: center; */
+}
+.anchor-wrapper h2[id] {
+    display: inline;
+    margin: 0;
+}
+.anchor-wrapper a {
+    display: inline-flex;
+    margin-left: .25em;
+    font-size: 1.25em;
+}
+
+.article-anchor {
+  display: grid;
+  grid-template-columns: min-content auto;
+  margin-top: 2rem; 
+  margin-bottom: 0.65em;
+}
+.article-anchor [id] {
+    margin: 0;
+}
+
+/* [id]:target:before {
+    content: "Aww, you came to see me!";
+    font-size: .9rem;
+    font-style: italic;
+    position: absolute;
+    top: -1.5rem;
 } */
+/* .article-anchor:target::before {
+  content: "Is it me you're looking for?";
+  position: absolute;
+  font-size: .9rem;
+  top: -1.25rem;
+  left: 0;
+  font-style: italic;
+  color: currentColor;
+} */
+
+.article-anchor a {
+    align-self: start;
+    font-size: 1rem;
+    grid-row-start: 1;
+    line-height: 1;
+    opacity: .75;
+    text-decoration: none;
+    transform: translateX(-50%) translateY(25%);
+  opacity: 0.8;
+  color: var(--color-links);
+}
+
+.article-anchor a:hover {
+  text-decoration: underline;
+  text-underline-offset: 0.25em;
+  opacity: 1;
+}
+
+.article-anchor a:focus {
+  outline: 2px solid currentColor;
+  outline-offset: 0.15em;
+}
+
+/* Visually hidden while remaining accessible to
+assistive tech like screen readers */
+.article-anchor span.icon-link * {
+  font-size: 1.1rem;
+}
+.article-anchor span.icon-num {
+  font-size: 1.2rem;
+  opacity: 0.7;
+  font-weight: 400;
+}
+
+
+
+.heading-anchor-wrapper {
+    display: flex;
+    align-items: center;
+}
+.heading-anchor-wrapper .anchor-link {
+    margin-bottom: 0.8em;
+    margin-left: 0.4em;
+}
+.heading-anchor-wrapper .anchor-icon {
+    font-size: 1.2em;
+    font-weight: 400;
+    font-size: 1.5em;
+    opacity: .8;
+}
+
+
+/* Add a link icon next to heading-anchor link */
+.anchor a::after,
+.article h3 a[href^="https"]::before {
+    content: "🔗 ";
+    content: " \1F517";
+}
+
 
 .post__footer {
 
@@ -73,6 +174,29 @@ POST
     margin-left: auto;
     margin-right: auto;
     border-top: 1px solid var(--color-light-gray);
+}
+
+.share-widget {
+    /* background: #f7f6f6;
+    color: #333333;
+    border-radius: 0.625rem;
+    padding: 0.5em 1.5em; */
+    
+}
+
+.share-list-2 {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    font-size: 0.8em;
+}
+/* .share-list-2 li + li::after {
+    content: " | ";
+} */
+.share-list-2 a {
+    padding: 0.2em 0.5em;
 }
 
 

@@ -1,0 +1,194 @@
+/**
+ * Nord Theme Originally by Arctic Ice Studio
+ * https://nordtheme.com
+ *
+ * Ported for PrismJS by Zane Hitchcoxc (@zwhitchcox) and Gabriel Ramos (@gabrieluizramos)
+ * Altered by Tristan Gibbs @gibbs_digital
+ */
+
+ :root {
+    --font-code-nord: "Fira Code", Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+    --font-code: Consolas,Menlo,Monaco,"Andale Mono WT","Andale Mono","Lucida Console","Lucida Sans Typewriter","DejaVu Sans Mono","Bitstream Vera Sans Mono","Liberation Mono","Nimbus Mono L","Courier New",Courier,monospace;
+    --font-size-code: 0.75em;
+    --size-200: 0.694rem;
+    --size-300: 0.833rem;
+    --size-400: 1rem;
+    --size-500: 1.2rem;
+    --size-600: 1.44rem;
+    --size-700: 1.728rem;
+    --size-800: 2.074rem;
+    --size-900: 2.488rem;
+    --size-1000: 2.986rem;
+    --red: hsl(0, 55%, 34%);
+    --green: hsl(126, 39%, 24%);
+    --black: rgb(34,31,44);
+    --grey-20: rgb(192,190,202);
+    --grey-30: rgb(163,160,178);
+    --white: rgb(252,252,253);
+    --color-attr: #fdb31f;
+    --color-attr-light: #f4bf75;
+    --color-tag: hsl(222, 100%, 85%);
+    --color-string: hsl(222, 100%, 85%);
+    --color-attr-val: #54e88f;
+    --color-important: rgb(245,0,159);
+    --color-selector: rgb(203,131,255);
+    --color-comment: var(--grey-30);
+    --code-forground: rgb(252,252,253);
+    --code-background: #161b22;
+    --code-bg: #161b22;
+}
+
+ code[class*="language-"],
+ pre[class*="language-"] {
+    color: var(--white);
+    background: none;
+    font-family: var(--font-code);
+    font-size: var(--size-300);
+    padding: .5rem;
+     text-align: left;
+     white-space: pre;
+     word-spacing: normal;
+     word-break: normal;
+     word-wrap: normal;
+     line-height: 1.5em;
+     -moz-tab-size: 4;
+     -o-tab-size: 4;
+     tab-size: 4;
+     -webkit-hyphens: none;
+     -moz-hyphens: none;
+     -ms-hyphens: none;
+     hyphens: none;
+     direction: ltr;
+     display: block;
+ }
+ 
+ /* Code blocks */
+ pre[class*="language-"] {
+    padding: 1rem 0.5rem;
+    margin: 2.5rem 0;
+    overflow: auto;
+    display: block;
+    /* margin: 2rem calc(50% - 50vw); */
+    /* max-width: 55rem; */
+    margin-left: -15px;
+    margin-right: -15px;
+    border-radius: .5rem;
+ }
+
+ .markdown pre[class*=language-]>code {
+    width: 100%;
+    /* max-width: 41rem; */
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+@media screen and (min-width: 978px) {
+    .markdown pre[class*=language-] {
+        padding: 1.85rem 2rem;
+        margin-left: -35px;
+        margin-right: -35px;
+        border-radius: 0.5rem;
+    }
+}
+
+ :not(pre) > code[class*="language-"],
+ pre[class*="language-"] {
+     background-color: var(--code-bg);
+     color: var(--white);
+ }
+ 
+ /* Inline code */
+ :not(pre) > code[class*="language-"] {
+    font-size: var(--size-400);
+    padding: .1rem;
+    background-color: rgba(222,221,227,.7);
+    border-radius: .3rem;
+    color: var(--code-bg);
+     white-space: normal;
+
+    /*  display: block;
+     max-width: 75ch;
+    padding: 0 1.33rem;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: calc(1rem + (8 - 1) * ((100vw - 20rem)/ (100 - 20)));
+    padding-right: calc(1rem + (8 - 1) * ((100vw - 20rem)/ (100 - 20))); */
+ }
+ 
+ .token.comment,
+ .token.prolog,
+ .token.doctype,
+ .token.cdata {
+     color: #636f88;
+ }
+ 
+ .token.punctuation {
+     color: #81A1C1;
+ }
+ 
+ .namespace {
+     opacity: .7;
+ }
+ 
+ .token.property,
+ .token.tag,
+ .token.constant,
+ .token.symbol,
+ .token.deleted {
+     color: #81A1C1;
+ }
+ 
+ .token.number {
+     color: #B48EAD;
+ }
+ 
+ .token.boolean {
+     color: #81A1C1;
+ }
+ 
+ .token.selector,
+ .token.attr-name,
+ .token.string,
+ .token.char,
+ .token.builtin,
+ .token.inserted {
+     color: #A3BE8C;
+ }
+ 
+ .token.operator,
+ .token.entity,
+ .token.url,
+ .language-css .token.string,
+ .style .token.string,
+ .token.variable {
+     color: #81A1C1;
+ }
+ 
+ .token.atrule,
+ .token.attr-value,
+ .token.function,
+ .token.class-name {
+     color: #88C0D0;
+ }
+ 
+ .token.keyword {
+     color: #81A1C1;
+ }
+ 
+ .token.regex,
+ .token.important {
+     color: #EBCB8B;
+ }
+ 
+ .token.important,
+ .token.bold {
+     font-weight: bold;
+ }
+ 
+ .token.italic {
+     font-style: italic;
+ }
+ 
+ .token.entity {
+     cursor: help;
+ }

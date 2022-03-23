@@ -165,6 +165,68 @@ opacity: 0.9;
 }
 
 
+
+/* 
+BACK TO TOP LINK
+
+ <div class="back-to-top-wrapper">
+    <a href="#top" class="back-to-top-link" aria-label="Scroll to Top">🔝</a>
+</div>
+
+How far of a scroll travel within <main> prior to the
+   link appearing. main tag needs position: relative to work
+*/
+$scrollLength: 200vh;
+
+.back-to-top-wrapper {
+    // uncomment to visualize "track"
+    // outline: 1px solid red;
+    position: absolute;
+    top: $scrollLength;
+    right: 0.25rem;
+    bottom: -5em;
+    width: 3em;
+    pointer-events: none;
+}
+.back-to-top-link {
+    $color: #254568;
+
+    // `fixed` is fallback
+    position: fixed;
+    // preferred positioning, requires prefixing for most support, and not supported on Safari
+    // @link https://caniuse.com/#search=position%3A%20sticky
+    position: sticky;
+    // reinstate clicks
+    pointer-events: all;
+    // achieves desired positioning within the viewport
+    // relative to the top of the viewport once `sticky` takes over, or always if `fixed` fallback is used
+    top: calc(100vh - 5rem);
+  
+    // basic styling
+    display: inline-block;
+    text-decoration: none;
+    font-size: 2rem;
+    line-height: 3rem;
+    text-align: center;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    padding: 0.25rem;
+  
+    // "pretty" styles, including states
+    border: 1px solid $color;
+    background-color: #d6e3f0;
+    transition: transform 80ms ease-in;
+    &:hover,
+    &:focus {
+      transform: scale(1.1);
+    }
+    &:focus {
+      outline: none;
+      box-shadow: 0 0 0 3px #4e85c0;
+    }
+}
+  
 /* 
 .pag-btn[aria-disabled=true],
 button.btn--delete[aria-disabled=true],

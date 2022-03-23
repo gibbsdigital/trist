@@ -9,7 +9,7 @@ intro:
     name:
         first: Tristan
         last: Gibbs
-    lead: 'I create performant, accessible, user-friendly solutions for the Web.'
+    lead: 'I make fast, accessible, user-friendly solutions for the Web.'
     image: "/images/bg/intro.png"
     imageAlt: "Computer monitor displaying code"
     buttonText: "See my work"
@@ -20,7 +20,7 @@ intro:
 <header class="page-header">
     <div class="page-header__inner intro-layout container">
 
-        <h1 id="intro-title" class="title">
+        <!-- <h1 id="intro-title" class="page-header__title">
             <div class="eyebrow">
                 {{ intro.eyebrow }}
             </div>
@@ -31,7 +31,23 @@ intro:
         </h1>
         <p class="lead">
             {{ intro.lead }}
-        </p>
+        </p> -->
+        <!-- <h1 id="intro-title" class="page-header__title">
+            <div class="eyebrow">
+                Hi, I'm Tristan
+            </div>
+            <div class="name">
+                {{ intro.lead }}
+            </div>
+        </h1> -->
+        <div id="intro-title" >
+            <div class="eyebrow">
+                Hi, I'm Tristan
+            </div>
+            <h1 class="page-header__title">
+                {{ intro.lead }}
+            </h1>
+        </div>
         <div class="side-img">
             {% include "svg/monitor-and-tablet.svg" %}
         </div>
@@ -52,6 +68,12 @@ intro:
         <h2 id="featured-projects" class="h-display-box mb-1">
             Featured projects
         </h2>
+
+        <p class="conic-gradient-border">
+            This site is under development. 
+            The content is just temporary placeholder content. 
+            The projects are not mine, just filler for development purposes.
+        </p>
     
         <div class="section__content">
             {% set projectListItems = collections.featuredProjects %} 
@@ -108,12 +130,5 @@ intro:
     </div>
 </section>
 
-<div class="container">
-    <p class="conic-gradient-border">
-        This site is under development. 
-        The content is just temporary placeholder content. 
-        The projects are not mine, just filler for development purposes.
-    </p>
-</div>
 
 {% include "partials/cta.njk" %}

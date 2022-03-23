@@ -11,10 +11,31 @@
     box-sizing: inherit;
 }
 
+html:focus-within {
+    scroll-behavior: smooth
+}
+
+@media (prefers-reduced-motion:reduce) {
+    html:focus-within {
+        scroll-behavior: auto
+    }
+    *,:after,:before {
+        -webkit-animation-duration: .01ms!important;
+        animation-duration: .01ms!important;
+        -webkit-animation-iteration-count: 1!important;
+        animation-iteration-count: 1!important;
+        scroll-behavior: auto!important;
+        transition-duration: .01ms!important
+    }
+}
+
 body {
+    /* display: flex;
+    flex-direction: column; */
     font-family: var(--font-primary);
     /* font-size: calc(0.333vw + 0.9rem); */
-    font-size: 1.125rem;
+    font-size: 1rem;
+    font-size: clamp(1rem, calc(1rem + 0.25vw), 1.25rem);
     line-height: 1.65;
     font-weight: 400;
     color: var(--color-text);
@@ -25,11 +46,140 @@ body {
     overflow-x: hidden;
 }
 
+p,
+h1,
+h2,
+h3,
+h4 {
+    margin: 0;
+    word-break: break-word;
+    -webkit-hyphens: auto;
+    -ms-hyphens: auto;
+    hyphens: auto;
+}
+
+p, li {
+    /* --fluid-type-min: 1rem;
+    --fluid-type-max: 1.25rem;
+    --fluid-type-target: 0.2vw;
+    font-size: 1rem;
+    font-size: clamp(
+            var(--fluid-type-min, 1rem),
+            calc(1rem + var(--fluid-type-target, 0.2vw)),
+            var(--fluid-type-max, 1.2rem)
+        ); */
+}
 
 p {
-    margin: 0 0 1.5rem;
+    /* font-size: clamp(1rem, 0.8824rem + 0.5882vw, 1.2rem); */
+    /* font-size: calc(14px + (26 - 14) * ((100vw - 300px) / (1600 - 300))); */
+    line-height: 1.65;
+    /* line-height: calc(2px + 2.5ex + 2px); */
+    margin-bottom: 1.5rem;
     max-width: 65ch;
 }
+
+/* 
+    LINK ORDER: 
+    a:link, 
+    a:visited, 
+    a:hover, 
+    a:active 
+ */
+a {
+    color: inherit;
+    color: var(--color-links);
+    font-family: var(--font-family-display);
+    font-weight: 700;
+    text-decoration: none;
+}
+a:hover {
+    color: var(--color-links-hover);
+    /* text-decoration: underline solid var(--color-links-hover) 2px; */
+}
+a:focus {
+    color: var(--color-links-hover);
+    text-decoration: none;
+}
+
+p a {
+    font-family: var(--font-primary);
+    color: var(--color-links);
+    text-decoration-line: underline;
+    text-decoration-style: solid;
+    text-decoration-color: var(--color-links);
+    text-decoration-thickness: 2px;
+    display: inline-block;
+}
+p a:hover,
+p a:focus {
+    color: var(--color-links-hover);
+    text-decoration: none;
+}
+
+ol[role=list],
+ul[role=list] {
+    list-style: none;
+    padding: 0
+}
+
+
+
+
+img {
+    max-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    object-fit: cover;
+    object-position: 50% 50%;
+    box-shadow: 0 1px 5px rgba(0,0,0,.05), 0 5px 30px rgba(0,0,0,.2);
+    border-radius: 3px;
+ }
+
+img:not([alt]) {
+    outline: 2px solid red;
+}
+
+svg {
+    fill: currentColor;
+}
+
+.hr {
+    background-color: var(--color-gray);
+    border: 0;
+    height: 1px;
+    margin: 0 0 12px;
+    width: 100%;
+}
+
+mark {
+    background-color: var(--color-light-blue);
+}
+
+
+/* ol[role=list] li,
+ul[role=list] li{
+    list-style-type: none;
+} */
+
+[id] {
+    scroll-margin-top: 2em;
+}
+
+/* img {
+    max-width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+ */
+
+ .page-title {
+    font-size: clamp(1rem, (1rem + 5vw), 3rem);
+  }
+
+
+
 
 /**
 * HEADINGS
@@ -39,41 +189,144 @@ h2,
 h3,
 h4,
 h5 {
-   position: relative;
+   /* position: relative;
    margin: 0;
-   margin: 0 0 .4rem;
+   margin: 0 0 .4rem; */
+   position: relative;
     font-family: var(--font-family-display);
     font-weight: 500;
     line-height: 1.1;
-    max-width: 40ch;
+    line-height: calc(4px + 2ex);
+    margin-bottom: .65em;
+    max-width: 30ch;
    color: var(--color-text);
 }
 
+
+
+/* h1 {
+    font-size: clamp(2.75rem, 4vw + 1rem, 3rem);
+  }
+ */
+/*
+h4: 1.333rem
+h3: 1.776889rem
+h2: 2.368593037rem
+h1: 3.1573345183rem
+
+slope = (maxFontSize - minFontSize) / (maxWidth - minWidth)
+yAxisIntersection = -minWidth * slope + minFontSize
+preferredValue = yAxisIntersection[rem] + (slope * 100)[vw]
+*/
+h1,
+.h1 {
+    --fluid-type-min: 2.5rem;
+    --fluid-type-max: 3.5rem;
+    --fluid-type-target: 3vw;
+    max-width: 15ch;
+    font-size: 3.2rem;
+    line-height: calc(2px + 2ex + 2px);
+    font-size: clamp(2.5rem, 8vw, 3.25rem);
+    font-size: clamp(
+        var(--fluid-type-min, 2.5rem),
+        calc(1rem + var(--fluid-type-target, 3vw)),
+        var(--fluid-type-max, 1.3rem)
+    );
+    font-weight: 700;
+    /* font-size: clamp(1rem, calc(1rem + 0.25vw), 1.25rem);
+    font-size: clamp(2.5rem, 2.0294rem + 2.3529vw, 3.5rem); */
+  /* font-size: clamp( 2.5rem, 1rem + 3.5vw, 3.5rem ); */
+  /* font-size: clamp( 2.1154141273rem, calc(1.625rem + 1.6vw);, 3.1573345183rem ); */
+}
+
+h2,
+.h2 {
+    --fluid-type-min: 1.7rem;
+  --fluid-type-max: 2.2rem;
+  --fluid-type-target: 2vw;
+  font-size: 2.368593037rem;
+  line-height: calc(2px + 2ex + 2px);
+  /* margin-bottom: 0.65em; */
+  font-size: clamp( 1.5869573348rem, 4.7816357022vw + 1rem, 2.368593037rem );
+  font-size: clamp(1rem, 1rem + 4vw, 2.5rem);
+  font-size: clamp(1.5rem, 1rem + 3.5vw, 2.1rem);
+  font-size: clamp(1.5rem, 5vw, 1.8rem);
+  font-size: clamp(
+        var(--fluid-type-min, 1.5rem),
+        calc(1rem + var(--fluid-type-target, 5vw)),
+        var(--fluid-type-max, 1.8rem)
+    );
+    /* font-size: clamp(1.6rem, 1.1471rem + 1.7647vw, 2.25rem); */
+}
+
+h3,
+.h3 {
+    --fluid-type-min: 1.2rem;
+    --fluid-type-max: 1.5rem;
+    --fluid-type-target: 1vw;
+      max-width: 30ch;
+  font-size: 1.776889rem;
+  line-height: calc(2px + 2ex + 2px);
+  /* margin-bottom: 0.65em; */
+  font-size: clamp( 1.19051563rem, 4.58637337vw + 1rem, 1.776889rem );
+  font-size: clamp(1.2rem, 3.5vw, 1.5rem);
+  font-size: clamp(
+        var(--fluid-type-min, 1.2rem),
+        calc(1rem + var(--fluid-type-target, 5vw)),
+        var(--fluid-type-max, 1.5rem)
+    );
+}
+
+h4,
+.h4 {
+  font-size: 1.333rem;
+  line-height: calc(2px + 2ex + 2px);
+  font-size: clamp( 1rem, 4.333vw + 1rem, 1.333rem );
+  font-size: clamp(1rem, 2.5vw, 1.25rem);
+}
+
+
+@supports selector(:is(h2)) {
+    :is(h2, h3, h4) {
+        margin-top: 2;
+        /* margin-bottom: .5em; */
+    }
+  }
+  
+:is(h2, h3, h4) {
+    margin-top: 2rem;
+    /* margin-bottom: .5em; */
+}
+/* 
 h1 {
     font-size: 3em;
+    font-size: 3.1573345183rem;
     font-weight: 700;
     text-transform: capitalize;
-    /* width: fit-content; */
+    width: fit-content;
     z-index: 1;
 }
 
 h2 {
     font-size: 2em;
+    font-size: 2.368593037rem;
     position: relative;
     z-index: 1;
 }
 
 h3 {
     font-size: 1.6em;
+    font-size: 1.776889rem;
 }
 
 h4 {
     font-size: 1.2em;
+    font-size: 1.333rem;
 }
 
 h5 {
     font-size: 1.125em;
-}
+} */
 
 .h1-display {
     font-size: 4.5em;
@@ -87,16 +340,20 @@ h5 {
     opacity: .9;
 }
 
-.h3-display {
+.h3-display a {
     font-size: 2em;
-    font-weight: 700;
+    font-size: clamp( 1.5rem, 4.8vw + 1rem, 2.4rem );
+    font-size: clamp(1.3rem, 1rem + 3.5vw, 2.1rem);
+    font-weight: 500;
 }
 
-.markdown h2, .markdown h3, .markdown h4 {
-    position: relative;
+/* .markdown h2, .markdown h3, .markdown h4 {
     margin-top: 1.5em;
-    margin-bottom: .5em;
-}
+} */
+/* .markdown :is(h2, h3) {
+    margin-top: 1.5em;
+} */
+
 
 
 /* TITLE, SECTION-TITLE */
@@ -184,16 +441,16 @@ h5 {
     width: 13em;
     border-bottom: 1px solid;
     transform: translate3d(-100%,0,0);
-} */
+} 
 h2::after {
     
-   /*  display: block;
+    display: block;
     position: absolute;
     z-index: -1;
     top: 60%;
     left: .25em;
     right: .25em;
-    height: .5em; */
+    height: .5em; 
 
     content: '';
     /* display: block;
@@ -202,9 +459,9 @@ h2::after {
     left: 0;
     right: 0;
     bottom: 0;
-    z-index: -1; */
-    background-color: var(--secondary);
-}
+    z-index: -1; 
+    
+} */
 .highlight::after {
     content: '';
     width: 100%;
@@ -232,62 +489,7 @@ h2::after {
 
 
 
-.hr {
-    background-color: var(--color-gray);
-    border: 0;
-    height: 1px;
-    margin: 0 0 12px;
-    width: 100%;
-}
 
-
-mark {
-    background-color: var(--color-light-blue);
-}
-
-
-
-/* 
-    ANCHOR LINKS
-
-    LINK ORDER: 
-        a:link, 
-        a:visited, 
-        a:hover, 
-        a:active 
-        
-    (see pg 16 CSS in Depth)
- */
-a {
-    color: inherit;
-    color: var(--color-links);
-    font-family: var(--font-family-display);
-    font-weight: 700;
-    text-decoration: none;
-}
-a:hover {
-    color: var(--color-links-hover);
-    /* text-decoration: underline solid var(--color-links-hover) 2px; */
-}
-a:focus {
-    color: var(--color-links-hover);
-    text-decoration: none;
-}
-
-p a {
-    font-family: var(--font-primary);
-    color: var(--color-links);
-    text-decoration-line: underline;
-    text-decoration-style: solid;
-    text-decoration-color: var(--color-links);
-    text-decoration-thickness: 2px;
-    display: inline-block;
-}
-p a:hover,
-p a:focus {
-    color: var(--color-links-hover);
-    text-decoration: none;
-}
 
 
 
@@ -371,27 +573,71 @@ a:hover .left-arrow {
 /* END ARROW LINK SVG EFFECT */
 
 
+/* 
+.tdbc-skip-link {
+    background-color: #0d3233;
+    color: #fff!important;
+    font-size: 1.125rem;
+    height: 1px;
+    left: -10000px;
+    overflow: hidden;
+    position: absolute;
+    top: auto;
+    width: 1px
+}
 
+.skip-link:focus {
+    height: auto;
+    left: 0;
+    padding: .5em;
+    position: fixed;
+    top: 0;
+    width: auto
+} */
 
 /*
 SKIP LINK FROM PICALLI RESOPONSIVE BURGER MENU
-.skip-link {
+*/
+/* .skip-link {
   display: inline-block;
   padding: 0.7rem 1rem 0.5rem 1rem;
   background: var(--color-light);
   color: var(--color-primary-shade);
+  background: var(--color-text);
+  color: var(--color-bg);
   text-decoration: none;
   font-weight: 700;
   text-transform: uppercase;
   position: absolute;
   top: 1rem;
   left: 1rem;
-}
+} */
 .skip-link:hover {
-  background: var(--color-dark);
-  color: var(--color-light-shade);
+  /* background: var(--color-text);
+  color: var(--color-bg); */
 }
-.skip-link:not(:focus) {
+/* .skip-link {
+    background-color: var(--color-text);
+    color: #fff!important;
+    border: 3px solid var(--color-light-gray);
+    font-size: 1.125rem;
+    height: 1px;
+    left: -10000px;
+    overflow: hidden;
+    position: absolute;
+    top: auto;
+    width: 1px;
+}
+.skip-link:focus {
+    height: auto;
+    left: 2px;
+    padding: .5em;
+    position: fixed;
+    top: 2px;
+    width: auto;
+    z-index: 5;
+} */
+/* .skip-link:not(:focus) {
   border: 0;
   clip: rect(0 0 0 0);
   height: auto;
@@ -401,11 +647,11 @@ SKIP LINK FROM PICALLI RESOPONSIVE BURGER MENU
   position: absolute;
   width: 1px;
   white-space: nowrap;
-}
-*/
+} */
+
 
 /* SCREEN READER ONLY, TEXT, AND FOCUS STYLES */
-.sr-only:not(:focus):not(:active),
+/* .sr-only:not(:focus):not(:active),
 .sr-skip-link:not(:focus),
 .visually-hidden {
     border: 0;
@@ -417,7 +663,19 @@ SKIP LINK FROM PICALLI RESOPONSIVE BURGER MENU
     position: absolute;
     width: 1px;
     white-space: nowrap;
-}
+} */
+
+.sr-only {
+    clip: rect(1px, 1px, 1px, 1px);
+    clip-path: inset(1px);
+    display: block;
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+  }
+
 
 /* Focus from clicks not keyboard events. 
     From mouse, touch, or stylus */
@@ -432,52 +690,21 @@ SKIP LINK FROM PICALLI RESOPONSIVE BURGER MENU
 
 
 
-
-
-/* 
-  LISTS
-*/
-/* ul,
-ol {
-    padding-left: 0;
-    margin: 0;
-}
-ul li, 
-ol li {
-    list-style-type: none;  remove bullets 
-} */
-ul li::before, 
-ol li::before {
-    content: "\200B"; /* add zero-width space */
-}
-/* 
- VoiceOver and Safari (Webkit) (macOS and iOS) remove list element semantics 
- when list-style-type: none is used:
-https://gerardkcohen.me/writing/2017/voiceover-list-style-type.html */
-
-
-
-
-
-/**
-* IMAGE AND SVG
-*/
-img {
-    max-width: 100%;
-    min-height: 100%;
-    width: auto;
-    height: auto;
-    object-fit: cover;
-    object-position: 50% 50%;
-    box-shadow: 0 1px 5px rgba(0,0,0,.05), 0 5px 30px rgba(0,0,0,.2);
-    border-radius: 3px;
- }
-svg {
-    fill: currentColor;
-}
-
-
-
+.skip-link {
+    position: fixed;
+    top: 0;
+    left: 0;
+    transform: translateY(-10rem);
+    transition: transform 0.3s ease-in-out;
+    padding: 0.5rem;
+    background-color: var(--color-text);
+    color: #fff!important;
+    z-index: 999;
+  }
+  .skip-link:focus {
+    transform: translateY(0);
+  }
+  
 
 /**
  * Add the correct display in IE 10.
@@ -486,3 +713,27 @@ svg {
  .hidden {
     display: none !important;
 }
+
+
+
+
+/* ul li::before, 
+ol li::before {
+    content: "\200B";  add zero-width space 
+} 
+
+ VoiceOver and Safari (Webkit) (macOS and iOS) remove list element semantics 
+ when list-style-type: none is used:
+https://gerardkcohen.me/writing/2017/voiceover-list-style-type.html */
+
+
+
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* 
+       <img src="url" width=45 height=45 alt="person sking">
+*/

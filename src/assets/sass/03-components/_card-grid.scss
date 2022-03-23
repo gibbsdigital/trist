@@ -1,0 +1,67 @@
+
+/* 
+From https://codepen.io/5t3ph/pen/VwvvVqa?editors=1100
+
+<main>
+  <section class="card-row">
+    <article class="card">
+      <img class="card__img" alt="Preview of Whizzbang Widget" src="https://placeimg.com/320/240/tech" />
+      <div class="card__content">
+        <h3>Whizzbang Widget SuperDeluxe</h3>
+        <p>
+          Liquorice candy macaroon soufflé jelly cake. Candy canes ice cream
+          biscuit marzipan. Macaroon pie sesame snaps jelly-o.
+        </p>
+        <a href="#" class="button">Add to Cart</a>
+      </div>
+    </article>
+    <article class="card">
+      <img class="card__img" alt="Preview of Whizzbang Widget" src="https://placeimg.com/600/300/tech" />
+      <div class="card__content">
+        <h3>Whizzbang Widget SuperDeluxe</h3>
+        <p>
+          Liquorice candy macaroon soufflé jelly cake. Candy canes ice cream
+          biscuit marzipan. Macaroon pie sesame snaps jelly-o.
+        </p>
+        <a href="#" class="button">Add to Cart</a>
+      </div>
+    </article>
+    <article class="card">
+      <img class="card__img" alt="Preview of Whizzbang Widget" src="https://placeimg.com/200/400/tech" />
+      <div class="card__content">
+        <h3>Whizzbang Widget SuperDeluxe</h3>
+        <p>
+          Liquorice candy macaroon soufflé jelly cake. Candy canes ice cream
+          biscuit marzipan. Macaroon pie sesame snaps jelly-o.
+        </p>
+        <a href="#" class="button">Add to Cart</a>
+      </div>
+    </article>
+  </section>
+</main>
+*/
+.card-row {
+    display: grid;
+    grid-gap: 2rem;
+    justify-content: center;
+    grid-template-columns: repeat(auto-fit, minmax(26ch, 1fr));
+  }
+  
+  .card {
+    border: 1px solid #c9c9c9;
+    border-radius: 7px;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.15);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .card__content {
+    padding: 20px;
+  }
+  
+  .card__img {
+    object-fit: cover;
+    height: 30vh;
+  }
+  

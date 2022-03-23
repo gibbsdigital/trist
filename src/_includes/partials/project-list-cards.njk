@@ -1,0 +1,60 @@
+
+<section class="card-row">
+
+    for project in projectListItems 
+
+    <article class="card">
+        <!--  image 
+            project.data.image, 
+            project.data.imageAlt,
+            "(min-width: 768px) 50vw, 100vw",
+            "card__img"
+         -->
+      <img 
+        class="card__img" 
+        alt="{{ project.data.imageAlt }}" 
+        src="{ project.data.image }}" 
+        />
+      <div class="card__content">
+        <h3>{{ project.data.title }}</h3>
+        <p>
+            {{ project.data.description }}
+        </p>
+        <a 
+            href="{{ project.data.url }}" 
+            class="button">
+            Live site
+        </a>
+        <a 
+            href="{{ project.data.repo }}" 
+            class="button">
+            Source code
+        </a>
+      </div>
+    </article>
+
+    endfor
+
+    <article class="card">
+      <img class="card__img" alt="Preview of Whizzbang Widget" src="https://placeimg.com/600/300/tech" />
+      <div class="card__content">
+        <h3>Whizzbang Widget SuperDeluxe</h3>
+        <p>
+          Liquorice candy macaroon soufflé jelly cake. Candy canes ice cream
+          biscuit marzipan. Macaroon pie sesame snaps jelly-o.
+        </p>
+        <a href="#" class="button">Add to Cart</a>
+      </div>
+    </article>
+    <article class="card">
+      <img class="card__img" alt="Preview of Whizzbang Widget" src="https://placeimg.com/200/400/tech" />
+      <div class="card__content">
+        <h3>Whizzbang Widget SuperDeluxe</h3>
+        <p>
+          Liquorice candy macaroon soufflé jelly cake. Candy canes ice cream
+          biscuit marzipan. Macaroon pie sesame snaps jelly-o.
+        </p>
+        <a href="#" class="button">Add to Cart</a>
+      </div>
+    </article>
+  </section>

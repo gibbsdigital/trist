@@ -1,0 +1,21 @@
+/* 
+Fluid Hero Section from https://codepen.io/shadeed/pen/KKdZgEe?editors=1100
+
+<section class="hero">
+  <h2 class="hero-title">CSS Comparison Functions</h2>
+  <p class="hero-desc">A post about min(), max(), clamp()</p>
+</section>
+*/
+
+.hero {
+    position: relative;
+    background: #ebf3fd;
+    padding: clamp(2rem, 15vmax, 15rem) 1rem;
+    text-align: center;
+}
+  
+.hero-title {
+    font-weight: bold;
+    font-size: clamp(16px, 5vw, 32px);
+    margin-bottom: 0.5rem;
+}

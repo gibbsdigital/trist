@@ -5,17 +5,52 @@
 */
 .container,
 .wrapper {
+    --padding-x: calc(1rem + (8 - 1) * ((100vw - 20rem)/ (100 - 20)));
     padding: 0 1.33rem;
     margin-left: auto;
     margin-right: auto;
     max-width: 75rem;
+    padding-left: calc(1rem + (8 - 1) * ((100vw - 20rem)/ (100 - 20)));
+    padding-right: calc(1rem + (8 - 1) * ((100vw - 20rem)/ (100 - 20)));
 }
+/* 
+Calc formula by Mike Riethmuller  https://css-tricks.com/snippets/css/fluid-typography/
+
+ font-size: calc([minimum size] + ([maximum size] - [minimum size]) * ((100vw - [minimum viewport width]) / ([maximum viewport width] - [minimum viewport width])));
+
+- If we want the our font size in a range where 14px is the minimum size at the smallest viewport width of 300px 
+   and where 26px is the maximum size at the largest viewport width of 1600px, then our equation looks like this:
+
+   font-size: calc(14px + (26 - 14) * ((100vw - 300px) / (1600 - 300)));
+*/
+
+/* https://codepen.io/mikemai2awesome/pen/YzpQzaP?editors=1100 */
+.container-test {
+    --page-padding-x: calc((100vw - min(80vw, 75ch)) / 2);
+    --page-padding-x: calc((100vw - min(90vw, 75rem)) / 2);
+    --page-padding-x-small: calc(1rem + 7 * ((100vw - 20rem)/ (100 - 20)));
+    --page-padding-x-small: calc(1rem + 7 * ((100vw - 20rem)/ 80));
+    margin-left: auto;
+      margin-right: auto;
+      max-width: 75rem;
+      padding-left: calc(1rem + (8 - 1) * ((100vw - 20rem)/ (100 - 20)));
+      padding-right: calc(1rem + (8 - 1) * ((100vw - 20rem)/ (100 - 20)));
+    padding-left: --page-padding-x-small;
+      padding-right: --page-padding-x-small;
+  }
+  
+
+    /* width: min(80ch,100vw - 2rem); */
+    /* padding: 5vh clamp(1rem, 5vw, 3rem) 1rem; */
+
 
 .article-container {
     max-width: 75ch;
     padding: 0 1.33rem;
     margin-left: auto;
     margin-right: auto;
+    padding-left: calc(1rem + (8 - 1) * ((100vw - 20rem)/ (100 - 20)));
+    padding-right: calc(1rem + (8 - 1) * ((100vw - 20rem)/ (100 - 20)));
     /* padding-top: 5em; */
 }
 .article-layout {
@@ -42,34 +77,49 @@
 }
 
 .markdown > * {
-    margin-bottom: 1.5em;
+    /* margin-bottom: 1.5em; */
 }
-/* .markdown pre[class*=language-] {
-    display: block;
+/*
+pre {
+    width: 100vw;
+    max-width: 58rem;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    position: relative;
+} */
+.markdown pre[class*=language-] {
+    /* display: block;
     font-size: 1rem;
     padding: 2rem 1.5rem;
-    overflow-x: auto;
-} */
+    overflow-x: auto; */
+}
 .markdown pre[class*=language-]>code {
-    width: 100%;
+    /* width: 100%;
     max-width: 85ch;
     margin-left: auto;
     margin-right: auto;
-    display: block;
+    display: block; */
+
+    /* max-width: 75ch;
+    padding: 0 1.33rem;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: calc(1rem + (8 - 1) * ((100vw - 20rem)/ (100 - 20)));
+    padding-right: calc(1rem + (8 - 1) * ((100vw - 20rem)/ (100 - 20))); */
 }
-.post .markdown pre[class*=language-] {
+/* .post .markdown pre[class*=language-] {
     margin: 2rem calc(50% - 50vw);
 }
 @media (min-width: 940px) {
 .markdown pre[class*=language-] {
     padding: 2rem 3rem;
 }
-}
+} */
 @media (min-width: 1040px) {
 .post .markdown pre[class*=language-] {
-    margin-left: -170px;
+    /* margin-left: -170px;
     margin-right: -170px;
-    border-radius: .5rem;
+    border-radius: .5rem; */
 }
 }
 
