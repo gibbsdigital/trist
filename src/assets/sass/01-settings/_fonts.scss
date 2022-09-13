@@ -21,3 +21,11 @@
        url('../fonts/barlow-v5-latin-700.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
   font-display: swap;
 }
+
+/*  FOR CRITICAL INLINE CSS - FROM ZACK'S SITE
+@font-face {
+  font-family: Lato;
+  src: url("/assets/fonts/barlow-v5-latin-500.woff2") format("woff2");
+  font-weight: 700;
+  font-display: swap
+} */

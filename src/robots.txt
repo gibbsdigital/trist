@@ -1,4 +1,7 @@
-Sitemap: https://trist.dev/sitemap.xml
+# www.robotstxt.org
 
 User-agent: *
-Disallow:
+Disallow: /build.txt
+Disallow: /drafts
+
+Sitemap: https://trist.dev/sitemap.xml

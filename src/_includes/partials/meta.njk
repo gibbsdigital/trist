@@ -3,11 +3,11 @@
 {% set pageDesc = (description or site.description) %}
 {% set pageImage = site.url + (image or site.image) %}
 
-<!-- HTML Meta Tags -->
+<!-- Meta Under the 'Title' Tag -->
+<link rel="canonical" href="{{ site.url + page.url }}" />
 <meta name="description" content="{{ pageDesc }}">
 <meta name="image" content="{{ pageImage }}">
-<!--  <meta name="theme-color" content="#222">
-<meta name="background-color" content="#fffffe"> -->
+<meta name="theme-color" content="#222">
 
 <!-- Google / Search Engine Tags -->
 <meta itemprop="name" content="{{ pageTitle }}">
@@ -35,6 +35,24 @@
     <meta property="og:type" content="website" />
 {%- endif -%}
 <!-- <meta property="og:site_name" content="{{ site.name }}" /> -->
-
-
 <!-- Meta Tags Generated via http://heymeta.com -->
+{# JSON LD #}
+<!-- <script type="application/ld+json">
+    {
+        "name":"{{ author.name }}",
+        "description":"{{ site.description }}",
+        "author": {
+            "@type":"Person",
+            "name":"{{ author.name }}"
+        },
+        "@type":"WebSite",
+        "url":"{{ site.url }}",
+        "image":"{{ author.avatar | url | absoluteUrl(site.url) }}",
+        "headline":"{{ site.title }}",
+        "sameAs":[
+            "{{ author.social.twitter.url }}",
+            "{{ author.social.github.url }}"
+        ],
+        "@context":"http://schema.org"
+    }
+</script> -->

@@ -22,3 +22,11 @@ Source code for [trist.dev](https://trist.dev), personal website of Tristan Gibb
 - [Rollup.js](https://rollupjs.org/guide/en/)
 - [Nunjucks](https://mozilla.github.io/nunjucks/)
 - [Node.js](https://nodejs.org/)
+
+
+### notes
+
+https://webmention.io/api/mentions.html?token=Pb-8nnE_164y6Ld16ErfpA
+
+You'll also be given an API key. We want to safely store that WEBMENTION_IO_TOKEN in our Netlify environment variables.
+

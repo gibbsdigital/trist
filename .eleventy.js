@@ -53,6 +53,7 @@ const str = "Euler\'s identity $e^{i\\pi}+1=0$ is a beautiful formula in $\\RR^2
 md.render(str); */
 
   // FILTERS
+  eleventyConfig.addFilter();
   eleventyConfig.addFilter("dateFriendly", filters.dateFriendly);
   eleventyConfig.addFilter("dateYMD", filters.dateYMD);
   eleventyConfig.addFilter("dateISO", filters.dateISO);
@@ -129,6 +130,8 @@ md.render(str); */
   eleventyConfig.addPassthroughCopy("./src/assets/images/favicons");
   eleventyConfig.addPassthroughCopy("./src/assets/images/posts/");
   eleventyConfig.addPassthroughCopy("./src/assets/fonts");
+  /* eleventyConfig.addPassthroughCopy('./src/site.webmanifest') */
+  eleventyConfig.addPassthroughCopy("./src/robots.txt");
 
   // WATCH TARGET
   eleventyConfig.addWatchTarget("./src/assets");

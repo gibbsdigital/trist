@@ -1,33 +1,35 @@
 ---
-title: Making design tokens a single source of truth
-description: 'To build something without planning first is a common way to 
-get lost in a project. This article describes the design process and just how 
-important it really is to success.'
+title: Principles of the indieWeb community
+description: 'The IndieWeb is a people-focused alternative to the "corporate web.'
 image: "/assets/images/posts/labtop.jpg"
 date: 2019-12-21
-tags: 'design systems'
+tags: 'ethical development'
 ---
-Lorem markdownum, bracchia iuvenis teneo, nec urget, iuvenum nec adusque. Quaerit laborum parientibus inde eloquitur impune passu coronam sed maritae oculis, valuissent ne breve novis. Nec aliena facies agros sub cupiunt Credulitas, alumnus sermonibus, medium, gemellos. Sibi nec videbor negabat; et etiam offensi amnis interea donec sanguis forsitan descenderat nempe altior!
 
-1. Litora optasse visa tellus
-2. Lacrimante corripitur frustra conveniunt colla est inridet
-3. Super poscis
-4. Ne velamina suos iuventus
 
-## Et murmur summa Titan esto ut opprimere
 
-Referens timeas fides, haut sic vultusque, culpa latitantem in eadem, ossa dubitat. *Atracides et imber* vires dies placuere indignatus ardetque exire. His summa flexerat perit! Pro partu suorum ille; populos lacu positaeque vocant regia puerpera valentes o pes. Cereris rerum cornua pavet Alemoniden vitae pereunt laetum.
+# Webmentions instructions
 
-## Sit potuit sinus Achille tortum
 
-Cauda corpore leto curas tamen pluma, ipse *fecundus*, nihil viris cuspide convivia sanctaque. Spectatae inpetus patulo faciendus Tethys festumque exterrita nota, litora paventis inque; hic? Ingemit et frontes tumefactum hanc, nil perque stetit, factas adductaque cubilia anno, **sanguinis**: munus **postquam**? Stuppea illa cretus? Et gaudia et moras male defecta aquarum et grates conbibitur Mendesius thyrso ausus!
 
-Umida infamia colorum ille lacrimas, et gaudet erat hasta. Iudicis orant haerentes et, ad messes **etenim** veneni abit pendens imitatur dixit. Unum et alite ecce quoque hamo vult etiam in nigrae. Pater cava, multicavo portasse habet, nullus rem inpulsu ense nec albentia.
+## Principles
 
-## Generi iactanti tibi medio conposuit inferias quibus
+The IndieWeb Community is largely based on principles (AKA tenets) such as own your data, make what you need, use what you make, document your stuff, open source your stuff, UX design is more important than protocols, visible data for humans first and machines second, platform agnostic platforms, plurality over monoculture, longevity, and remember to have fun!
 
-Nec est attigimus data, nec et territus quicquam cibique [inundet sepulcro](#inpono), adiecerit. Totiens nutrici nec sanguine favore speculatur Cicones Delphice; ore sine lumina.
+## Key Principles
 
-Sic inde molle gradientis verum, amoris Cypron plurimus toris **dea semideique** fiducia malis motibus, is, est. Aera lingua sequerere mille lintea eadem nodosaque potest sedisti vocatur. Nomine non haec, posse nota foedera sopita. Sed animoque felix videtur *aequoreae at* quae, haustus tu inrita oculos. Quam lumbis dictis, accensae sole manu in illi strepitum videar.
+[Step 1](https://indieauth.com/setup)
 
-Gestae **ferre mecum fata** spatium, est acta ieiunia sperat praecipue habuere. Proteu esse secedit fata hac suis: ieiunia [recens](#una). Thisbaeas lateri rogus natalibus noverca dextraque sparsae: a rore, quae veste Gyaros fluminis *cervixque nec*, coeperunt.
+Key principles of building on the indie web, numbered for reference, not necessarily for any kind of priority.
+
+✊ Own your data. Your content, your metadata, your identity.
+🔍 Use & publish visible data for humans first, machines second. See also DRY.
+💪 Make what you need. Make tools, templates, etc. for yourself first, not for all of your friends or ”everyone“. If you design for some hypothetical user, they may not actually exist; if you make for yourself, you actually do exist. Make something that satisfies your needs (also known as scratch your own itch), and is compatible for others, e.g. by practicing POSSE, you benefit immediately, while staying connected to friends, without having to convince anyone. If and when others join the indieweb, you all benefit.
+😋 Use what you make! Whatever you build you should actively use. If you aren't depending on it, why should anybody else? We also call this eat what you cook. Personal use helps you see both problems and areas for improvement more quickly, and thus focus your efforts on building the indieweb around actual needs and consistently solving immediate real world problems, instead of spending lots of time solving what may be theoretical problems.
+📓 Document your stuff. You've made a place to speak your mind, use it to document your processes, ideas, designs and code. Help others benefit from your journey, including your future self!
+💞 Open source your stuff! You don't have to, of course, but if you like the existence of the indie web, making your code open source means other people can get on the indie web quicker and easier.
+📐 UX and design is more important than protocols, formats, data models, schema etc. We focus on UX first, and then as we figure that out we build/develop/subset the absolutely simplest, easiest, and most minimal protocols & formats sufficient to support that UX, and nothing more. AKA UX before plumbing.
+🌐 Modularity. Build platform agnostic platforms. The more your code is modular and composed of pieces you can swap out, the less dependent you are on a particular device, UI, templating language, API, backend language, storage model, database, platform. Modularity increases the chance that at least some of it can and will be re-used, improved, which you can then reincorporate. AKA building-blocks. AKA "small pieces loosely joined".
+🗿 Longevity. Build for the long web. If human society is able to preserve ancient papyrus, Victorian photographs and dinosaur bones, we should be able to build web technology that doesn't require us to destroy everything we've done every few years in the name of progress. Consider making things on the web that are designed to last.
+✨ Plurality. With IndieWebCamp we've specifically chosen to encourage and embrace a diversity of approaches & implementations. This background makes the IndieWeb stronger and more resilient than any one (often monoculture) approach.
+🎉 Above all, Have fun. When the web took off in the 90's people began designing personal sites with tools such as GeoCities. These spaces had Java applets, garish green background and seventeen animated GIFs. It may have been ugly and badly coded but it was fun. Keep the web weird and interesting.

@@ -1,10 +1,3 @@
-# Misc
-*.log
-npm-debug.*
-*.scssc
-*.swp
-.DS_Store
-Thumbs.db
 
 # Node modules
 node_modules
@@ -12,16 +5,29 @@ node_modules/
 
 # Output folder
 dist
+site
 _dist
 _site
 
 # Env Variables
 .env
 
-# Cache
-.sass-cache
+# cache
 .cache
 cache
 _cache
 
+#functions
 functions
+
+# sass Cache
+.sass-cache
+*.scssc
+
+# Misc
+*.log
+npm-debug.*
+*.swp
+.DS_Store
+Thumbs.db
+
